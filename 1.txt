@@ -174,7 +174,8 @@ _G.ConfigMain = {
 
     ["Auto Save Config"] = false,
     ["Lock FPS Now"] = false,
-    ["Select Lock FPS"] = 25,
+    ["Select Lock FPS"] = 15,
+    ["White Screen"] = true
 }
 _G.Close_Ui = true
 _G.Auto_Close_ui = true

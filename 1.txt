@@ -4,7 +4,7 @@ getgenv().DitBF = {
         ["Black Screen"] = true,
         ["Lock FPS"] = 15,
     },
-	["Fast Attack Duration/Cooldown"] = {2, 5},
+	["Fast Attack Duration/Cooldown"] = {2, 8},
     ["Raid if Maxed Blox Fruit"] = true,
     ["Farm boss drops while not maxed"] = false,
     ["Farm Blox Fruit Mastery if maxed"] = true,
@@ -25,7 +25,7 @@ getgenv().DitBF = {
         ["Get Hallow Scythe"] = false,
         ["Get Cursed Dual Katana"] = true,
         ["Get Soul Guitar"] = false,
-        ["Awake Current Blox Fruit"] = false,
+        ["Awake Current Blox Fruit"] = true,
     },
     ["Buy Haki"] = {
         ["Enhancement"] = false,

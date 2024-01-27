@@ -1,0 +1,13 @@
+local settings = {
+   AutoChat_Time = 30,
+   AutoChat_Delay = 10,
+   AutoChat = true,
+}
+
+local chatrem = game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest
+
+while task.wait(settings.AutoChat_Time) do
+    chatrem:FireServer('MUA NICK ROBLOX GIA RE TAI SELLACCROBLOX . C0M', "All")
+	wait(30)
+chatrem:FireServer('BUY BLOX FRUITS ACCOUNT AT SELLACCROBLOX . C0M', "All")
+end

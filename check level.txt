@@ -1,0 +1,18 @@
+task.spawn(function()
+local placeId = game.PlaceId
+	local ts = game:GetService("TeleportService")
+local p = game:GetService("Players").LocalPlayer
+    local acc = game.Players.LocalPlayer
+    local levelhientai = acc.Data.Level.Value
+    while true do
+        wait(300)
+        if acc then
+            local levelmoi = acc.Data.Level.Value
+            if (levelmoi == levelhientai and levelhientai < 2550) then
+                ts:Teleport(placeId, p)
+            else
+                levelhientai = levelmoi
+            end
+        end
+    end
+end)

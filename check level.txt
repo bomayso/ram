@@ -5,7 +5,7 @@ local p = game:GetService("Players").LocalPlayer
     local acc = game.Players.LocalPlayer
     local levelhientai = acc.Data.Level.Value
     while true do
-        wait(300)
+        wait(30)
         if acc then
             local levelmoi = acc.Data.Level.Value
             if (levelmoi == levelhientai and levelhientai < 2550) then

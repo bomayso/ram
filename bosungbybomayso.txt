@@ -1,5 +1,5 @@
 local settings = {
-   AutoChat_Time = 600,
+   AutoChat_Time = 900,
    AutoChat_Delay = 10,
    AutoChat = true,
 }
@@ -8,9 +8,9 @@ local chatrem = game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageReq
 
 while task.wait(settings.AutoChat_Time) do
     chatrem:FireServer('MUA TAI KHOAN BLOX FRUITS GIA RE TAI SELLACCROBLOX . C0M', "All")
-	wait(600)
+	wait(900)
 chatrem:FireServer('BUY BLOX FRUITS ACCOUNT AT SELLACCROBLOX . C0M', "All")
-	wait(600)
+	wait(900)
 chatrem:FireServer('Beli akun BLOX FRUITS murah di SELLACCROBLOX . C0M', "All")
 wait(300)
 end

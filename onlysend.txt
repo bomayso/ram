@@ -1,0 +1,125 @@
+local w1 = false -- bat tat rocket w1
+local w2 = true -- bat tat rocket w2
+local activesend = false
+local min = 10000
+local minbucket = 5999
+local minGem = 2000000
+local mingift = 1000
+local minchest = 50
+local user = ""
+local diamond = true
+local gift = true
+local minichest = true
+
+repeat task.wait() until game:IsLoaded()
+UserSettings():GetService('UserGameSettings').MasterVolume = 0;
+settings().Rendering.QualityLevel = 1;
+repeat task.wait() until game.PlaceId ~= nil
+repeat wait() until game.Players.LocalPlayer
+repeat task.wait() until not game.Players.LocalPlayer.PlayerGui:FindFirstChild("__INTRO")
+repeat task.wait() until game:GetService("Players").LocalPlayer and game:GetService("Players").LocalPlayer.Character and game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+
+
+local save = require(game:GetService("ReplicatedStorage").Library.Client.Save)
+
+
+if w2 then
+    game.ReplicatedStorage.Network.World2Teleport:InvokeServer()
+elseif w1 then
+    game.ReplicatedStorage.Network.World1Teleport:InvokeServer()
+end
+
+
+task.spawn(function()
+    while task.wait(5) do
+        game:GetService("ReplicatedStorage").Network["Mailbox: Claim All"]:InvokeServer()
+        task.wait(30)
+    end
+end)
+
+
+
+               
+
+
+task.spawn(function()
+    while activesend do task.wait(60)
+        for i, v in pairs(save.Get().Inventory.Misc) do
+            if v.id == "Charm Stone" and v._am >= minchest and gift then
+                local am = math.floor(v._am)
+                
+                game:GetService("ReplicatedStorage").Network["Mailbox: Send"]:InvokeServer(user,
+                    tostring(math.random(1, 10000)), "Misc", i, am)
+
+            elseif v.id == "Fruit Bundle" and v._am >= mingift and gift then
+                local am = math.floor(v._am)
+                
+                game:GetService("ReplicatedStorage").Network["Mailbox: Send"]:InvokeServer(user,
+                    tostring(math.random(1, 10000)), "Misc", i, am)
+					
+			elseif v.id == "Enchant Bundle" and v._am >= mingift and gift then
+                local am = math.floor(v._am)
+                
+                game:GetService("ReplicatedStorage").Network["Mailbox: Send"]:InvokeServer(user,
+                    tostring(math.random(1, 10000)), "Misc", i, am)
+					
+			elseif v.id == "Flag Bundle" and v._am >= mingift and gift then
+                local am = math.floor(v._am)
+                
+                game:GetService("ReplicatedStorage").Network["Mailbox: Send"]:InvokeServer(user,
+                    tostring(math.random(1, 10000)), "Misc", i, am)	
+					
+			elseif v.id == "Potion Bundle" and v._am >= mingift and gift then
+                local am = math.floor(v._am)
+                
+                game:GetService("ReplicatedStorage").Network["Mailbox: Send"]:InvokeServer(user,
+                    tostring(math.random(1, 10000)), "Misc", i, am)	
+					
+			elseif v.id == "Toy Bundle" and v._am >= mingift and gift then
+                local am = math.floor(v._am)
+                
+                game:GetService("ReplicatedStorage").Network["Mailbox: Send"]:InvokeServer(user,
+                    tostring(math.random(1, 10000)), "Misc", i, am)		
+					
+			elseif v.id == "Large Gift Bag" and v._am >= mingift and gift then
+                local am = math.floor(v._am)
+                
+                game:GetService("ReplicatedStorage").Network["Mailbox: Send"]:InvokeServer(user,
+                    tostring(math.random(1, 10000)), "Misc", i, am)
+					
+			elseif v.id == "Gift Bag" and v._am >= mingift and gift then
+                local am = math.floor(v._am)
+                
+                game:GetService("ReplicatedStorage").Network["Mailbox: Send"]:InvokeServer(user,
+                    tostring(math.random(1, 10000)), "Misc", i, am)
+					
+			elseif v.id == "Mini Chest" and v._am >= minchest and minichest then
+                local am = math.floor(v._am)
+                
+                game:GetService("ReplicatedStorage").Network["Mailbox: Send"]:InvokeServer(user,
+                    tostring(math.random(1, 10000)), "Misc", i, am)
+					
+            end
+        
+		end
+		for i, v in pairs(save.Get().Inventory.Currency) do
+            if v.id == 'Diamonds' and v._am >= minGem and diamond then
+                local am = math.floor(v._am - 100000)
+                
+                game:GetService("ReplicatedStorage").Network["Mailbox: Send"]:InvokeServer(user,
+                    tostring(math.random(1, 10000)), "Currency", i, am)
+                
+            end
+        end
+      		
+    end
+end)
+
+
+for i, v in pairs(save.Get().Inventory.Currency) do
+	if v.id == "Diamonds" and v._am < min then
+			game.ReplicatedStorage.Network.GiftBag_Open:InvokeServer("Gift Bag")
+	end
+			
+		
+end

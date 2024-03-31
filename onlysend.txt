@@ -1,5 +1,5 @@
-local w1 = false -- bat tat rocket w1
-local w2 = true -- bat tat rocket w2
+local w1 = true -- bat tat rocket w1
+local w2 = false -- bat tat rocket w2
 local activesend = false
 local min = 10000
 local minbucket = 5999

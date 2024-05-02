@@ -199,6 +199,19 @@ for i, e in pairs(lighting:GetChildren()) do
     end
 end
 
+spawn(function()
+    while true do
+        task.wait(60)
+        for i, v in pairs(game.Players:GetPlayers()) do
+            if v ~= game.Players.LocalPlayer then
+                pcall(function()
+                    local Character = v.Character
+                    Character:Destroy()
+                end)
+            end
+        end
+    end
+end)
 
 task.spawn(function()
     game:GetService("GuiService").ErrorMessageChanged:Connect(function()

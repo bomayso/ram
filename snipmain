@@ -25,20 +25,7 @@ local vu = game:GetService("VirtualUser")
 local character = Player.Character or Player.CharacterAdded:Wait()
 local humanoid = character:FindFirstChildWhichIsA('Humanoid')
  
-spawn(function()
-    while true do
-        
-        for i, v in pairs(game.Players:GetPlayers()) do
-            if v ~= game.Players.LocalPlayer then
-                pcall(function()
-                    local Character = v.Character
-                    Character:Destroy()
-                end)
-            end
-        end
-	task.wait(60)
-    end
-end)
+
  
 print("Anti AFKEY")
 local VirtualUser=game:service'VirtualUser'
@@ -218,7 +205,27 @@ for i, e in pairs(lighting:GetChildren()) do
     end
 end
 
-
+spawn(function()
+    while true do
+        
+	for _, v in pairs(game.Players:GetChildren()) do
+        	for _, v2 in pairs(v.Character:GetDescendants()) do
+                    if v2:IsA("BasePart") or v2:IsA("Decal") then
+                        v2.Transparency = 1
+                    end
+                end
+        end
+        for i, v in pairs(game.Players:GetPlayers()) do
+            if v ~= game.Players.LocalPlayer then
+                pcall(function()
+                    local Character = v.Character
+                    Character:Destroy()
+                end)
+            end
+        end
+	task.wait(60)
+    end
+end)
 
 task.spawn(function()
     game:GetService("GuiService").ErrorMessageChanged:Connect(function()

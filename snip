@@ -219,7 +219,7 @@ if PlayerInServer < 25 then
     end
 end
  
- 
+ task.spawn(function()
 Players.PlayerRemoving:Connect(function(player)
     getPlayers = Players:GetPlayers()
     PlayerInServer = #getPlayers
@@ -229,10 +229,11 @@ Players.PlayerRemoving:Connect(function(player)
         end
     end
 end)
- 
+end)
+
 local hopDelay = math.random(1500, 1800)
  
-task.spawn(function ()
+task.spawn(function()
     while task.wait(1) do
         if math.floor(os.clock() - osclock) >= hopDelay then
             while task.wait(1) do

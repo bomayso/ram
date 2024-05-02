@@ -11,7 +11,7 @@ local ItemsPS99 = {
 	["Diamond"] = 17500
 }
  
-wait(10)
+
 local Booths_Broadcast = game:GetService("ReplicatedStorage").Network:WaitForChild("Booths_Broadcast")
 local Players = game:GetService('Players')
 local Player = Players.LocalPlayer

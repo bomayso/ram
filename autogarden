@@ -1,3 +1,40 @@
+repeat task.wait() until game:IsLoaded()
+UserSettings():GetService('UserGameSettings').MasterVolume = 0;
+settings().Rendering.QualityLevel = 1;
+game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.Chat,false)
+game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList,false)
+game.CoreGui:FindFirstChild("RobloxGui").Enabled = false
+repeat task.wait() until game.PlaceId ~= nil
+repeat wait() until game.Players.LocalPlayer
+repeat task.wait() until not game.Players.LocalPlayer.PlayerGui:FindFirstChild("__INTRO")
+repeat task.wait() until game:GetService("Players").LocalPlayer and game:GetService("Players").LocalPlayer.Character and game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+if game.PlaceId == 8737899170 or game.PlaceId == 16498369169 then
+    local map = game:GetService("Workspace"):FindFirstChild('Map') or game:GetService("Workspace"):FindFirstChild('Map2')
+    repeat task.wait() until #map:GetChildren() >= 25
+elseif game.PlaceId == 15502339080 then
+    repeat task.wait() until game:GetService("Workspace").__THINGS and game:GetService("Workspace").__DEBRIS
+else
+    print("wtf r u doing? what game r u even on dumb fuck")
+end
+
+local save = require(game:GetService("ReplicatedStorage").Library.Client.Save)
+
+local function instanceControl(inst1, inst, ctrl)
+    repeat
+        if ctrl then
+            if not workspace.__THINGS.__INSTANCE_CONTAINER.Active:FindFirstChild(inst) then break end
+        else
+            if workspace.__THINGS.__INSTANCE_CONTAINER.Active:FindFirstChild(inst) then break end
+        end
+
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = inst1.CFrame
+        firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, inst1, 0)
+        wait()
+        firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, inst1, 1)
+        task.wait(3)
+    until ctrl and not workspace.__THINGS.__INSTANCE_CONTAINER.Active:FindFirstChild(inst) or workspace.__THINGS.__INSTANCE_CONTAINER.Active:FindFirstChild(inst)
+end
+
 game.ReplicatedStorage.Network.World1Teleport:InvokeServer()
 
 task.wait()

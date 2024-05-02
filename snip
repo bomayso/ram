@@ -30,22 +30,7 @@ local vu = game:GetService("VirtualUser")
 local character = Player.Character or Player.CharacterAdded:Wait()
 local humanoid = character:FindFirstChildWhichIsA('Humanoid')
  
-local function moveToPosition(position)
-	local moveFinished = false
-	local connection
-	connection = humanoid.MoveToFinished:Connect(function(reached)
-		moveFinished = reached
-		if connection then
-			connection:Disconnect()
-		end
-	end)
-	humanoid:MoveTo(position)
-	repeat task.wait() until moveFinished
-end
- 
-moveToPosition(Vector3.new(-970, 284, -2278))
-moveToPosition(Vector3.new(-935, 284, -2189))
-moveToPosition(Vector3.new(-919, 285, -2183))
+
  
 print("Anti AFKEY")
 local VirtualUser=game:service'VirtualUser'

@@ -165,7 +165,7 @@ local function serverHop(id)
     end
     local randomCount = #servers
     if not randomCount then
-        randomCount = 2
+        randomCount = 100
     end
     TeleportService:TeleportToPlaceInstance(id, servers[math.random(1, randomCount)], Players.LocalPlayer)
 end
@@ -219,7 +219,7 @@ if PlayerInServer < 25 then
     end
 end
  
- task.spawn(function()
+
 Players.PlayerRemoving:Connect(function(player)
     getPlayers = Players:GetPlayers()
     PlayerInServer = #getPlayers
@@ -229,7 +229,7 @@ Players.PlayerRemoving:Connect(function(player)
         end
     end
 end)
-end)
+
 
 local hopDelay = math.random(1500, 1800)
  

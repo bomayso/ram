@@ -41,7 +41,7 @@ end)
  
 local niggaJump = coroutine.create(function ()
     while 1 do
-        wait(10)
+        wait(30)
         game.Players.LocalPlayer.Character.Humanoid.Jump = true
     end
 end)
@@ -250,19 +250,7 @@ wait(10)
  
 local Players = game:GetService("Players")
  
-local magnanakaw = {
-    "prinzemark1020",
-    "prinzemark1029",
-    "prinzemark1021",
-    "prinzemark1026",
-    "sofia_10899"
-}
- 
-for _,v in ipairs(magnanakaw) do
-    if Players.LocalPlayer.Name == v then
-        game:Shutdown()
-    end
-end
+
  
 local function serverHop(id)
 	local deep

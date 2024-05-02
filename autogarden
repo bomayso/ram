@@ -1,0 +1,61 @@
+game.ReplicatedStorage.Network.World1Teleport:InvokeServer()
+
+task.wait()
+
+task.spawn(function()
+    local VirtualInputManager = game:GetService("VirtualInputManager")
+
+	while task.wait() do
+        VirtualInputManager:SendKeyEvent(true, "Space", false, game)
+        task.wait(.2)
+        VirtualInputManager:SendKeyEvent(false, "Space", false, game)
+        task.wait(300)
+	end
+	
+end)	
+
+task.spawn(function()
+    while task.wait(10) do
+        if not game:GetService("Workspace")["__THINGS"]["__INSTANCE_CONTAINER"].Active:FindFirstChild("FlowerGarden") then
+            print('Teleporting to garden')
+            instanceControl(workspace.__THINGS.Instances.FlowerGarden.Teleports.Enter, "FlowerGarden", false)
+            task.wait(3)
+            game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(-450.45263671875, 110.33782958984375, -1399.4224853515626)
+            task.wait(3)
+        end
+        break
+    end
+end)
+
+task.spawn(function()
+    local Remote = game.ReplicatedStorage.Network.Instancing_InvokeCustomFromClient
+    while wait(1) do
+        for i = 1, 10 do
+            Remote:InvokeServer("FlowerGarden", "PurchaseSlot", i)
+            Remote:InvokeServer("FlowerGarden", "PlantSeed", i, "Diamond")
+            Remote:InvokeServer("FlowerGarden", "WaterSeed", i)
+            Remote:InvokeServer("FlowerGarden", "InstaGrowSeed", i)
+            Remote:InvokeServer("FlowerGarden", "ClaimPlant", i)
+        end
+    end
+end)
+
+task.spawn(function()
+    while wait(1) and getgenv().autoCollectBag do
+        for _, lootbag in pairs(game:GetService("Workspace").__THINGS:FindFirstChild("Lootbags"):GetChildren()) do
+            if lootbag then
+                game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Lootbags_Claim"):FireServer(unpack( { [1] = { [1] = lootbag.Name, }, } ))
+                lootbag:Destroy()
+                task.wait()
+            end
+        end
+
+        game:GetService("Workspace").__THINGS:FindFirstChild("Lootbags").ChildAdded:Connect(function(lootbag)
+            task.wait()
+            if lootbag then
+                game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Lootbags_Claim"):FireServer(unpack( { [1] = { [1] = lootbag.Name, }, } ))
+                lootbag:Destroy()
+            end
+        end)
+    end
+end)

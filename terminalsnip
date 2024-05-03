@@ -1,9 +1,9 @@
 getgenv().settings = {
-    
+    {
         item = "Diamond Plant Seed",
         maxPrice = 17500,
         class = "Seed",
-    
+    },
 }
 
 getgenv().tpToBooth = false

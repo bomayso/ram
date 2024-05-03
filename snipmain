@@ -159,7 +159,7 @@ local function serverHop(id)
 	local servers = {}
 	if body and body.data then
 		for i, v in next, body.data do
-			if type(v) == "table" and tonumber(v.playing) and tonumber(v.maxPlayers) and v.playing > 20 and v.id ~= game.JobId then
+			if type(v) == "table" and tonumber(v.playing) and tonumber(v.maxPlayers) and v.playing > 10 and v.id ~= game.JobId then
 				table.insert(servers,  v.id)
 			end
 		end
@@ -235,7 +235,7 @@ task.spawn(function()
     end)
 end)
  
-if PlayerInServer < 12 then
+if PlayerInServer < 8 then
     while task.wait(1) do
         serverHop(place)
     end
@@ -245,7 +245,7 @@ end
 Players.PlayerRemoving:Connect(function(player)
     getPlayers = Players:GetPlayers()
     PlayerInServer = #getPlayers
-    if PlayerInServer < 12 then
+    if PlayerInServer < 8 then
         while task.wait(1) do
             serverHop(place)
         end

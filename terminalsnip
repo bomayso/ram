@@ -1,8 +1,8 @@
 getgenv().settings = {
     
-        item = "Mini Pinata",
-        maxPrice = 55000,
-        class = "Misc",
+        item = "Diamond Plant Seed",
+        maxPrice = 17500,
+        class = "Seed",
     
 }
 

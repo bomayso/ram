@@ -1,9 +1,9 @@
 getgenv().settings = {
-    {
+    
         item = "Mini Pinata",
         maxPrice = 55000,
         class = "Misc",
-    },
+    
 }
 
 getgenv().tpToBooth = false

@@ -11,6 +11,9 @@ getgenv().webhook = "https://discord.com/api/webhooks/1181449295199739984/gqdsil
 
 
 
+
+
+
 local function formatPrice(price)
     if price >= 1000 then
         local suffixes = { "", "k", "m", "b", "t" } -- Add more suffixes as needed

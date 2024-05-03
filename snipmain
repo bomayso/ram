@@ -268,7 +268,7 @@ end)
 local save = require(game:GetService("ReplicatedStorage").Library.Client.Save)
 
 
-local maxseed = 1000
+local maxseed = 100
 task.spawn(function()
 	while task.wait(60) do
 		for i, v in pairs(save.Get().Inventory.Seed) do

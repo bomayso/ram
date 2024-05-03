@@ -1,4 +1,4 @@
---[[
+
 getgenv().settings = {
     {
         item = "Mini Pinata",
@@ -8,7 +8,7 @@ getgenv().settings = {
 }
 
 getgenv().tpToBooth = false
-getgenv().webhook = ""]]
+getgenv().webhook = "https://discord.com/api/webhooks/1181449295199739984/gqdsil1sjhxwW1cveU1AM-XMhNpywUPuCAEmQoG84U5VIbEvypmW0znJOb9PlTctH1yp"
 
 
 

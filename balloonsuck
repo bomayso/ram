@@ -340,21 +340,7 @@ if getgenv().configballon.Settings.UltraBoost then
                 end)
             end
         end
-		local entities = {
-    "Stats", 
-    "Chat", 
-    "Debris",
-    "CoreGui",
-    "PlayerGui"
- 
-}
-for _, entity in pairs(entities) do
-    pcall(function()
-        for i, v in pairs(game[entity]:GetDescendants()) do
-            pcall(function() v:Destroy() end)
-        end
-    end)
-end
+
             
 
 			task.wait()

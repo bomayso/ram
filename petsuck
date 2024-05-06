@@ -46,12 +46,12 @@ local function serverHop(id)
 end
 
 task.spawn(function()
-	task.wait(300)
+	task.wait(220)
 game.Players.LocalPlayer:Kick("stuckfuck")
 end)
 
 task.spawn(function()
-task.wait(280)
+task.wait(200)
 while wait(1) do
 	serverHop(8737899170)
 end

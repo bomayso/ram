@@ -1,30 +1,39 @@
-repeat
-    task.wait()
-until game:IsLoaded()
+local config = {
+ 
+  loops = 20,
+  tapTimeout = 5,
+  waitForBaloonTimeout = 1.5,
+  
+  
+  waitForCheck = 0.1,
+  waitForTap = 3,
+}
 
-repeat
-    task.wait()
-until game.PlaceId ~= nil
+  if LPH_OBFUSCATED == false or LPH_OBFUSCATED == nil then
+  LPH_NO_VIRTUALIZE = function(f) return f end
+  LPH_NO_UPVALUES = function(...) return ... end
+  end
+  
 
-repeat
-    task.wait()
-until game:GetService("Players").LocalPlayer and game:GetService("Players").LocalPlayer.Character and game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+  if not game:IsLoaded() then
+    game.Loaded:Wait()
+  end
+  
+	local w1 = true -- bat tat rocket w1
+	local w2 = false -- bat tat rocket w2
 
-repeat
-    task.wait()
-until game:GetService("Workspace"):FindFirstChild("Map") or game:GetService("Workspace"):FindFirstChild("Map2")
-
-repeat
-    task.wait()
-until game:GetService("Workspace").__THINGS and game:GetService("Workspace").__DEBRIS
-
-local w1 = false -- bat tat rocket w1
-local w2 = true -- bat tat rocket w2
-local replicatedStorage = game:GetService("ReplicatedStorage")
-local Lib = require(replicatedStorage.Library)
-local plrs = game:GetService("Players")
-local tpService = game:GetService("TeleportService")
-local plr = game.Players.LocalPlayer
+  local plrs = game:GetService("Players")
+  local plr = plrs.LocalPlayer
+  local options = {}
+  local orbFolder = game:GetService("Workspace"):WaitForChild("__THINGS"):WaitForChild("Orbs")
+  local lootbagFolder = workspace:WaitForChild("__THINGS"):WaitForChild("Lootbags")
+  local breakablesFolder = game:GetService("Workspace"):WaitForChild("__THINGS"):WaitForChild("Breakables")
+  local replicatedStorage = game:GetService("ReplicatedStorage")
+  local Lib = require(replicatedStorage.Library)
+  local plrs = game:GetService("Players") 
+  local plr = plrs.LocalPlayer
+  local tpService = game:GetService("TeleportService")
+  local dummyfunc = LPH_NO_UPVALUES(function() return end)
 
 
 if w2 then
@@ -33,68 +42,8 @@ elseif w1 then
     game.ReplicatedStorage.Network.World1Teleport:InvokeServer()
 end
 
-getgenv().configballon = {
-    ["Settings"] = {
-    ["OpenGift"] = false, 
-    ["SkipTap"] = 13, 
-    ["waitForBaloonTimeout"] = 1, --- tang len neu thay bo qua gift
-    ["UltraBoost"] = true,
-    ["WhiteScreen"] = false, 
-	["HideUI"] = false, --- an het tat ca (bat cung voi white screen bug)
-    },
-    ["Hop"] = {
-        ["Enabled"] = true,
-        ["SecHop"] = 20, 
-		["DelayHop"] = 1, --- delay xong moi hop
-    },
-}
 
 
-local function getServers()
-    local url =
-        string.format("https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=Asc&limit=100", game.PlaceId)
-    local servers = game:GetService("HttpService"):JSONDecode(game:HttpGet(url)).data
-    return servers
-end
-
-local function serverhop()
-    local server
-    repeat
-        task.wait(configballon.Hop.DelayHop)
-        server = getServers()[math.random(1, 100)]
-    until server.id ~= game.JobId
-    tpService:TeleportToPlaceInstance(game.PlaceId, server.id, plr)
-end
-
-task.spawn(function()
-	wait(240)
-		serverhop()
-	
-end)
-		
-
-
-
-
-game:GetService("RunService"):Set3dRenderingEnabled(not getgenv().configballon.Settings.WhiteScreen)
-
-
-task.spawn(function()
-    local player = game.Players.LocalPlayer
-    if player and getgenv().configballon.Settings.HideUI then
-        local playerGui = player:WaitForChild("PlayerGui")
-        if playerGui then
-            for _, screenGui in ipairs(playerGui:GetChildren()) do
-                if screenGui:IsA("ScreenGui") then
-                    
-                    
-                        screenGui:Destroy()
-                    
-                end
-            end
-        end
-    end
-end)
 
 
 task.spawn(function()
@@ -264,7 +213,9 @@ task.spawn(function()
 game:GetService("Workspace").Map2:remove()
 end)
 
-
+task.spawn(function()
+game:GetService("Workspace").Map:remove()
+end)
 
 task.spawn(function()
 game:GetService("Workspace").ALWAYS_RENDERING:remove()
@@ -278,7 +229,9 @@ task.spawn(function()
 game:GetService("Workspace").Map2.Parent:remove()
 end)
 
-
+task.spawn(function()
+game:GetService("Workspace").Map.Parent:remove()
+end)
 
 task.spawn(function()
 game:GetService("Workspace").ALWAYS_RENDERING.Parent:remove()
@@ -332,14 +285,6 @@ if getgenv().configballon.Settings.UltraBoost then
                 end
             end
 			
-			for i, v in pairs(game.Players:GetPlayers()) do
-            if v ~= game.Players.LocalPlayer then
-                pcall(function()
-                    local Character = v.Character
-                    Character:Destroy()
-                end)
-            end
-        end
 
             
 
@@ -390,25 +335,8 @@ if getgenv().configballon.Settings.UltraBoost then
 			
 		end
 
-end)
+end) 
 
-
-
-
-
-local function autoGifts()
-    while task.wait(2) do
-        Lib.Network.Invoke("GiftBag_Open", "Large Gift Bag")
-        Lib.Network.Invoke("GiftBag_Open", "Gift Bag")
-        Lib.Network.Invoke("GiftBag_Open", "Mini Chest")
-    end
-end
-
-
-
-
-
-	
 task.spawn(function()
     while wait() do
         pcall(function()
@@ -439,10 +367,31 @@ task.spawn(function()
     end
 end)
 
+ local function getServers()
+    local url =
+        string.format("https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=Asc&limit=100", game.PlaceId)
+    local servers = game:GetService("HttpService"):JSONDecode(game:HttpGet(url)).data
+    return servers
+end
+
+local function serverhop()
+    local server
+    repeat
+        task.wait()
+        server = getServers()[math.random(1, 100)]
+    until server.id ~= game.JobId
+    tpService:TeleportToPlaceInstance(game.PlaceId, server.id, plr)
+end
+
+task.spawn(function()
+	wait(240)
+		serverhop()
+	
+end)
 
 
-local function getBalloonUID(zoneName)
-    for i, v in pairs(Lib.BreakableCmds.AllByZoneAndClass(zoneName, "Chest")) do
+  local function getBalloonUID(zoneName) 
+    for i,v in pairs(Lib.BreakableCmds.AllByZoneAndClass(zoneName, "Chest")) do
         local isGift = string.find(v:GetAttribute("BreakableID"), "Balloon Gift")
         if v:GetAttribute("OwnerUsername") == plr.Name and isGift then
             return v:GetAttribute("BreakableUID")
@@ -450,195 +399,144 @@ local function getBalloonUID(zoneName)
             return "skip"
         end
     end
-end
-local function antiStaff()
-    for i, v in pairs(plrs:GetPlayers()) do
-        if v:IsInGroup(5060810) then
-            serverhop()
-        end
-    end
-    plrs.PlayerAdded:Connect(
-        function(player)
-            if player:IsInGroup(5060810) then
-                serverhop()
-            end
-        end
-    )
-end
+  end
 
+  local function getCurrentZone() 
+    return Lib.MapCmds.GetCurrentZone() 
+  end
 
-
-
-local function getCurrentZone()
-    return Lib.MapCmds.GetCurrentZone()
-end
-
-local function autoOrbsLootbags()
+  local function autoOrbsLootbags()
     for _, lootbag in pairs(game:GetService("Workspace").__THINGS:FindFirstChild("Lootbags"):GetChildren()) do
         if lootbag then
-            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Lootbags_Claim"):FireServer(
-                unpack({[1] = {[1] = lootbag.Name}})
-            )
+            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Lootbags_Claim"):FireServer(unpack( { [1] = { [1] = lootbag.Name, }, } ))
             lootbag:Destroy()
             task.wait()
         end
     end
 
-    game:GetService("Workspace").__THINGS:FindFirstChild("Lootbags").ChildAdded:Connect(
-        function(lootbag)
-            task.wait()
-            if lootbag then
-                game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Lootbags_Claim"):FireServer(
-                    unpack({[1] = {[1] = lootbag.Name}})
-                )
-                lootbag:Destroy()
-            end
-        end
-    )
-
-    game:GetService("Workspace").__THINGS:FindFirstChild("Orbs").ChildAdded:Connect(
-        function(orb)
-            task.wait()
-            if orb then
-                game:GetService("ReplicatedStorage"):WaitForChild("Network"):FindFirstChild("Orbs: Collect"):FireServer(
-                    unpack({[1] = {[1] = tonumber(orb.Name)}})
-                )
-                orb:Destroy()
-            end
-        end
-    )
-end
-
-local blacklistedIds = {}
-
-local function resetSpeed()
-    plr.Character:WaitForChild("HumanoidRootPart").AssemblyAngularVelocity = Vector3.new(0, 0, 0)
-    plr.Character:WaitForChild("HumanoidRootPart").AssemblyLinearVelocity = Vector3.new(0, 0, 0)
-    plr.Character:WaitForChild("HumanoidRootPart").Velocity = Vector3.new(0, 0, 0)
-end
-
-local function baloonLoop()
-    local activeBaloons = Lib.Network.Invoke("BalloonGifts_GetActiveBalloons")
-    for i, v in pairs(activeBaloons) do
-        if v.Popped == true or table.find(blacklistedIds, i) then
-            break
-        end
-        getgenv().isExisting = true
-        local position = v.LandPosition
-        task.spawn(
-            function()
-                local tickStart = tick()
-                repeat
-                    task.wait()
-                    
-                    plr.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(position)
-					resetSpeed()
-                until getBalloonUID(getCurrentZone()) or tick() - tickStart > configballon.Settings.waitForBaloonTimeout
-                if tick() - tickStart > configballon.Settings.waitForBaloonTimeout then
-                    getgenv().isExisting = false
-                end
-                resetSpeed()
-                plr.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(v.LandPosition)
-                resetSpeed()
-            end
-        )
-        if isExisting == false then
-            break
-        end
+    game:GetService("Workspace").__THINGS:FindFirstChild("Lootbags").ChildAdded:Connect(function(lootbag)
         task.wait()
-        local args = {
-            [1] = Vector3.new(position.X, position.Y, position.Z),
-            [2] = 0.5794160315249014,
-            [3] = -0.8331117721691044,
-            [4] = 200
-        }
-        Lib.Network.Invoke("Slingshot_Toggle")
-        Lib.Network.Invoke("Slingshot_FireProjectile", unpack(args))
-        
-        Lib.Network.Fire("BalloonGifts_BalloonHit", v.Id)
-        task.wait(3)
-        Lib.Network.Invoke("Slingshot_Unequip")
+        if lootbag then
+            game:GetService("ReplicatedStorage"):WaitForChild("Network"):WaitForChild("Lootbags_Claim"):FireServer(unpack( { [1] = { [1] = lootbag.Name, }, } ))
+            lootbag:Destroy()
+        end
+    end)
+
+    game:GetService("Workspace").__THINGS:FindFirstChild("Orbs").ChildAdded:Connect(function(orb)
+        task.wait()
+        if orb then
+            game:GetService("ReplicatedStorage"):WaitForChild("Network"):FindFirstChild("Orbs: Collect"):FireServer(unpack( { [1] = { [1] = tonumber(orb.Name), }, } ))
+            orb:Destroy()
+        end
+    end)
+  end
+
+  local blacklistedIds = {}
+
+  local function resetSpeed()
+    plr.Character:WaitForChild("HumanoidRootPart").AssemblyAngularVelocity = Vector3.new(0,0,0)
+    plr.Character:WaitForChild("HumanoidRootPart").AssemblyLinearVelocity = Vector3.new(0,0,0)
+    plr.Character:WaitForChild("HumanoidRootPart").Velocity = Vector3.new(0,0,0)
+  end
+  local isExisting = true
+
+  local oneBalloon =  LPH_NO_VIRTUALIZE( function (i,v)
+  --local function oneBalloon(i,v)
+    if v.Popped == true or table.find(blacklistedIds,i) then
+        return
+    end
+    isExisting = true
+    local position = v.Position
+    task.spawn(function()
         local tickStart = tick()
         repeat
-            task.wait()
-        until getBalloonUID(getCurrentZone()) or tick() - tickStart > configballon.Settings.waitForBaloonTimeout
-        if tick() - tickStart > configballon.Settings.waitForBaloonTimeout then
-            table.insert(blacklistedIds, v.Id)
+            plr.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(position)
+            task.wait(1)
+        until getBalloonUID(getCurrentZone()) or tick()-tickStart > config.waitForBaloonTimeout
+        if tick()-tickStart > config.waitForBaloonTimeout then
+            isExisting = false
         end
-        local breakableUID = getBalloonUID(getCurrentZone())
-        task.wait()
-        if breakableUID == "skip" then
-            table.insert(blacklistedIds, v.Id)
-            break
+        resetSpeed()
+        plr.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(v.LandPosition)
+        resetSpeed()
+    end)
+    if isExisting == false then
+        return
+    end
+    task.wait()
+    local args = {
+        [1] = Vector3.new(position.X, position.Y, position.Z),
+        [2] = 0.5794160315249014,
+        [3] = -0.8331117721691044,
+        [4] = 200,
+    }
+    Lib.Network.Invoke("Slingshot_Toggle")
+    Lib.Network.Invoke("Slingshot_FireProjectile",unpack(args))
+    local args = {
+        [1] = v.Id,
+    }
+    Lib.Network.Fire("BalloonGifts_BalloonHit",unpack(args))
+    task.wait()
+    Lib.Network.Invoke("Slingshot_Unequip")
+    local tickStart = tick()
+    repeat
+        task.wait(config.waitForCheck) 
+    until getBalloonUID(getCurrentZone()) or tick()-tickStart > config.waitForBaloonTimeout
+    if tick()-tickStart > config.waitForBaloonTimeout then
+        table.insert(blacklistedIds,v.Id)
+    end
+    local breakableUID = getBalloonUID(getCurrentZone())
+    task.wait()
+    if breakableUID == "skip" then 
+        table.insert(blacklistedIds,v.Id)
+        return
+    end
+    if breakableUID then
+        local tickStart = tick()
+        repeat task.wait(math.random(15, 20))
+            Lib.Network.Fire("Breakables_PlayerDealDamage", breakableUID)
+        until (not getBalloonUID(getCurrentZone())) or tick()-tickStart > config.tapTimeout
+        if tick()-tickStart > config.tapTimeout then
+            table.insert(blacklistedIds,v.Id)
+            return
+        else
+            task.wait(0.25)
+            --game:GetService("Workspace").__THINGS:FindFirstChild("Lootbags").ChildAdded:Wait()
         end
+    end
 
-        if breakableUID then
-            local tickStart = tick()
-            repeat
-                task.wait()
-                Lib.Network.Fire("Breakables_PlayerDealDamage", breakableUID)
-                Lib.Network.Fire("Breakables_JoinPet", breakableUID)
-                
-            until (not getBalloonUID(getCurrentZone())) or tick() - tickStart > configballon.Settings.SkipTap
-            if tick() - tickStart > configballon.Settings.SkipTap or activeBaloons == 3 then
-                
-                table.insert(blacklistedIds, v.Id)
-                game:GetService("Workspace").__THINGS.BalloonGifts:WaitForChild("Model"):remove()
-                break
-            else
-                game:GetService("Workspace").__THINGS:FindFirstChild("Lootbags").ChildAdded:Wait()
-            end
-        
-		end
-		if activeBaloons == 3 then 
-		game:GetService("Workspace").__THINGS.BalloonGifts:WaitForChild("Model"):remove()
-		end
-	end
-	
+  end)
 
-end
+  local function baloonLoop()
+    local activeBaloons = Lib.Network.Invoke("BalloonGifts_GetActiveBalloons")
+  local balloonCount = 0
+  for i,v in activeBaloons do
+    balloonCount = balloonCount + 1
+  end
+  print("balloonCount:",balloonCount)
+    for i,v in activeBaloons do
+        oneBalloon(i,v)
+    end
+  end
 
 
 
---- main start
-	task.wait()
-	if getgenv().configballon.Settings.OpenGift then
-    task.spawn(autoGifts)
-	end
-	task.wait()
-	task.spawn(antiStaff)
-	
-	task.wait()
-	task.spawn(autoOrbsLootbags)
-	
-	task.wait()
-	
+  -- CODE EXECUTION START
 
+  
 
+  autoOrbsLootbags()
 
-	
-task.spawn(function()	
-	
-	if getgenv().configballon.Hop.Enabled == true then
-		for i = 1, configballon.Hop.SecHop do
-    
-		baloonLoop()
-		task.wait()
-		end
-	
-		
+  for i=1,config.loops do
+    print("loop no.", i)
+    baloonLoop()
+    task.wait(1)
+  end
+  print("hopping")
 
-	serverhop()
-	elseif getgenv().configballon.Hop.Enabled == false then
-		while task.wait() do
-		baloonLoop()
-		
-		end
-	end
-	tpService.TeleportInitFailed:Connect(
-		function()
-			task.wait(5)
-				serverhop()
-		end
-	)
-end)
+  tpService.TeleportInitFailed:Connect(function()
+    task.wait(20)
+    serverhop()
+  end)
+
+  serverhop()

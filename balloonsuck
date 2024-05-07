@@ -383,11 +383,7 @@ local function serverhop()
     tpService:TeleportToPlaceInstance(game.PlaceId, server.id, plr)
 end
 
-task.spawn(function()
-	wait(240)
-		serverhop()
-	
-end)
+
 
 
   local function getBalloonUID(zoneName) 

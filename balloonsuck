@@ -1,12 +1,14 @@
+local alts = {
+    "LKB4gyih",
+    "AZGkz9ia",
+    
+}
 local config = {
  
-  loops = 20,
+  loops = 5,
   tapTimeout = 5,
   waitForBaloonTimeout = 1.5,
-  
-  
-  waitForCheck = 0.1,
-  waitForTap = 3,
+
 }
 
   if LPH_OBFUSCATED == false or LPH_OBFUSCATED == nil then
@@ -34,6 +36,8 @@ local config = {
   local plr = plrs.LocalPlayer
   local tpService = game:GetService("TeleportService")
   local dummyfunc = LPH_NO_UPVALUES(function() return end)
+	local getPlayers = plrs:GetPlayers()
+	local PlayerInServer = #getPlayers
 
 
 if w2 then
@@ -41,8 +45,6 @@ if w2 then
 elseif w1 then
     game.ReplicatedStorage.Network.World1Teleport:InvokeServer()
 end
-
-
 
 
 
@@ -245,7 +247,7 @@ end)
    
 task.spawn(function()
 
-if getgenv().configballon.Settings.UltraBoost then
+
 	
     
     
@@ -286,22 +288,19 @@ if getgenv().configballon.Settings.UltraBoost then
             end
 			
 
-            
+            for i, v in pairs(game.Players:GetPlayers()) do
+				if v ~= game.Players.LocalPlayer then
+					pcall(function()
+                    local Character = v.Character
+                    Character:Destroy()
+					end)
+				end
+			end
 
 			task.wait()
 
 			
-		pcall(function()
-            local DebrisTempFolder = game.ReplicatedStorage:FindFirstChild("DebrisTempFolder") or Instance.new("Folder")
-            DebrisTempFolder.Name = "DebrisTempFolder"
-            DebrisTempFolder.Parent = game.ReplicatedStorage
-            for i, v in workspace.__DEBRIS:GetChildren() do
-                v.Parent = DebrisTempFolder
-            end
-            workspace.__DEBRIS.ChildAdded:Connect(function(v)
-                v.Parent = DebrisTempFolder            
-            end)
-        end)
+		
         
         -- DELETE USELESS SCRIPTS
         for i, v in Player.PlayerScripts:GetChildren() do
@@ -333,39 +332,13 @@ if getgenv().configballon.Settings.UltraBoost then
 
             
 			
-		end
+		
 
 end) 
 
-task.spawn(function()
-    while wait() do
-        pcall(function()
-            
-              if not plr.Character.HumanoidRootPart:FindFirstChild("Noclip") then
-                local mm = Instance.new('BodyVelocity')
-                mm.Velocity = Vector3.new(0,0,0)
-                mm.MaxForce = Vector3.new(9e9,9e9,9e9)
-                mm.Name = "Noclip"
-              end
-              if not plr.Character.HumanoidRootPart:FindFirstChild("Noclip1") then
-                local aki = Instance.new('BodyGryo')
-                aki.P = 9e4
-                aki.Parent = plr.Character.HumanoidRootPart
-                aki.maxTorque = Vector3.new(9e9,9e9,9e9)
-                aki.Cframe = workspace.CurrentCamera.CoordinateFrame
-                aki.Name = "Noclip1"
-              end
-              plr.Character.HumanoidRootPart.PlatformStand = true
-            if plr.Character.HumanoidRootPart:FindFirstChild("Noclip") then
-                plr.Character.HumanoidRootPart:FindFirstChild("Noclip"):Destroy()
-            end
-            plr.Character.HumanoidRootPart.PlatformStand = false
-            if plr.Character.HumanoidRootPart:FindFirstChild("Noclip1") then
-                plr.Character.HumanoidRootPart:FindFirstChild("Noclip1"):Destroy()
-            end
-        end)
-    end
-end)
+game:GetService("RunService"):Set3dRenderingEnabled(false)
+
+
 
  local function getServers()
     local url =
@@ -377,14 +350,15 @@ end
 local function serverhop()
     local server
     repeat
-        task.wait()
-        server = getServers()[math.random(1, 100)]
+        task.wait(1)
+        server = getServers()[Random.new():NextInteger(1, 100)]
     until server.id ~= game.JobId
     tpService:TeleportToPlaceInstance(game.PlaceId, server.id, plr)
 end
 
 
-
+Lib.Network.Invoke("Slingshot_Toggle")
+game:GetService("VirtualInputManager"):SendKeyEvent(true, "Q", false, game)
 
   local function getBalloonUID(zoneName) 
     for i,v in pairs(Lib.BreakableCmds.AllByZoneAndClass(zoneName, "Chest")) do
@@ -442,12 +416,14 @@ end
         return
     end
     isExisting = true
-    local position = v.Position
-    task.spawn(function()
+    local position = v.LandPosition
+  task.spawn(function()
         local tickStart = tick()
         repeat
+			task.wait()
             plr.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(position)
-            task.wait(1)
+            
+			resetSpeed()
         until getBalloonUID(getCurrentZone()) or tick()-tickStart > config.waitForBaloonTimeout
         if tick()-tickStart > config.waitForBaloonTimeout then
             isExisting = false
@@ -459,24 +435,24 @@ end
     if isExisting == false then
         return
     end
-    task.wait()
+    task.wait(math.random(16,17))
     local args = {
         [1] = Vector3.new(position.X, position.Y, position.Z),
         [2] = 0.5794160315249014,
         [3] = -0.8331117721691044,
         [4] = 200,
     }
-    Lib.Network.Invoke("Slingshot_Toggle")
+    
     Lib.Network.Invoke("Slingshot_FireProjectile",unpack(args))
     local args = {
         [1] = v.Id,
     }
     Lib.Network.Fire("BalloonGifts_BalloonHit",unpack(args))
     task.wait()
-    Lib.Network.Invoke("Slingshot_Unequip")
+    
     local tickStart = tick()
     repeat
-        task.wait(config.waitForCheck) 
+        task.wait() 
     until getBalloonUID(getCurrentZone()) or tick()-tickStart > config.waitForBaloonTimeout
     if tick()-tickStart > config.waitForBaloonTimeout then
         table.insert(blacklistedIds,v.Id)
@@ -489,7 +465,7 @@ end
     end
     if breakableUID then
         local tickStart = tick()
-        repeat task.wait(math.random(15, 20))
+        repeat task.wait()
             Lib.Network.Fire("Breakables_PlayerDealDamage", breakableUID)
         until (not getBalloonUID(getCurrentZone())) or tick()-tickStart > config.tapTimeout
         if tick()-tickStart > config.tapTimeout then
@@ -519,19 +495,49 @@ end
 
   -- CODE EXECUTION START
 
+
+
+	
+
+task.spawn(function()
+for i = 1, PlayerInServer do
+	for ii = 1,#alts do
+        if getPlayers[i].Name == alts[ii] and alts[ii] ~= plrs.LocalPlayer.Name then
+        	while task.wait(1) do
+				serverhop()
+	    	end
+        end
+    end
+end
+end)
+	
+	
+plrs.PlayerAdded:Connect(function(player)
+	for i = 1,#alts do
+		if player.Name == alts[i] and alts[i] ~= plrs.LocalPlayer.Name then
+			while task.wait(1) do
+	    	serverhop()
+			end
+        end
+    end
+end)
+
+
   
 
   autoOrbsLootbags()
 
+	
+	
   for i=1,config.loops do
     print("loop no.", i)
     baloonLoop()
-    task.wait(1)
+    task.wait()
   end
-  print("hopping")
-
+  
+	
   tpService.TeleportInitFailed:Connect(function()
-    task.wait(20)
+    task.wait(5)
     serverhop()
   end)
 

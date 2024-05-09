@@ -485,7 +485,7 @@ game:GetService("VirtualInputManager"):SendKeyEvent(true, "Q", false, game)
   for i,v in activeBaloons do
     balloonCount = balloonCount + 1
   end
-  print("balloonCount:",balloonCount)
+  print("So luong bong bay quet duoc hien tai:",balloonCount)
     for i,v in activeBaloons do
         oneBalloon(i,v)
     end
@@ -530,7 +530,7 @@ end)
 	
 	
   for i=1,config.loops do
-    print("loop no.", i)
+    print("Quet bong bay lan", i)
     baloonLoop()
     task.wait()
   end

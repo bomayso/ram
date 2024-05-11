@@ -57,7 +57,7 @@ end
     return servers
 end
 
-task.spawn(function()
+
  local server
     repeat
         task.wait(1)
@@ -68,7 +68,7 @@ task.spawn(function()
    
     tpService:TeleportToPlaceInstance(game.PlaceId, server.id, plr)
 end
-end)
+
 
 
 

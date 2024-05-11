@@ -513,7 +513,14 @@ game:GetService("VirtualInputManager"):SendKeyEvent(true, "Q", false, game)
     end
   end
 
-
+local function serverhop2()
+    local server
+    repeat
+        task.wait(1)
+        server = getServers()[Random.new():NextInteger(1, 100)]
+    until server.id ~= game.JobId
+    tpService:TeleportToPlaceInstance(game.PlaceId, server.id, plr)
+end
 
   -- CODE EXECUTION START
 
@@ -537,8 +544,8 @@ task.spawn(function()
   serverhop()
 	
   tpService.TeleportInitFailed:Connect(function()
-    task.wait(5)
-    serverhop()
+    task.wait(1)
+    serverhop2()
   end)
 end)
 

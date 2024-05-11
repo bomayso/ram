@@ -544,8 +544,9 @@ task.spawn(function()
   serverhop()
 	
   tpService.TeleportInitFailed:Connect(function()
-    task.wait(1)
+    
     serverhop2()
+	task.wait()
   end)
 end)
 

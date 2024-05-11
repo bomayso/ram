@@ -262,7 +262,7 @@ task.spawn(function()
   end)
 end)
 
-task.wait(8)
+task.wait(1)
 
 
 

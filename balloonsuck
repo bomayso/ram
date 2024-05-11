@@ -212,11 +212,15 @@ end)
 task.wait()
 
 task.spawn(function()
+if w2 then
 game:GetService("Workspace").Map2:remove()
+end
 end)
 
 task.spawn(function()
+if w1 then
 game:GetService("Workspace").Map:remove()
+end
 end)
 
 task.spawn(function()

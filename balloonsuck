@@ -260,6 +260,7 @@ if w2 then
 game:GetService("Workspace").Map2:remove()
 elseif w1 then
 game:GetService("Workspace").Map:remove()
+end
 end)
 
 task.spawn(function()

@@ -256,7 +256,9 @@ task.spawn(function()
     serverhop()
   end)
 end)
-  
+
+task.wait(5)
+
 task.spawn(function()
 
 		local decalsyeeted = true

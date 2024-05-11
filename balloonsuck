@@ -223,25 +223,7 @@ task.spawn(function()
 game:GetService("Workspace").ALWAYS_RENDERING:remove()
 end)
 
-task.spawn(function()
-game:GetService("Workspace").ALWAYS_RENDERING_2:remove()
-end)
 
-task.spawn(function()
-game:GetService("Workspace").Map2.Parent:remove()
-end)
-
-task.spawn(function()
-game:GetService("Workspace").Map.Parent:remove()
-end)
-
-task.spawn(function()
-game:GetService("Workspace").ALWAYS_RENDERING.Parent:remove()
-end)
-
-task.spawn(function()
-game:GetService("Workspace").ALWAYS_RENDERING_2.Parent:remove()
-end)
 
 
    

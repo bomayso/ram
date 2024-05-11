@@ -468,14 +468,18 @@ game:GetService("VirtualInputManager"):SendKeyEvent(true, "Q", false, game)
         repeat task.wait()
             Lib.Network.Fire("Breakables_PlayerDealDamage", breakableUID)
         until (not getBalloonUID(getCurrentZone())) or tick()-tickStart > config.tapTimeout
-        if tick()-tickStart > config.tapTimeout then
+        if tick()-tickStart > config.tapTimeout or activeBaloons == 3 then
             table.insert(blacklistedIds,v.Id)
+		game:GetService("Workspace").__THINGS.BalloonGifts:WaitForChild("Model"):remove()
             return
         else
-            task.wait(0.25)
+            task.wait()
             --game:GetService("Workspace").__THINGS:FindFirstChild("Lootbags").ChildAdded:Wait()
         end
-    end
+    		if activeBaloons == 3 then 
+		game:GetService("Workspace").__THINGS.BalloonGifts:WaitForChild("Model"):remove()
+		end
+	end
 
   end)
 
@@ -485,7 +489,7 @@ game:GetService("VirtualInputManager"):SendKeyEvent(true, "Q", false, game)
   for i,v in activeBaloons do
     balloonCount = balloonCount + 1
   end
-  print("So luong bong bay quet duoc hien tai:",balloonCount)
+  print("So luong bong bay hien tai:",balloonCount)
     for i,v in activeBaloons do
         oneBalloon(i,v)
     end
@@ -534,11 +538,11 @@ end)
     baloonLoop()
     task.wait()
   end
-  
+  serverhop()
 	
   tpService.TeleportInitFailed:Connect(function()
     task.wait(5)
     serverhop()
   end)
 
-  serverhop()
+  

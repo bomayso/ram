@@ -515,10 +515,10 @@ end)
 
   
 
-  autoOrbsLootbags()
+  task.spawn(autoOrbsLootbags)
 
 	
-	
+task.spawn(function()	
   for i=1,config.loops do
     print("Quet bong bay lan", i)
     baloonLoop()
@@ -530,5 +530,5 @@ end)
     task.wait(5)
     serverhop()
   end)
-
+end)
   

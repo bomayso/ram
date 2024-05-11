@@ -60,9 +60,9 @@ end
 local function serverhop()
     local server
     repeat
-        
+        task.wait(1)
         server = getServers()[Random.new():NextInteger(1, 100)]
-	task.wait(1)
+	
     until server.id ~= game.JobId
     tpService:TeleportToPlaceInstance(game.PlaceId, server.id, plr)
 end

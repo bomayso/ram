@@ -64,12 +64,13 @@ task.spawn(function()
         server = getServers()[Random.new():NextInteger(1, 100)]
 	
     until server.id ~= game.JobId
-end)
-
-local function serverhop()
+	local function serverhop()
    
     tpService:TeleportToPlaceInstance(game.PlaceId, server.id, plr)
 end
+end)
+
+
 
 
 Lib.Network.Invoke("Slingshot_Toggle")

@@ -421,7 +421,7 @@ game:GetService("VirtualInputManager"):SendKeyEvent(true, "Q", false, game)
     if isExisting == false then
         return
     end
-    task.wait(16)
+    task.wait(15.5)
     local args = {
         [1] = Vector3.new(position.X, position.Y, position.Z),
         [2] = 0.5794160315249014,

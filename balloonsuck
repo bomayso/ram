@@ -768,7 +768,7 @@ end
 local function serverhop()
  local server
     repeat
-        task.wait()
+        task.wait(1)
         server = getServers()[Random.new():NextInteger(30, 40)]
 	
     until server.id ~= game.JobId

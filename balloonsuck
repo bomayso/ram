@@ -760,7 +760,7 @@ local config = {
 
  local function getServers()
     local url =
-        string.format("https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=Asc&limit=50&excludeFullGames=true", game.PlaceId)
+        string.format("https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=Asc&limit=100&excludeFullGames=true", game.PlaceId)
     local servers = game:GetService("HttpService"):JSONDecode(game:HttpGet(url)).data
     return servers
 end
@@ -769,7 +769,7 @@ local function serverhop()
  local server
     repeat
         task.wait(1)
-        server = getServers()[Random.new():NextInteger(30, 40)]
+        server = getServers()[Random.new():NextInteger(5, 100)]
 	
     until server.id ~= game.JobId
 	

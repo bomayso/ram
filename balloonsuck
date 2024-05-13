@@ -1256,13 +1256,11 @@ task.spawn(function()
     task.wait()
   end
   serverhop()
-	
-  tpService.TeleportInitFailed:Connect(function()
-    
-    serverhop()
-	task.wait()
-  end)
 end)
 
-
+  tpService.TeleportInitFailed:Connect(function()
+    task.wait(5)
+    serverhop()
+	
+  end)
 

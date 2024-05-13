@@ -1,7 +1,8 @@
- if not game:IsLoaded() then
+
+  if not game:IsLoaded() then
     game.Loaded:Wait()
   end
- 
+
 repeat
     task.wait()
 until game.PlaceId ~= nil
@@ -87,7 +88,251 @@ local PetUpgradeCost = {
 }
 
 -- MORE LOW GRAPHICS
-loadstring(game:HttpGet("https://pastebin.com/raw/iGgkH0kS"))()
+getgenv().WhiteScreen =  false
+getgenv().HideUI =  true
+
+task.spawn(function()
+    local player = game.Players.LocalPlayer
+    if player and getgenv().HideUI then
+        local playerGui = player:WaitForChild("PlayerGui")
+        if playerGui then
+            for _, screenGui in ipairs(playerGui:GetChildren()) do
+                if screenGui:IsA("ScreenGui") then
+                    
+                    
+                        screenGui:Destroy()
+                    
+                end
+            end
+        end
+    end
+end)
+ 
+
+ 
+task.spawn(function()
+
+		local decalsyeeted = true
+local g = game
+local w = g.Workspace
+local l = g.Lighting
+local t = w.Terrain
+sethiddenproperty(l,"Technology",2)
+sethiddenproperty(t,"Decoration",false)
+game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.Chat,false)
+t.WaterWaveSize = 0
+t.WaterWaveSpeed = 0
+t.WaterReflectance = 0
+t.WaterTransparency = 0
+l.GlobalShadows = 0
+l.FogEnd = 9e9
+l.Brightness = 0
+settings().Rendering.QualityLevel = "1"
+for i, v in pairs(w:GetDescendants()) do
+    if v:IsA("BasePart") and not v:IsA("MeshPart") then
+        v.Material = "Plastic"
+        v.Reflectance = 0
+    elseif (v:IsA("Decal") or v:IsA("Texture")) and decalsyeeted then
+        v.Transparency = 1
+    elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+        v.Lifetime = NumberRange.new(0)
+    elseif v:IsA("Explosion") then
+        v.BlastPressure = 1
+        v.BlastRadius = 1
+    elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
+        v.Enabled = false
+    elseif v:IsA("MeshPart") and decalsyeeted then
+        v.Material = "Plastic"
+        v.Reflectance = 0
+        v.TextureID = 10385902758728957
+    elseif v:IsA("SpecialMesh") and decalsyeeted  then
+        v.TextureId=0
+    elseif v:IsA("ShirtGraphic") and decalsyeeted then
+        v.Graphic=1
+    elseif (v:IsA("Shirt") or v:IsA("Pants")) and decalsyeeted then
+        v[v.ClassName.."Template"]=1
+    end
+end
+for i = 1,#l:GetChildren() do
+    e=l:GetChildren()[i]
+    if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+        e.Enabled = false
+    end
+end
+w.DescendantAdded:Connect(function(v)
+   if v:IsA("BasePart") and not v:IsA("MeshPart") then
+        v.Material = "Plastic"
+        v.Reflectance = 0
+    elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
+        v.Transparency = 1
+    elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+        v.Lifetime = NumberRange.new(0)
+    elseif v:IsA("Explosion") then
+        v.BlastPressure = 1
+        v.BlastRadius = 1
+    elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
+        v.Enabled = false
+    elseif v:IsA("MeshPart") and decalsyeeted then
+        v.Material = "Plastic"
+        v.Reflectance = 0
+        v.TextureID = 10385902758728957
+    elseif v:IsA("SpecialMesh") and decalsyeeted then
+        v.TextureId=0
+    elseif v:IsA("ShirtGraphic") and decalsyeeted then
+        v.ShirtGraphic=1
+    elseif (v:IsA("Shirt") or v:IsA("Pants")) and decalsyeeted then
+        v[v.ClassName.."Template"]=1
+            end
+        end)
+end)
+
+
+task.wait()
+
+task.spawn(function()
+
+		local decalsyeeted = true
+local g = game
+local w = g.Workspace
+local l = g.Lighting
+local t = w.Terrain
+sethiddenproperty(l,"Technology",2)
+sethiddenproperty(t,"Decoration",false)
+t.WaterWaveSize = 0
+t.WaterWaveSpeed = 0
+t.WaterReflectance = 0
+t.WaterTransparency = 1
+l.GlobalShadows = 0
+l.FogEnd = 9e9
+l.Brightness = 0
+settings().Rendering.QualityLevel = "Level01"
+for i, v in pairs(w:GetDescendants()) do
+    if v:IsA("BasePart") and not v:IsA("MeshPart") then
+        v.Material = "Plastic"
+        v.Transparency = 1
+        v.Reflectance = 0
+    elseif (v:IsA("Decal") or v:IsA("Texture")) and decalsyeeted then
+        v.Transparency = 1
+    elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+        v.Lifetime = NumberRange.new(0)
+    elseif v:IsA("Explosion") then
+        v.BlastPressure = 1
+        v.BlastRadius = 1
+    elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
+        v.Enabled = false
+    elseif v:IsA("MeshPart") and decalsyeeted then
+        v.Material = "Plastic"
+        v.Transparency = 1
+        v.Reflectance = 0
+        v.TextureID = 0
+    elseif v:IsA("SpecialMesh") and decalsyeeted  then
+        v.TextureId=0
+    elseif v:IsA("ShirtGraphic") and decalsyeeted then
+        v.Graphic=1
+    elseif (v:IsA("Shirt") or v:IsA("Pants")) and decalsyeeted then
+        v[v.ClassName.."Template"]=1
+    end
+end
+for i = 1,#l:GetChildren() do
+    e=l:GetChildren()[i]
+    if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
+        e.Enabled = false
+    end
+end
+w.DescendantAdded:Connect(function(v)
+    pcall(function()
+        if v:IsA("BasePart") and not v:IsA("MeshPart") then
+            v.Material = "Plastic"
+            v.Reflectance = 0
+            v.Transparency = 1
+        elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
+            v.Transparency = 1
+        elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+            v.Lifetime = NumberRange.new(0)
+        elseif v:IsA("Explosion") then
+            v.BlastPressure = 1
+            v.BlastRadius = 1
+        elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
+            v.Enabled = false
+        elseif v:IsA("MeshPart") and decalsyeeted then
+            v.Material = "Plastic"
+            v.Reflectance = 0
+            v.TextureID = 0
+            v.Transparency = 1
+        elseif v:IsA("SpecialMesh") and decalsyeeted then
+            v.TextureId=0
+        elseif v:IsA("ShirtGraphic") and decalsyeeted then
+            v.ShirtGraphic=1
+        elseif (v:IsA("Shirt") or v:IsA("Pants")) and decalsyeeted then
+            v[v.ClassName.."Template"]=1
+        end
+    end)
+end)			
+end)
+
+task.wait()
+
+
+
+
+
+
+
+
+
+
+
+
+
+			game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.Chat,false)
+			game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList,false)
+			game.CoreGui:FindFirstChild("RobloxGui").Enabled = false
+			
+
+            game:GetService("Workspace").__THINGS.Cannons:remove()
+            game:GetService("Workspace").__THINGS.Flags:remove()
+            game:GetService("Workspace").__THINGS.Ultimates:remove()
+            game:GetService("Workspace").__THINGS.AnimatedBreakables:remove()
+            game:GetService("Workspace").__THINGS.MagicOrbs:remove()
+            game:GetService("Workspace").__THINGS.Chests:remove()
+			
+			
+			
+			
+		
+
+
+		
+
+            
+			
+			
+			 for _, v in pairs(game.Players:GetChildren()) do
+                for _, v2 in pairs(v.Character:GetDescendants()) do
+                    if v2:IsA("BasePart") or v2:IsA("Decal") then
+                        v2.Transparency = 1
+                    end
+                end
+            end
+			
+
+            
+
+	
+
+			
+		
+            
+		
+
+			
+           
+			
+                     
+
+
+
+game:GetService("RunService"):Set3dRenderingEnabled(not getgenv().WhiteScreen)
 
 
 
@@ -540,7 +785,7 @@ end)
 -- FARMING PART [AUTO WORLD]
 local Unlock = function(MaxZone, MaxZoneInfo)
     local NextZone, NextZoneInfo = Library["ZoneCmds"].GetNextZone()
-    if MaxZoneInfo.ZoneNumber < 174 then 
+    if MaxZoneInfo.ZoneNumber < 199 then 
         return Network:WaitForChild("Zones_RequestPurchase"):InvokeServer(NextZoneInfo.ZoneName), NextZoneInfo
     end
 end
@@ -646,7 +891,7 @@ AutoWorldToggle:OnChanged(function()
             task.wait()
             pcall(function()
                 Unlock(MaxZone, MaxZoneInfo)
-                if MaxZoneInfo.ZoneNumber >= 174 then
+                if MaxZoneInfo.ZoneNumber >= 199 then
                     return
                 end
             end)
@@ -659,10 +904,10 @@ AutoWorldToggle:OnChanged(function()
             task.wait()
             pcall(function()
                 if PlayerState == "Farming" then
-                    if game.PlaceId == 8737899170 and save.Rebirths >= 4 and MaxZoneInfo.ZoneNumber >= 99 and MaxZoneInfo.ZoneNumber < 174 then
+                    if game.PlaceId == 8737899170 and save.Rebirths >= 4 and MaxZoneInfo.ZoneNumber >= 99 and MaxZoneInfo.ZoneNumber < 199 then
                         game.ReplicatedStorage.Network.World2Teleport:InvokeServer()
                     end
-                    if game.PlaceId ~= 8737899170 and save.Rebirths >= 6 and MaxZoneInfo.ZoneNumber >= 174 then
+                    if game.PlaceId ~= 8737899170 and save.Rebirths >= 6 and MaxZoneInfo.ZoneNumber >= 199 then
                         repeat game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer) task.wait(3) until not game.PlaceId
                     end
                     MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
@@ -703,15 +948,7 @@ AutoWorldToggle:OnChanged(function()
         gui.Enabled = true
 
         -- DELETE MAP
-        pcall(function()
-            workspace.Map.Parent = game.ReplicatedStorage
-        end)
-        pcall(function()
-            workspace.Map2.Parent = game.ReplicatedStorage
-        end)
-        pcall(function()
-            workspace.MAP.Parent = game.ReplicatedStorage
-        end)
+
         pcall(function()
             workspace.ALWAYS_RENDERING.Parent = game.ReplicatedStorage
         end)

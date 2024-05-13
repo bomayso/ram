@@ -831,18 +831,7 @@ local function serverhop2()
     tpService:TeleportToPlaceInstance(game.PlaceId, server.id, plr)
 end
 
-task.spawn(function()
-for i = 1, PlayerInServer do
-	for ii = 1,#alts do
-        if getPlayers[i].Name == alts[ii] and alts[ii] ~= plrs.LocalPlayer.Name then
-        	while true do
-				serverhop2()
-			task.wait(1)
-	    	end
-        end
-    end
-end
-end)
+
 	
 	
 
@@ -859,6 +848,18 @@ elseif w1 then
     game.ReplicatedStorage.Network.World1Teleport:InvokeServer()
 end
 
+task.spawn(function()
+for i = 1, PlayerInServer do
+	for ii = 1,#alts do
+        if getPlayers[i].Name == alts[ii] and alts[ii] ~= plrs.LocalPlayer.Name then
+        	while true do
+				serverhop2()
+			task.wait(1)
+	    	end
+        end
+    end
+end
+end)
 
 plrs.PlayerAdded:Connect(function(player)
 	for i = 1,#alts do

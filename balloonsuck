@@ -868,7 +868,7 @@ elseif w2 then
 end
 end)
 
- game:GetService("RunService"):Set3dRenderingEnabled(false) 
+
 
 task.spawn(function()
 for i = 1, PlayerInServer do
@@ -1067,6 +1067,7 @@ end)
   end)
 
 game:GetService("Workspace").ALWAYS_RENDERING:remove()
+game:GetService("RunService"):Set3dRenderingEnabled(false) 
   UserSettings():GetService('UserGameSettings').MasterVolume = 0
 			settings().Rendering.QualityLevel = "0" 
 			settings().Rendering.MeshPartDetailLevel = Enum.MeshPartDetailLevel.Level04

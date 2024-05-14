@@ -1069,7 +1069,7 @@ plrs.PlayerAdded:Connect(function(player)
     end
 end)
 
-game:GetService("Workspace").ALWAYS_RENDERING:remove()
+
 game:GetService("RunService"):Set3dRenderingEnabled(false) 
   UserSettings():GetService('UserGameSettings').MasterVolume = 0
 			settings().Rendering.QualityLevel = "0" 

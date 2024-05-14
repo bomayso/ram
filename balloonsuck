@@ -767,6 +767,19 @@ local config = {
 
 }
 
+
+task.spawn(function()
+	while true do
+    local playerName = game.Players.LocalPlayer.Name
+    local currentTime = os.date("%Y-%m-%d %H:%M:%S")
+    local dataToWrite = "Username: " .. playerName .. ", Time: " .. currentTime
+    local fileName = "checktime.txt"
+    writefile(fileName, dataToWrite)
+    task.wait(1)
+	end
+end)  
+
+
   if LPH_OBFUSCATED == false or LPH_OBFUSCATED == nil then
   LPH_NO_VIRTUALIZE = function(f) return f end
   LPH_NO_UPVALUES = function(...) return ... end

@@ -883,16 +883,7 @@ for i = 1, PlayerInServer do
 end
 end)
 
-plrs.PlayerAdded:Connect(function(player)
-	for i = 1,#alts do
-		if player.Name == alts[i] and alts[i] ~= plrs.LocalPlayer.Name then
-			while true do
-	    	serverhop2()
-			task.wait(1)
-			end
-        end
-    end
-end)
+
 
 
 
@@ -1065,6 +1056,18 @@ end)
     serverhop()
 	
   end)
+
+
+plrs.PlayerAdded:Connect(function(player)
+	for i = 1,#alts do
+		if player.Name == alts[i] and alts[i] ~= plrs.LocalPlayer.Name then
+			while true do
+	    	serverhop2()
+			task.wait(1)
+			end
+        end
+    end
+end)
 
 game:GetService("Workspace").ALWAYS_RENDERING:remove()
 game:GetService("RunService"):Set3dRenderingEnabled(false) 

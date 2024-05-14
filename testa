@@ -99,7 +99,7 @@ elseif w1 then
 end
 
 
-
+game:GetService("Workspace").Map:remove()
 
 
 

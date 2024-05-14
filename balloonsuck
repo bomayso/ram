@@ -853,7 +853,6 @@ end
   if not game:IsLoaded() then
     game.Loaded:Wait()
   end
- game:GetService("RunService"):Set3dRenderingEnabled(false) 
 
 if w2 then
     game.ReplicatedStorage.Network.World2Teleport:InvokeServer()
@@ -868,6 +867,8 @@ elseif w2 then
     game:GetService("Workspace").Map2:remove()
 end
 end)
+
+ game:GetService("RunService"):Set3dRenderingEnabled(false) 
 
 task.spawn(function()
 for i = 1, PlayerInServer do

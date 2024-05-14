@@ -853,13 +853,21 @@ end
   if not game:IsLoaded() then
     game.Loaded:Wait()
   end
-  
+ game:GetService("RunService"):Set3dRenderingEnabled(false) 
 
 if w2 then
     game.ReplicatedStorage.Network.World2Teleport:InvokeServer()
 elseif w1 then
     game.ReplicatedStorage.Network.World1Teleport:InvokeServer()
 end
+
+task.spawn(function()
+if w1 then
+    game:GetService("Workspace").Map:remove()
+elseif w2 then
+    game:GetService("Workspace").Map2:remove()
+end
+end)
 
 task.spawn(function()
 for i = 1, PlayerInServer do
@@ -885,289 +893,10 @@ plrs.PlayerAdded:Connect(function(player)
     end
 end)
 
-task.spawn(function()
-
-		local decalsyeeted = true
-local g = game
-local w = g.Workspace
-local l = g.Lighting
-local t = w.Terrain
-sethiddenproperty(l,"Technology",2)
-sethiddenproperty(t,"Decoration",false)
-game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.Chat,false)
-t.WaterWaveSize = 0
-t.WaterWaveSpeed = 0
-t.WaterReflectance = 0
-t.WaterTransparency = 0
-l.GlobalShadows = 0
-l.FogEnd = 9e9
-l.Brightness = 0
-settings().Rendering.QualityLevel = "1"
-for i, v in pairs(w:GetDescendants()) do
-    if v:IsA("BasePart") and not v:IsA("MeshPart") then
-        v.Material = "Plastic"
-        v.Reflectance = 0
-    elseif (v:IsA("Decal") or v:IsA("Texture")) and decalsyeeted then
-        v.Transparency = 1
-    elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
-        v.Lifetime = NumberRange.new(0)
-    elseif v:IsA("Explosion") then
-        v.BlastPressure = 1
-        v.BlastRadius = 1
-    elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
-        v.Enabled = false
-    elseif v:IsA("MeshPart") and decalsyeeted then
-        v.Material = "Plastic"
-        v.Reflectance = 0
-        v.TextureID = 10385902758728957
-    elseif v:IsA("SpecialMesh") and decalsyeeted  then
-        v.TextureId=0
-    elseif v:IsA("ShirtGraphic") and decalsyeeted then
-        v.Graphic=1
-    elseif (v:IsA("Shirt") or v:IsA("Pants")) and decalsyeeted then
-        v[v.ClassName.."Template"]=1
-    end
-end
-for i = 1,#l:GetChildren() do
-    e=l:GetChildren()[i]
-    if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
-        e.Enabled = false
-    end
-end
-w.DescendantAdded:Connect(function(v)
-   if v:IsA("BasePart") and not v:IsA("MeshPart") then
-        v.Material = "Plastic"
-        v.Reflectance = 0
-    elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
-        v.Transparency = 1
-    elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
-        v.Lifetime = NumberRange.new(0)
-    elseif v:IsA("Explosion") then
-        v.BlastPressure = 1
-        v.BlastRadius = 1
-    elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
-        v.Enabled = false
-    elseif v:IsA("MeshPart") and decalsyeeted then
-        v.Material = "Plastic"
-        v.Reflectance = 0
-        v.TextureID = 10385902758728957
-    elseif v:IsA("SpecialMesh") and decalsyeeted then
-        v.TextureId=0
-    elseif v:IsA("ShirtGraphic") and decalsyeeted then
-        v.ShirtGraphic=1
-    elseif (v:IsA("Shirt") or v:IsA("Pants")) and decalsyeeted then
-        v[v.ClassName.."Template"]=1
-            end
-        end)
-end)
-
-
-task.wait()
-
-task.spawn(function()
-
-		local decalsyeeted = true
-local g = game
-local w = g.Workspace
-local l = g.Lighting
-local t = w.Terrain
-sethiddenproperty(l,"Technology",2)
-sethiddenproperty(t,"Decoration",false)
-t.WaterWaveSize = 0
-t.WaterWaveSpeed = 0
-t.WaterReflectance = 0
-t.WaterTransparency = 1
-l.GlobalShadows = 0
-l.FogEnd = 9e9
-l.Brightness = 0
-settings().Rendering.QualityLevel = "Level01"
-for i, v in pairs(w:GetDescendants()) do
-    if v:IsA("BasePart") and not v:IsA("MeshPart") then
-        v.Material = "Plastic"
-        v.Transparency = 1
-        v.Reflectance = 0
-    elseif (v:IsA("Decal") or v:IsA("Texture")) and decalsyeeted then
-        v.Transparency = 1
-    elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
-        v.Lifetime = NumberRange.new(0)
-    elseif v:IsA("Explosion") then
-        v.BlastPressure = 1
-        v.BlastRadius = 1
-    elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
-        v.Enabled = false
-    elseif v:IsA("MeshPart") and decalsyeeted then
-        v.Material = "Plastic"
-        v.Transparency = 1
-        v.Reflectance = 0
-        v.TextureID = 0
-    elseif v:IsA("SpecialMesh") and decalsyeeted  then
-        v.TextureId=0
-    elseif v:IsA("ShirtGraphic") and decalsyeeted then
-        v.Graphic=1
-    elseif (v:IsA("Shirt") or v:IsA("Pants")) and decalsyeeted then
-        v[v.ClassName.."Template"]=1
-    end
-end
-for i = 1,#l:GetChildren() do
-    e=l:GetChildren()[i]
-    if e:IsA("BlurEffect") or e:IsA("SunRaysEffect") or e:IsA("ColorCorrectionEffect") or e:IsA("BloomEffect") or e:IsA("DepthOfFieldEffect") then
-        e.Enabled = false
-    end
-end
-w.DescendantAdded:Connect(function(v)
-    pcall(function()
-        if v:IsA("BasePart") and not v:IsA("MeshPart") then
-            v.Material = "Plastic"
-            v.Reflectance = 0
-            v.Transparency = 1
-        elseif v:IsA("Decal") or v:IsA("Texture") and decalsyeeted then
-            v.Transparency = 1
-        elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
-            v.Lifetime = NumberRange.new(0)
-        elseif v:IsA("Explosion") then
-            v.BlastPressure = 1
-            v.BlastRadius = 1
-        elseif v:IsA("Fire") or v:IsA("SpotLight") or v:IsA("Smoke") or v:IsA("Sparkles") then
-            v.Enabled = false
-        elseif v:IsA("MeshPart") and decalsyeeted then
-            v.Material = "Plastic"
-            v.Reflectance = 0
-            v.TextureID = 0
-            v.Transparency = 1
-        elseif v:IsA("SpecialMesh") and decalsyeeted then
-            v.TextureId=0
-        elseif v:IsA("ShirtGraphic") and decalsyeeted then
-            v.ShirtGraphic=1
-        elseif (v:IsA("Shirt") or v:IsA("Pants")) and decalsyeeted then
-            v[v.ClassName.."Template"]=1
-        end
-    end)
-end)			
-end)
-
-
-task.wait()
-
-game:GetService("RunService"):Set3dRenderingEnabled(false)
-
-
-task.spawn(function()
-if w1 then
-    game:GetService("Workspace").Map:remove()
-elseif w2 then
-    game:GetService("Workspace").Map2:remove()
-end
-end)
-
-task.spawn(function()
-game:GetService("Workspace").ALWAYS_RENDERING:remove()
-end)
 
 
 
-   
-task.spawn(function()
-
-
-	
-    
-    
-   
-                   
-			UserSettings():GetService('UserGameSettings').MasterVolume = 0
-			settings().Rendering.QualityLevel = "0" 
-			settings().Rendering.MeshPartDetailLevel = Enum.MeshPartDetailLevel.Level04
-			game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.Chat,false)
-			game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList,false)
-			game.CoreGui:FindFirstChild("RobloxGui").Enabled = false
-			
-
-            game:GetService("Workspace").__THINGS.Cannons:remove()
-            game:GetService("Workspace").__THINGS.Flags:remove()
-            game:GetService("Workspace").__THINGS.Ultimates:remove()
-            game:GetService("Workspace").__THINGS.AnimatedBreakables:remove()
-            game:GetService("Workspace").__THINGS.MagicOrbs:remove()
-            game:GetService("Workspace").__THINGS.Chests:remove()
-			
-			
-			
-			
-			task.wait()
-
-
-		
-
-            
-			
-			
-			 for _, v in pairs(game.Players:GetChildren()) do
-                for _, v2 in pairs(v.Character:GetDescendants()) do
-                    if v2:IsA("BasePart") or v2:IsA("Decal") then
-                        v2.Transparency = 1
-                    end
-                end
-            end
-			
-
-            for i, v in pairs(game.Players:GetPlayers()) do
-				if v ~= game.Players.LocalPlayer then
-					pcall(function()
-                    local Character = v.Character
-                    Character:Destroy()
-					end)
-				end
-			end
-
-			task.wait()
-
-			
-		
-        
-        -- DELETE USELESS SCRIPTS
-        for i, v in Player.PlayerScripts:GetChildren() do
-            print(i, v)
-            if v.Name ~= "Scripts" then
-                v:Destroy()
-            end
-        end
-        for i, v in Player.PlayerScripts.Scripts:GetChildren() do
-            print(i, v)
-            if not (v.Name == "Game" or v.Name == "Core") then
-                v:Destroy()
-            end
-        end
-        for i, v in Player.PlayerScripts.Scripts.Game:GetChildren() do
-            pcall(function()
-                if not string.find(v.Name, "Breakables") then
-                    v:Destroy()
-                end
-            end)
-        end
-            
-		
-
-			
-
-			
-                     
-
-            
-			
-		
-
-end) 
-
-
-
-
-
-
-
-
-
-
-
-
+Lib.Network.Fire("Pets_UnequipAll")
 Lib.Network.Invoke("Slingshot_Toggle")
 game:GetService("VirtualInputManager"):SendKeyEvent(true, "Q", false, game)
 
@@ -1232,7 +961,7 @@ game:GetService("VirtualInputManager"):SendKeyEvent(true, "Q", false, game)
         local tickStart = tick()
         repeat
 			task.wait()
-            plr.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(position)
+            plr.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(position.X, position.Y+5, position.Z)
             
 			resetSpeed()
         until getBalloonUID(getCurrentZone()) or tick()-tickStart > config.waitForBaloonTimeout
@@ -1240,7 +969,7 @@ game:GetService("VirtualInputManager"):SendKeyEvent(true, "Q", false, game)
             isExisting = false
         end
         resetSpeed()
-        plr.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(v.LandPosition)
+        plr.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(position.X, position.Y+5, position.Z)
         resetSpeed()
     end)
     if isExisting == false then
@@ -1336,3 +1065,65 @@ end)
 	
   end)
 
+game:GetService("Workspace").ALWAYS_RENDERING:remove()
+  UserSettings():GetService('UserGameSettings').MasterVolume = 0
+			settings().Rendering.QualityLevel = "0" 
+			settings().Rendering.MeshPartDetailLevel = Enum.MeshPartDetailLevel.Level04
+			game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.Chat,false)
+			game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList,false)
+			game.CoreGui:FindFirstChild("RobloxGui").Enabled = false
+			
+
+            game:GetService("Workspace").__THINGS.Cannons:remove()
+            game:GetService("Workspace").__THINGS.Flags:remove()
+            game:GetService("Workspace").__THINGS.Ultimates:remove()
+            game:GetService("Workspace").__THINGS.AnimatedBreakables:remove()
+            game:GetService("Workspace").__THINGS.MagicOrbs:remove()
+            game:GetService("Workspace").__THINGS.Chests:remove()
+			
+			
+			
+			
+			task.wait()
+
+
+		
+
+            
+			
+			
+			 for _, v in pairs(game.Players:GetChildren()) do
+                for _, v2 in pairs(v.Character:GetDescendants()) do
+                    if v2:IsA("BasePart") or v2:IsA("Decal") then
+                        v2.Transparency = 1
+                    end
+                end
+            end
+			
+
+            for i, v in pairs(game.Players:GetPlayers()) do
+				if v ~= game.Players.LocalPlayer then
+					pcall(function()
+                    local Character = v.Character
+                    Character:Destroy()
+					end)
+				end
+			end
+
+			task.wait()
+			
+			local entities = {
+    "Stats", 
+    "Chat", 
+    "Debris",
+    "CoreGui",
+    "PlayerGui"
+    
+}
+for _, entity in pairs(entities) do
+    pcall(function()
+        for i, v in pairs(game[entity]:GetDescendants()) do
+            pcall(function() v:Destroy() end)
+        end
+    end)
+end

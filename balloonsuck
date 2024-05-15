@@ -1011,6 +1011,10 @@ game:GetService("VirtualInputManager"):SendKeyEvent(true, "Q", false, game)
     		
 	end
 
+	if activeBaloons == 3 then 
+ 	game:GetService("Workspace").__THINGS.BalloonGifts:WaitForChild("Model"):remove()
+	end
+
   end)
 
   local function baloonLoop()
@@ -1032,9 +1036,7 @@ game:GetService("VirtualInputManager"):SendKeyEvent(true, "Q", false, game)
 
 
 	
-if activeBaloons == 3 then 
- 	game:GetService("Workspace").__THINGS.BalloonGifts:WaitForChild("Model"):remove()
-end
+
 
 
   

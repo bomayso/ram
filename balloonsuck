@@ -1050,7 +1050,7 @@ task.spawn(function()
     baloonLoop()
     task.wait()
   end
-  hop[random_index]()
+  serverhop()
 end)
 
   tpService.TeleportInitFailed:Connect(function()

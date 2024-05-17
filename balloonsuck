@@ -857,16 +857,14 @@ local random_index = math.random(1, #hop)
     game.Loaded:Wait()
   end
 
-if w2 then
-    game.ReplicatedStorage.Network.World2Teleport:InvokeServer()
-elseif w1 then
-    game.ReplicatedStorage.Network.World1Teleport:InvokeServer()
-end
+
 
 task.spawn(function()
 if w1 then
+	game.ReplicatedStorage.Network.World1Teleport:InvokeServer()
     game:GetService("Workspace").Map:remove()
 elseif w2 then
+	game.ReplicatedStorage.Network.World2Teleport:InvokeServer()
     game:GetService("Workspace").Map2:remove()
 end
 end)
@@ -1080,25 +1078,8 @@ game:GetService("RunService"):Set3dRenderingEnabled(false)
 			game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.Chat,false)
 			game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList,false)
 			game.CoreGui:FindFirstChild("RobloxGui").Enabled = false
-			
-
-            game:GetService("Workspace").__THINGS.Cannons:remove()
-            game:GetService("Workspace").__THINGS.Flags:remove()
-            game:GetService("Workspace").__THINGS.Ultimates:remove()
-            game:GetService("Workspace").__THINGS.AnimatedBreakables:remove()
-            game:GetService("Workspace").__THINGS.MagicOrbs:remove()
-            game:GetService("Workspace").__THINGS.Chests:remove()
-			
-			
-			
-			
-			task.wait()
-
-
 		
-
-            
-			
+        			
 			
 			 for _, v in pairs(game.Players:GetChildren()) do
                 for _, v2 in pairs(v.Character:GetDescendants()) do
@@ -1118,7 +1099,7 @@ game:GetService("RunService"):Set3dRenderingEnabled(false)
 				end
 			end
 
-			task.wait()
+			
 			
 			local entities = {
     "Stats", 

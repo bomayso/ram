@@ -882,8 +882,6 @@ elseif w2 then
 end
 end)
 
-
-
 task.spawn(function()
 
     for i,v in plrs:GetPlayers() do
@@ -903,12 +901,42 @@ for i = 1, PlayerInServer do
 end
 end)
 
-
-
-
-
+game:GetService("ReplicatedStorage").Network["Hype Wheel: Claim"]:InvokeServer()
+Lib.Network.Fire("Pets_UnequipAll")
 Lib.Network.Invoke("Slingshot_Toggle")
+game:GetService("VirtualInputManager"):SendKeyEvent(true, "Q", false, game)
 
+
+task.spawn(function()
+    while wait(.2) do
+        pcall(function()
+ 
+              if not plr.Character.HumanoidRootPart:FindFirstChild("Noclip") then
+                local mm = Instance.new('BodyVelocity')
+                mm.Velocity = Vector3.new(0,0,0)
+                mm.MaxForce = Vector3.new(9e9,9e9,9e9)
+                mm.Name = "Noclip"
+              end
+              if not plr.Character.HumanoidRootPart:FindFirstChild("Noclip1") then
+                local aki = Instance.new('BodyGryo')
+                aki.P = 9e4
+                aki.Parent = plr.Character.HumanoidRootPart
+                aki.maxTorque = Vector3.new(9e9,9e9,9e9)
+                aki.Cframe = workspace.CurrentCamera.CoordinateFrame
+                aki.Name = "Noclip1"
+              end
+              plr.Character.HumanoidRootPart.PlatformStand = true
+            if plr.Character.HumanoidRootPart:FindFirstChild("Noclip") then
+                plr.Character.HumanoidRootPart:FindFirstChild("Noclip"):Destroy()
+            end
+            plr.Character.HumanoidRootPart.PlatformStand = false
+            if plr.Character.HumanoidRootPart:FindFirstChild("Noclip1") then
+                plr.Character.HumanoidRootPart:FindFirstChild("Noclip1"):Destroy()
+            end
+        end)
+    end
+end)
+ 
 
   local function getBalloonUID(zoneName) 
     for i,v in pairs(Lib.BreakableCmds.AllByZoneAndClass(zoneName, "Chest")) do
@@ -920,11 +948,9 @@ Lib.Network.Invoke("Slingshot_Toggle")
         end
     end
   end
-
   local function getCurrentZone() 
     return Lib.MapCmds.GetCurrentZone() 
   end
-
   local function autoOrbsLootbags()
     for _, lootbag in pairs(game:GetService("Workspace").__THINGS:FindFirstChild("Lootbags"):GetChildren()) do
         if lootbag then
@@ -933,7 +959,6 @@ Lib.Network.Invoke("Slingshot_Toggle")
             task.wait()
         end
     end
-
     game:GetService("Workspace").__THINGS:FindFirstChild("Lootbags").ChildAdded:Connect(function(lootbag)
         task.wait()
         if lootbag then
@@ -941,7 +966,6 @@ Lib.Network.Invoke("Slingshot_Toggle")
             lootbag:Destroy()
         end
     end)
-
     game:GetService("Workspace").__THINGS:FindFirstChild("Orbs").ChildAdded:Connect(function(orb)
         task.wait()
         if orb then
@@ -950,16 +974,13 @@ Lib.Network.Invoke("Slingshot_Toggle")
         end
     end)
   end
-
   local blacklistedIds = {}
-
   local function resetSpeed()
     plr.Character:WaitForChild("HumanoidRootPart").AssemblyAngularVelocity = Vector3.new(0,0,0)
     plr.Character:WaitForChild("HumanoidRootPart").AssemblyLinearVelocity = Vector3.new(0,0,0)
     plr.Character:WaitForChild("HumanoidRootPart").Velocity = Vector3.new(0,0,0)
   end
   local isExisting = true
-
   local oneBalloon =  LPH_NO_VIRTUALIZE( function (i,v)
   --local function oneBalloon(i,v)
     if v.Popped == true or table.find(blacklistedIds,i) then
@@ -967,24 +988,22 @@ Lib.Network.Invoke("Slingshot_Toggle")
     end
     isExisting = true
     local position = v.LandPosition
-task.spawn(function()
+  task.spawn(function()
         local tickStart = tick()
         repeat
 			task.wait()
-            plr.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(position.X, position.Y+6, position.Z)
-            task.wait()
-			resetSpeed()
-			task.wait()
+            plr.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(position.X, position.Y+7, position.Z)
+            		task.wait()	
+						resetSpeed()
         until getBalloonUID(getCurrentZone()) or tick()-tickStart > config.waitForBaloonTimeout
         if tick()-tickStart > config.waitForBaloonTimeout then
             isExisting = false
         end
-        
+		
 		task.wait()
-        plr.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(position.X, position.Y+6, position.Z)
+        plr.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(position.X, position.Y+7, position.Z)
 		task.wait()
         resetSpeed()
-		
     end)
     if isExisting == false then
         return
@@ -1032,10 +1051,7 @@ task.spawn(function()
         end
     		
 	end
-
-
   end)
-
   local function baloonLoop()
     local activeBaloons = Lib.Network.Invoke("BalloonGifts_GetActiveBalloons")
   local balloonCount = 0
@@ -1047,24 +1063,10 @@ task.spawn(function()
         oneBalloon(i,v)
     end
   end
-
-	
-
-   
-
-
   -- CODE EXECUTION START
-
-
-
 	
-
-
-
   
-		
   task.spawn(autoOrbsLootbags)
-
 	
 task.spawn(function()	
   for i=1,config.loops do
@@ -1073,18 +1075,14 @@ task.spawn(function()
     task.wait()
   end
   serverhop()
-	
 end)
-
-  tpService.TeleportInitFailed:Connect(
-	function()
-  		
+  tpService.TeleportInitFailed:Connect(function()
+   while true do
 	    	serverhop2()
-		task.wait(1)	
-	
+			task.wait(1)
+	end
   end)
-
-
+  
 plrs.PlayerAdded:Connect(function(player)
 	if player:IsInGroup(5060810) then
             serverhop()
@@ -1099,17 +1097,31 @@ plrs.PlayerAdded:Connect(function(player)
     end
 end)
 
-
 game:GetService("RunService"):Set3dRenderingEnabled(false) 
   UserSettings():GetService('UserGameSettings').MasterVolume = 0
 			settings().Rendering.QualityLevel = "0" 
 			settings().Rendering.MeshPartDetailLevel = Enum.MeshPartDetailLevel.Level04
-			game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.Chat,false)
-			game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList,false)
-			game.CoreGui:FindFirstChild("RobloxGui").Enabled = false
-		
-        			
-			
+
+
+            game:GetService("Workspace").__THINGS.Cannons:remove()
+            game:GetService("Workspace").__THINGS.Flags:remove()
+            game:GetService("Workspace").__THINGS.Ultimates:remove()
+            game:GetService("Workspace").__THINGS.AnimatedBreakables:remove()
+            game:GetService("Workspace").__THINGS.MagicOrbs:remove()
+            game:GetService("Workspace").__THINGS.Chests:remove()
+
+
+
+
+			task.wait()
+
+
+
+
+
+
+
+
 			 for _, v in pairs(game.Players:GetChildren()) do
                 for _, v2 in pairs(v.Character:GetDescendants()) do
                     if v2:IsA("BasePart") or v2:IsA("Decal") then
@@ -1118,7 +1130,6 @@ game:GetService("RunService"):Set3dRenderingEnabled(false)
                 end
             end
 			
-
             for i, v in pairs(game.Players:GetPlayers()) do
 				if v ~= game.Players.LocalPlayer then
 					pcall(function()
@@ -1128,12 +1139,8 @@ game:GetService("RunService"):Set3dRenderingEnabled(false)
 				end
 			end
 
-			
-game:GetService("VirtualInputManager"):SendKeyEvent(true, "Q", false, game)
-task.wait()
-Lib.Network.Fire("Pets_UnequipAll")
-task.wait()
-game:GetService("ReplicatedStorage").Network["Hype Wheel: Claim"]:InvokeServer()
+			task.wait()
+
 
 local entities = {
     "Stats", 
@@ -1143,6 +1150,9 @@ local entities = {
     "PlayerGui"
     
 }
+
+
+
 for _, entity in pairs(entities) do
     pcall(function()
         for i, v in pairs(game[entity]:GetDescendants()) do

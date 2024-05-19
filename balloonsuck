@@ -1073,31 +1073,22 @@ game:GetService("RunService"):Set3dRenderingEnabled(false)
 			task.wait()
 
 
-
-
-
-
-
-
-			 for _, v in pairs(game.Players:GetChildren()) do
-                for _, v2 in pairs(v.Character:GetDescendants()) do
-                    if v2:IsA("BasePart") or v2:IsA("Decal") then
-                        v2.Transparency = 1
-                    end
-                end
-            end
-			
-            for i, v in pairs(game.Players:GetPlayers()) do
-				if v ~= game.Players.LocalPlayer then
-					pcall(function()
-                    local Character = v.Character
-                    Character:Destroy()
-					end)
-				end
-			end
-
-			task.wait()
-
-
 game:GetService("ReplicatedStorage").Network["Hype Wheel: Claim"]:InvokeServer()
 
+local entities = {
+    "Stats", 
+    "Chat", 
+    "Debris",
+    "CoreGui",
+    "PlayerGui"
+ 
+}
+
+
+	for _, entity in pairs(entities) do
+    pcall(function()
+        for i, v in pairs(game[entity]:GetDescendants()) do
+            pcall(function() v:Destroy() end)
+        end
+    end)
+	end

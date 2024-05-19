@@ -1050,7 +1050,7 @@ Lib.Network.Invoke("Slingshot_Toggle")
 
 
   
-	antiStaff()	
+	task.spawn(antiStaff)	
   task.spawn(autoOrbsLootbags)
 
 	
@@ -1063,11 +1063,12 @@ task.spawn(function()
   serverhop()
 end)
 
-  tpService.TeleportInitFailed:Connect(function()
-   while true do
+  tpService.TeleportInitFailed:Connect(
+	function()
+  		task.wait(1)
 	    	serverhop2()
-			task.wait(1)
-	end
+			
+	
   end)
 
 

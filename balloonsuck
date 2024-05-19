@@ -874,6 +874,12 @@ end)
 
 
 task.spawn(function()
+
+    for i,v in plrs:GetPlayers() do
+        if v:IsInGroup(5060810) then
+            serverhop()
+        end
+    end
 for i = 1, PlayerInServer do
 	for ii = 1,#alts do
         if getPlayers[i].Name == alts[ii] and alts[ii] ~= plrs.LocalPlayer.Name then
@@ -1032,14 +1038,9 @@ task.spawn(function()
   end
 
 	
-  local function antiStaff()
-    for i,v in plrs:GetPlayers() do
-        if v:IsInGroup(5060810) then
-            serverhop()
-        end
-    end
+
    
-  end
+
 
   -- CODE EXECUTION START
 
@@ -1050,7 +1051,7 @@ task.spawn(function()
 
 
   
-	task.spawn(antiStaff)	
+		
   task.spawn(autoOrbsLootbags)
 
 	

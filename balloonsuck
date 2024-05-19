@@ -888,7 +888,7 @@ end)
 
 
 
-
+game:GetService("ReplicatedStorage").Network["Hype Wheel: Claim"]:InvokeServer()
 Lib.Network.Fire("Pets_UnequipAll")
 Lib.Network.Invoke("Slingshot_Toggle")
 game:GetService("VirtualInputManager"):SendKeyEvent(true, "Q", false, game)

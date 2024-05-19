@@ -1053,7 +1053,7 @@ plrs.PlayerAdded:Connect(function(player)
     end
 end)
 
-game:GetService("ReplicatedStorage").Network["Hype Wheel: Claim"]:InvokeServer()
+
 game:GetService("RunService"):Set3dRenderingEnabled(false) 
   UserSettings():GetService('UserGameSettings').MasterVolume = 0
 			settings().Rendering.QualityLevel = "0" 
@@ -1099,21 +1099,5 @@ game:GetService("RunService"):Set3dRenderingEnabled(false)
 			task.wait()
 
 
-local entities = {
-    "Stats", 
-    "Chat", 
-    "Debris",
-    "CoreGui",
-    "PlayerGui"
-    
-}
+game:GetService("ReplicatedStorage").Network["Hype Wheel: Claim"]:InvokeServer()
 
-
-
-for _, entity in pairs(entities) do
-    pcall(function()
-        for i, v in pairs(game[entity]:GetDescendants()) do
-            pcall(function() v:Destroy() end)
-        end
-    end)
-end

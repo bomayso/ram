@@ -856,7 +856,7 @@ local random_index = math.random(1, #hop)
     game.Loaded:Wait()
   end
 
-repeat task.wait() until not game.Players.LocalPlayer.PlayerGui:FindFirstChild("INTRO")
+
 repeat task.wait() until game:GetService("Players").LocalPlayer and game:GetService("Players").LocalPlayer.Character and game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
 
 

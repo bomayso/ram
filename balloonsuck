@@ -954,7 +954,7 @@ game:GetService("VirtualInputManager"):SendKeyEvent(true, "Q", false, game)
         local tickStart = tick()
         repeat
 			task.wait()
-            plr.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(position.X, position.Y+7, position.Z)
+            plr.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(position.X, position.Y+6, position.Z)
             
 			resetSpeed()
         until getBalloonUID(getCurrentZone()) or tick()-tickStart > config.waitForBaloonTimeout
@@ -962,7 +962,7 @@ game:GetService("VirtualInputManager"):SendKeyEvent(true, "Q", false, game)
             isExisting = false
         end
         resetSpeed()
-        plr.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(position.X, position.Y+7, position.Z)
+        plr.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(position.X, position.Y+6, position.Z)
         resetSpeed()
     end)
     if isExisting == false then

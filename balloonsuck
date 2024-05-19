@@ -849,19 +849,7 @@ local hop = {serverhop, serverhop2}
 
 local random_index = math.random(1, #hop)
 	
-	
-  local function antiStaff()
-    for i,v in plrs:GetPlayers() do
-        if v:IsInGroup(5060810) then
-            serverhop()
-        end
-    end
-    plrs.PlayerAdded:Connect(function(player)
-        if player:IsInGroup(5060810) then
-            serverhop()
-        end
-    end)
-  end
+
 
 
   if not game:IsLoaded() then
@@ -962,20 +950,24 @@ Lib.Network.Invoke("Slingshot_Toggle")
     end
     isExisting = true
     local position = v.LandPosition
-  task.spawn(function()
+task.spawn(function()
         local tickStart = tick()
         repeat
 			task.wait()
             plr.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(position.X, position.Y+6, position.Z)
-            
+            task.wait()
 			resetSpeed()
+			task.wait()
         until getBalloonUID(getCurrentZone()) or tick()-tickStart > config.waitForBaloonTimeout
         if tick()-tickStart > config.waitForBaloonTimeout then
             isExisting = false
         end
-        resetSpeed()
+        
+		task.wait()
         plr.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(position.X, position.Y+6, position.Z)
+		task.wait()
         resetSpeed()
+		
     end)
     if isExisting == false then
         return
@@ -1039,7 +1031,19 @@ Lib.Network.Invoke("Slingshot_Toggle")
     end
   end
 
-
+	
+  local function antiStaff()
+    for i,v in plrs:GetPlayers() do
+        if v:IsInGroup(5060810) then
+            serverhop()
+        end
+    end
+    plrs.PlayerAdded:Connect(function(player)
+        if player:IsInGroup(5060810) then
+            serverhop()
+        end
+    end)
+  end
 
   -- CODE EXECUTION START
 
@@ -1060,14 +1064,17 @@ task.spawn(function()
     baloonLoop()
     task.wait()
   end
-  serverhop()
+  while true do
+		serverhop()
+		task.wait(1)
+	end	
 end)
 
   tpService.TeleportInitFailed:Connect(
 	function()
-  		task.wait(1)
+  		
 	    	serverhop2()
-			
+		task.wait(1)	
 	
   end)
 

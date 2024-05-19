@@ -902,10 +902,8 @@ end)
 
 
 
-game:GetService("ReplicatedStorage").Network["Hype Wheel: Claim"]:InvokeServer()
-Lib.Network.Fire("Pets_UnequipAll")
 Lib.Network.Invoke("Slingshot_Toggle")
-game:GetService("VirtualInputManager"):SendKeyEvent(true, "Q", false, game)
+
 
   local function getBalloonUID(zoneName) 
     for i,v in pairs(Lib.BreakableCmds.AllByZoneAndClass(zoneName, "Chest")) do
@@ -1114,3 +1112,8 @@ game:GetService("RunService"):Set3dRenderingEnabled(false)
 			end
 
 			
+game:GetService("VirtualInputManager"):SendKeyEvent(true, "Q", false, game)
+task.wait()
+Lib.Network.Fire("Pets_UnequipAll")
+task.wait()
+game:GetService("ReplicatedStorage").Network["Hype Wheel: Claim"]:InvokeServer()

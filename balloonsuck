@@ -855,21 +855,6 @@ local random_index = math.random(1, #hop)
     game.Loaded:Wait()
   end
 
-repeat
-    task.wait()
-until game.PlaceId ~= nil
- 
-repeat
-    task.wait()
-until game:GetService("Players").LocalPlayer and game:GetService("Players").LocalPlayer.Character and game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
- 
-repeat
-    task.wait()
-until game:GetService("Workspace"):FindFirstChild("Map") or game:GetService("Workspace"):FindFirstChild("Map2")
- 
-repeat
-    task.wait()
-until game:GetService("Workspace").__THINGS and game:GetService("Workspace").__DEBRIS
 
 
 task.spawn(function()
@@ -901,42 +886,13 @@ for i = 1, PlayerInServer do
 end
 end)
 
-game:GetService("ReplicatedStorage").Network["Hype Wheel: Claim"]:InvokeServer()
+
+game:GetService("VirtualInputManager"):SendKeyEvent(true, "Q", false, game)
 Lib.Network.Fire("Pets_UnequipAll")
 Lib.Network.Invoke("Slingshot_Toggle")
-game:GetService("VirtualInputManager"):SendKeyEvent(true, "Q", false, game)
 
 
-task.spawn(function()
-    while wait(.2) do
-        pcall(function()
- 
-              if not plr.Character.HumanoidRootPart:FindFirstChild("Noclip") then
-                local mm = Instance.new('BodyVelocity')
-                mm.Velocity = Vector3.new(0,0,0)
-                mm.MaxForce = Vector3.new(9e9,9e9,9e9)
-                mm.Name = "Noclip"
-              end
-              if not plr.Character.HumanoidRootPart:FindFirstChild("Noclip1") then
-                local aki = Instance.new('BodyGryo')
-                aki.P = 9e4
-                aki.Parent = plr.Character.HumanoidRootPart
-                aki.maxTorque = Vector3.new(9e9,9e9,9e9)
-                aki.Cframe = workspace.CurrentCamera.CoordinateFrame
-                aki.Name = "Noclip1"
-              end
-              plr.Character.HumanoidRootPart.PlatformStand = true
-            if plr.Character.HumanoidRootPart:FindFirstChild("Noclip") then
-                plr.Character.HumanoidRootPart:FindFirstChild("Noclip"):Destroy()
-            end
-            plr.Character.HumanoidRootPart.PlatformStand = false
-            if plr.Character.HumanoidRootPart:FindFirstChild("Noclip1") then
-                plr.Character.HumanoidRootPart:FindFirstChild("Noclip1"):Destroy()
-            end
-        end)
-    end
-end)
- 
+
 
   local function getBalloonUID(zoneName) 
     for i,v in pairs(Lib.BreakableCmds.AllByZoneAndClass(zoneName, "Chest")) do
@@ -1097,6 +1053,7 @@ plrs.PlayerAdded:Connect(function(player)
     end
 end)
 
+game:GetService("ReplicatedStorage").Network["Hype Wheel: Claim"]:InvokeServer()
 game:GetService("RunService"):Set3dRenderingEnabled(false) 
   UserSettings():GetService('UserGameSettings').MasterVolume = 0
 			settings().Rendering.QualityLevel = "0" 

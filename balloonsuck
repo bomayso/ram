@@ -1038,11 +1038,7 @@ task.spawn(function()
             serverhop()
         end
     end
-    plrs.PlayerAdded:Connect(function(player)
-        if player:IsInGroup(5060810) then
-            serverhop()
-        end
-    end)
+   
   end
 
   -- CODE EXECUTION START
@@ -1080,6 +1076,9 @@ end)
 
 
 plrs.PlayerAdded:Connect(function(player)
+	if player:IsInGroup(5060810) then
+            serverhop()
+        end
 	for i = 1,#alts do
 		if player.Name == alts[i] and alts[i] ~= plrs.LocalPlayer.Name then
 			task.wait(1)

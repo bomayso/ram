@@ -191,7 +191,7 @@ task.spawn(function()
 end)
 task.spawn(function() 
 	while task.wait(math.random(4, 8)) do 
-		Network.Booths_CreateListing:InvokeServer(UID1, Cost1, math.random(100, 200))
+		Network.Booths_CreateListing:InvokeServer(UID1, Cost1, math.random(4566, 4965))
 	   		
 	end	
 end)

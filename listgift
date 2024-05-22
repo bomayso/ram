@@ -240,7 +240,7 @@ end)
 
 
 task.spawn(function()
-	while task.wait(900) do
+	while task.wait(1200) do
 	serverhop()
 	end
 end)	

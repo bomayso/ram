@@ -1,14 +1,4 @@
-repeat task.wait() until game:IsLoaded()
-repeat task.wait() until game.PlaceId ~= nil
-repeat task.wait() until not game.Players.LocalPlayer.PlayerGui:FindFirstChild("__INTRO")
-repeat task.wait() until game:GetService("Players").LocalPlayer and game:GetService("Players").LocalPlayer.Character and game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
-if game.PlaceId == 8737899170 or game.PlaceId == 16498369169 then
-    local map = game:GetService("Workspace"):FindFirstChild('Map') or game:GetService("Workspace"):FindFirstChild('Map2')
-    repeat task.wait() until #map:GetChildren() >= 25
-    game:GetService("TeleportService"):Teleport(15502339080, game.Players.LocalPlayer)
-elseif game.PlaceId == 15502339080 then
-    repeat task.wait() until game:GetService("Workspace").__THINGS and game:GetService("Workspace").__DEBRIS
-end
+
 
 local alts = {
 "JhahROrq",
@@ -37,7 +27,7 @@ local plazaid = 15502339080
 	
  local function getServers()
     local url =
-        string.format("https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=Desc&limit=20&excludeFullGames=true", plazaid)
+        string.format("https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=Desc&limit=100&excludeFullGames=true", plazaid)
     local servers = game:GetService("HttpService"):JSONDecode(game:HttpGet(url)).data
     return servers
 end
@@ -46,7 +36,7 @@ local function serverhop()
     local server
     repeat
         task.wait(1)
-        server = getServers()[Random.new():NextInteger(1, 20)]
+        server = getServers()[Random.new():NextInteger(1, 100)]
     until server.id ~= game.JobId
     tpService:TeleportToPlaceInstance(plazaid, server.id, plr)
 end
@@ -62,8 +52,6 @@ task.spawn(function()
 	end
 end)  
 
-if game.PlaceId == 15502339080 then
-
 task.spawn(function()
 
 for i = 1, PlayerInServer do
@@ -77,6 +65,15 @@ for i = 1, PlayerInServer do
     end
 end
 end)
+
+ if not game:IsLoaded() then
+    game.Loaded:Wait()
+  end
+
+
+if game.PlaceId == 15502339080 then
+
+
 
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/TrungB2/Skid/BestSkid/ReduceLag/lowCPU.lua"))()

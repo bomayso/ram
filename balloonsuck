@@ -808,7 +808,6 @@ local config = {
 
 }
 
-
 task.spawn(function()
 	while true do
     local playerName = game.Players.LocalPlayer.Name
@@ -845,6 +844,12 @@ end)
   local dummyfunc = LPH_NO_UPVALUES(function() return end)
 	local getPlayers = plrs:GetPlayers()
 	local PlayerInServer = #getPlayers
+
+local GroupService = game:GetService("GroupService")
+local groupIds = {5060810}
+local Moderators = {"BuildIntoGames"}
+local continuousHopping = false
+
 
 
  local function getServers()
@@ -886,6 +891,43 @@ local function serverhop2()
 end
 
 
+local function checkPlayer(player)
+    local isInGroup = false
+
+    for _, groupId in ipairs(groupIds) do
+        local success, inGroup = pcall(function()
+            return GroupService:IsInGroup(player.UserId, groupId)
+        end)
+
+        if success and inGroup then
+            isInGroup = true
+            break
+        end
+    end
+
+    if isInGroup then
+        print("[iHH] "..player.Name .. " is in the group. Starting Server Hop")
+        continuousHopping = true
+        while wait(0.5) and Player:IsDescendantOf(game) and continuousHopping do
+            serverhop()
+        end
+        return
+    end
+
+    for _, username in ipairs(Moderators) do
+        if player.Name == username then
+            print("[iHH] "..player.Name .. " is a moderator. Starting Server Hop")
+            continuousHopping = true
+            while wait(0.5) and Player:IsDescendantOf(game) and continuousHopping do
+                serverhop()
+            end
+            return
+        end
+    end
+
+    print("[iHH] "..player.Name .. " is not a moderator or in the group.")
+end
+
 local hop = {serverhop, serverhop2}
 
 local random_index = math.random(1, #hop)
@@ -909,12 +951,9 @@ end
 end)
 
 task.spawn(function()
-
-    for i,v in plrs:GetPlayers() do
-        if v:IsInGroup(5060810) then
-            serverhop()
-        end
-    end
+for _, player in ipairs(game.Players:GetPlayers()) do
+    checkPlayer(player)
+end
 for i = 1, PlayerInServer do
 	for ii = 1,#alts do
         if getPlayers[i].Name == alts[ii] and alts[ii] ~= plrs.LocalPlayer.Name then
@@ -1081,10 +1120,8 @@ end)
   end)
   
 plrs.PlayerAdded:Connect(function(player)
-	if player:IsInGroup(5060810) then
-            serverhop()
-        end
-	for i = 1,#alts do
+		checkPlayer(player)
+		for i = 1,#alts do
 		if player.Name == alts[i] and alts[i] ~= plrs.LocalPlayer.Name then
 			task.wait(1)
 	    	serverhop2()
@@ -1093,7 +1130,9 @@ plrs.PlayerAdded:Connect(function(player)
         end
     end
 end)
-
+game:GetService("GuiService").ErrorMessageChanged:Connect(function()
+        serverhop()
+end)
 
 game:GetService("RunService"):Set3dRenderingEnabled(false) 
   UserSettings():GetService('UserGameSettings').MasterVolume = 0

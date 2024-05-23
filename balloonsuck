@@ -812,7 +812,7 @@ task.spawn(function()
     local dataToWrite = "Username: " .. playerName .. ", Time: " .. currentTime
     local fileName = "checktime.txt"
     writefile(fileName, dataToWrite)
-    task.wait(5)
+    task.wait(2)
 	end
 end)  
 

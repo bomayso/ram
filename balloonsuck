@@ -802,7 +802,7 @@ local config = {
  
   loops = 5,
   tapTimeout = 5,
-  waitForBaloonTimeout = 1.5,
+  waitForBaloonTimeout = 2,
 
 }
 

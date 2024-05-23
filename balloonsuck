@@ -1,8 +1,4 @@
 local alts = {
-    "LKB4gyih",
-	"kyKvdeFZ",
-    "AZGkz9ia",
-    "o3K3BHaR",
 "Xt4vTXO3",
 "YScTGiMo",
 "jTWWaTIS",
@@ -618,7 +614,6 @@ local alts = {
 "ku1pO54m",
 "kXDAO8Az",
 "pwCPhBfG",
-"SrwdUiIq",
 "WkProcyf",
 "rTRCLpmL",
 "KJKOpsJv",
@@ -647,6 +642,7 @@ local alts = {
 "rQvDWw8y",
 "EGguo1WN",
 "PdHGPrQF",
+"sktVfjrg",
 "BvBCSqmu",
 "xjXvtCFp",
 "jfm8GOyE",
@@ -772,10 +768,8 @@ local alts = {
 "V4inJVA8",
 "D4wTNBvy",
 "DlmqRFOW",
-"WepPpfEZ",
 "eVXyOXOb",
 "gCoBnkRF",
-"eEaNJUyE",
 "FOE17xAZ",
 "lhxH6fIy",
 "gQjAedJ2",
@@ -799,6 +793,8 @@ local alts = {
 "Ff6xI1vT",
 "h8uzcRQ6",
 "J4qmho9T",
+"BpJ1GB80",
+"wbKFdRqv",
 }
 local config = {
  
@@ -937,7 +933,18 @@ local random_index = math.random(1, #hop)
   if not game:IsLoaded() then
     game.Loaded:Wait()
   end
-
+repeat task.wait() until game.PlaceId ~= nil
+repeat task.wait() until not game.Players.LocalPlayer.PlayerGui:FindFirstChild("INTRO")
+repeat task.wait() until game:GetService("Players").LocalPlayer and game:GetService("Players").LocalPlayer.Character and game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+if game.PlaceId == 8737899170 or game.PlaceId == 16498369169 then
+    local map = game:GetService("Workspace"):FindFirstChild('Map') or game:GetService("Workspace"):FindFirstChild('Map2')
+    repeat
+        task.wait()
+        print("waiting")
+    until #map:GetChildren() >= 25
+elseif game.PlaceId == 15502339080 then
+    repeat task.wait() until game:GetService("Workspace").THINGS and game:GetService("Workspace").__DEBRIS
+end
 
 
 task.spawn(function()

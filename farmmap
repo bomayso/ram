@@ -907,7 +907,7 @@ AutoWorldToggle:OnChanged(function()
                     if game.PlaceId == 8737899170 and save.Rebirths >= 4 and MaxZoneInfo.ZoneNumber >= 99 and MaxZoneInfo.ZoneNumber < 199 then
                         game.ReplicatedStorage.Network.World2Teleport:InvokeServer()
                     end
-                    if game.PlaceId ~= 8737899170 and save.Rebirths >= 6 and MaxZoneInfo.ZoneNumber >= 199 then
+                    if game.PlaceId ~= 8737899170 and save.Rebirths >= 7 and MaxZoneInfo.ZoneNumber >= 199 then
                         repeat game:GetService("TeleportService"):Teleport(game.PlaceId, game.Players.LocalPlayer) task.wait(3) until not game.PlaceId
                     end
                     MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()

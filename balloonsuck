@@ -1,8 +1,4 @@
 local alts = {
-"UKQJL3Nw",
-"ZEIbs5ue",
-"NcG0JN6h",
-"vUeVr9w6",
 "Xt4vTXO3",
 "YScTGiMo",
 "jTWWaTIS",
@@ -75,10 +71,10 @@ local alts = {
 "Ii1maIb6",
 "YBg8xcAG",
 "qZRXDKQ9",
-"IdCJNYwZ",
 "NCgqQ36Z",
 "rxhSM7vx",
 "k4RT3cDy",
+"NcG0JN6h",
 "VgRXAPwB",
 "xp8WBE5O",
 "i0pFiEYy",
@@ -127,59 +123,35 @@ local alts = {
 "lCERwRh0",
 "xtRkQTM8",
 "tGlpNXK7",
-"yTnLMcfl",
-"mtDH8PxX",
 "MdEQU4lg",
 "fLWkFeHI",
 "BlQShAQk",
 "evH4D3gk",
 "pTRaA7wr",
 "NUPPJyyF",
-"OcCB9GGp",
-"qHZgO19z",
-"AwN4Osaa",
-"FnMEVgoP",
-"FOkBPTZa",
-"xMrU4PkB",
-"uq9qdg4f",
-"oEvFx57w",
-"Uc3E0O42",
-"xrKtP3yM",
-"YLhCHxqP",
-"j74jCVeM",
-"DC2lnaVQ",
-"BS6afLMK",
-"fCG1GCKN",
-"MgDJDc5d",
-"Pmou2O2w",
-"OrX5GZvN",
 "RbFQvc5x",
 "MsyJl7rR",
-"nMcyWFTP",
-"DSL4QSkG",
-"AkIxZoXn",
-"ehOMltqb",
-"z53cm8MR",
-"IQ79Setr",
-"gKKfMd1z",
-"ynwweaSB",
-"v095UtqK",
-"yyF45q1m",
-"AWLtxRjw",
-"x0veHrtA",
-"fcI4LfZA",
-"TXKIQnni",
-"fFrZX1mi",
-"KLu5sMO3",
-"oykh7kSW",
-"Xf7jbqmh",
-"S3St2Afw",
+"ArWdzspM",
+"A4THzpGf",
+"ZvdASzNW",
+"Cg7Hgvcu",
+"tDKE3n7O",
+"DKZ5mAnU",
+"VA4pWIfi",
+"KgVe9xaI",
+"PYrIrryF",
+"M9qE47JH",
+"OXRuf63z",
+"YJbnyuZz",
+"Tm7CgIDM",
+"m2EOZUiz",
+"kA4SaMkH",
+"pemqh1vi",
+"V3NEBQ4L",
+"ews3EfrC",
+"GyCK5Nv5",
+"f0bKnyLx",
 "LBZ0O7N6",
-"ALrzWsLN",
-"cVRKgSIg",
-"MoQr2C3V",
-"yD1mxvkL",
-"nrc7f0yT",
 "FzN2JpaO",
 "xFTnVpsa",
 "kmRq2MaG",
@@ -193,24 +165,40 @@ local alts = {
 "VspZ4FDs",
 "R8lFt8hQ",
 "v5xDoXk5",
+"ALrzWsLN",
+"cVRKgSIg",
+"MoQr2C3V",
+"vPWqDkJz",
+"HnyvP6T7",
+"pXH3uHCH",
+"KijGxZXY",
+"qLuVvVf9",
+"ty4oQkOI",
+"qV4igd0f",
+"SPUSFKgX",
+"xdCWG9N6",
+"TtmdUsmF",
+"YMVuGrGB",
+"ivbihLo6",
+"fW8TpA3r",
+"J8mlVKPg",
+"p3NtKS9M",
+"qAQIYRQZ",
+"ExQdcfr2",
+"yG2CJyzg",
+"WfKDB4qG",
+"INwH9pod",
+"ec2ctFDe",
 "ws3OsZG6",
 "BseGPizu",
-"vbMXyk5O",
-"JlqJkASo",
 "JomOlwII",
-"l8DpIZjQ",
-"mL8vrpHs",
 "f8tzgFre",
 "DffH12Gc",
-"vQK7ln2O",
 "G0BbSjNm",
 "lZVfPEAS",
-"bmiZweWx",
 "Sl9kOj3J",
-"wPxX3I3F",
 "oiQRqkaq",
 "Hcciw24l",
-"kEiEG8MC",
 "YYqYGni5",
 "o6BxIv3O",
 "IAPjtmO3",
@@ -231,6 +219,14 @@ local alts = {
 "SFwtZRTe",
 "T7mPeSKU",
 "VQhe4A7o",
+"efXMT9vz",
+"eV66GIHd",
+"GEe34ESI",
+"OI6u23Eo",
+"oHIFV2iW",
+"DPSdeL3Z",
+"fodl9rBz",
+"OBhbX6e4",
 "bgCdMt8q",
 "tHraWTdG",
 "hePzIhHm",
@@ -269,7 +265,6 @@ local alts = {
 "o3DnSZUy",
 "Qt2icFBF",
 "Zxd7ZIMw",
-"EJBkkBu0",
 "LNOOvxjH",
 "nTPABzLB",
 "mu54AFaj",
@@ -282,10 +277,8 @@ local alts = {
 "QhnlQwX7",
 "eW0tg8HF",
 "InaoBCzs",
-"LZ7TFOkR",
 "lkSI5Iqk",
 "sipAgCdL",
-"G7np7G0k",
 "NhPMSn0k",
 "fdAZNCWr",
 "eLKbp8Xq",
@@ -307,6 +300,9 @@ local alts = {
 "qK5bqlDv",
 "aIbdvFhn",
 "hv6JUw9F",
+"WUzTJ3Uf",
+"q3WJmqgO",
+"BZTkwkQ1",
 "FvHAKD4d",
 "tum0Id7X",
 "BjvOUFwh",
@@ -458,7 +454,7 @@ local alts = {
 "P3uscftg",
 "QzkEtUdi",
 "itU9JxuN",
-"KZVfBca8",
+"vUeVr9w6",
 "zWOJXrO6",
 "qp9mAGHk",
 "aQCCgAmf",
@@ -639,14 +635,14 @@ local alts = {
 "fLPgmMl7",
 "D0FpnA8o",
 "almE64w8",
-"sj9L08Aa",
-"s5PlWsIl",
 "xWpcUTR3",
 "Gec81CDb",
 "rQvDWw8y",
 "EGguo1WN",
 "PdHGPrQF",
 "sktVfjrg",
+"PCFuF5YY",
+"mB07kXD9",
 "BvBCSqmu",
 "xjXvtCFp",
 "jfm8GOyE",
@@ -728,7 +724,6 @@ local alts = {
 "llTnbK5T",
 "FV25ZrqW",
 "rZq6Tx9p",
-"sqLAJO2w",
 "ZIYWpxT5",
 "SEzzHbcM",
 "zE0rR0Id",
@@ -738,7 +733,6 @@ local alts = {
 "k2qSK4pP",
 "mJjY5YAZ",
 "gzeudIYy",
-"ifUGJuFl",
 "ZB3Ej9pF",
 "bAwaTy0O",
 "JTTLjZIo",
@@ -761,6 +755,8 @@ local alts = {
 "jjRBhXOO",
 "nCNpHLZb",
 "xd7DzPAj",
+"UKQJL3Nw",
+"ZEIbs5ue",
 "Ue1t6R6A",
 "XoRDH8Tb",
 "VonTe0Rg",
@@ -788,7 +784,6 @@ local alts = {
 "mt9oE8Sl",
 "o42mjKyG",
 "MIf8HXDP",
-"p9mKrOgI",
 "Mti34f4Y",
 "QnAbpL5Z",
 "kmD0FBFl",
@@ -799,6 +794,7 @@ local alts = {
 "J4qmho9T",
 "BpJ1GB80",
 "wbKFdRqv",
+"MhgGT8Tg",
 }
 local config = {
  
@@ -980,11 +976,6 @@ end)
 
 
 
-Lib.Network.Invoke("Slingshot_Toggle")
-
-
-
-
   local function getBalloonUID(zoneName) 
     for i,v in pairs(Lib.BreakableCmds.AllByZoneAndClass(zoneName, "Chest")) do
         local isGift = string.find(v:GetAttribute("BreakableID"), "Balloon Gift")
@@ -1038,24 +1029,24 @@ Lib.Network.Invoke("Slingshot_Toggle")
   task.spawn(function()
         local tickStart = tick()
         repeat
-			task.wait()
+			
             plr.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(position.X, position.Y+7, position.Z)
             		task.wait()	
-						resetSpeed()
+						
         until getBalloonUID(getCurrentZone()) or tick()-tickStart > config.waitForBaloonTimeout
         if tick()-tickStart > config.waitForBaloonTimeout then
             isExisting = false
         end
 		
-		task.wait()
+		
         plr.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(position.X, position.Y+7, position.Z)
 		task.wait()
-        resetSpeed()
+        
     end)
     if isExisting == false then
         return
     end
-    task.wait(15.1)
+    task.wait(math.random(15.1, 15.5))
     local args = {
         [1] = Vector3.new(position.X, position.Y, position.Z),
         [2] = 0.5794160315249014,
@@ -1226,7 +1217,28 @@ local entities = {
 		
     end 
 
-task.wait(8)
+local VirtualUser = game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+VirtualUser:CaptureController()
+VirtualUser:ClickButton2(Vector2.new())
+end)
+
+local niggaJump = coroutine.create(function ()
+    while 1 do 
+        wait(math.random(20, 40))
+        game.Players.LocalPlayer.Character.Humanoid.Jump = true
+    end
+end)
+coroutine.resume(niggaJump)
+
+local camera = workspace.CurrentCamera
+    camera.CFrame = CFrame.new(0, 0, 0) * CFrame.fromEulerAngles(math.rad(-75), 0, 0)
+    game.Players.LocalPlayer.CameraMinZoomDistance = 150
+    game.Players.LocalPlayer.CameraMaxZoomDistance = 150
+
+task.wait(6)
+Lib.Network.Invoke("Slingshot_Toggle")
+task.wait(3)
 Lib.Network.Fire("Pets_UnequipAll")
 task.wait(7)
 game:GetService("VirtualInputManager"):SendKeyEvent(true, "Q", false, game)

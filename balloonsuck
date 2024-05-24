@@ -1,4 +1,5 @@
 local alts = {
+"zdLwAxGY",
 "Xt4vTXO3",
 "YScTGiMo",
 "jTWWaTIS",
@@ -1155,7 +1156,7 @@ game:GetService("RunService"):Set3dRenderingEnabled(false)
 			task.wait()
 
 
-game:GetService("ReplicatedStorage").Network["Hype Wheel: Claim"]:InvokeServer()
+
 
 local entities = {
     "Stats", 
@@ -1242,3 +1243,5 @@ task.wait(3)
 Lib.Network.Fire("Pets_UnequipAll")
 task.wait(7)
 game:GetService("VirtualInputManager"):SendKeyEvent(true, "Q", false, game)
+task.wait()
+game:GetService("ReplicatedStorage").Network["Hype Wheel: Claim"]:InvokeServer()

@@ -509,7 +509,7 @@ local Tabs = {
 local Options = Fluent.Options
 
 -- ELEMENTS
-local AutoClickToggle = Tabs.Farming:AddToggle("AutoClick", { Title = "Auto Click", Default = false })
+local AutoClickToggle = Tabs.Farming:AddToggle("AutoClick", { Title = "Auto Click", Default = true })
 Tabs.Farming:AddSlider("AutoClickRadius", {
     Title = "Auto Click Radius",
     Description = "Recommended: 80",

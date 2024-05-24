@@ -941,6 +941,15 @@ AutoWorldToggle:OnChanged(function()
         -- DELETE MAP
 
         pcall(function()
+            workspace.Map.Parent = game.ReplicatedStorage
+        end)
+        pcall(function()
+            workspace.Map2.Parent = game.ReplicatedStorage
+        end)
+        pcall(function()
+            workspace.MAP.Parent = game.ReplicatedStorage
+        end)
+        pcall(function()
             workspace.ALWAYS_RENDERING.Parent = game.ReplicatedStorage
         end)
         pcall(function()

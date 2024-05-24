@@ -134,7 +134,7 @@ local Cost = 12300
 local Class1 = "Misc"
 local Name1 = "Gift Bag"
 
-local Cost1 = 3800
+local Cost1 = 3900
 local Class2 = "Misc"
 local Name2 = "Mini Chest"
 

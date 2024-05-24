@@ -1047,7 +1047,12 @@ end)
     if isExisting == false then
         return
     end
-    task.wait(math.random(15.1, 15.5))
+    	task.wait(7)
+	game:GetService("VirtualInputManager"):SendKeyEvent(true, "S", false, game)
+	task.wait(0.5)
+	game:GetService("VirtualInputManager"):SendKeyEvent(false, "S", false, game)
+	
+    task.wait(math.random(7.6, 8.1))
     local args = {
         [1] = Vector3.new(position.X, position.Y, position.Z),
         [2] = 0.5794160315249014,
@@ -1137,7 +1142,7 @@ game:GetService("GuiService").ErrorMessageChanged:Connect(function()
         serverhop()
 end)
 
-game:GetService("RunService"):Set3dRenderingEnabled(false) 
+game:GetService("RunService"):Set3dRenderingEnabled(true) 
   UserSettings():GetService('UserGameSettings').MasterVolume = 0
 			settings().Rendering.QualityLevel = "0" 
 			settings().Rendering.MeshPartDetailLevel = Enum.MeshPartDetailLevel.Level04
@@ -1219,10 +1224,6 @@ local entities = {
     end 
 
 local VirtualUser = game:service'VirtualUser'
-game:service'Players'.LocalPlayer.Idled:connect(function()
-VirtualUser:CaptureController()
-VirtualUser:ClickButton2(Vector2.new())
-end)
 
 local niggaJump = coroutine.create(function ()
     while 1 do 
@@ -1232,16 +1233,38 @@ local niggaJump = coroutine.create(function ()
 end)
 coroutine.resume(niggaJump)
 
+
+
+game.Players.LocalPlayer.PlayerScripts.Scripts.Core["Idle Tracking"].Enabled = false
+
+if getconnections then
+    for _, v in pairs(getconnections(game.Players.LocalPlayer.Idled)) do
+        v:Disable()
+    end
+else
+    game.Players.LocalPlayer.Idled:Connect(function()
+		game:GetService("VirtualUser"):Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+        task.wait(1)
+        game:GetService("VirtualUser"):Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+		task.wait(1)
+		VirtualUser:CaptureController()
+		task.wait(1)
+		VirtualUser:ClickButton2(Vector2.new())
+		
+        
+    end)
+end
+
 local camera = workspace.CurrentCamera
-    camera.CFrame = CFrame.new(0, 0, 0) * CFrame.fromEulerAngles(math.rad(-75), 0, 0)
+    camera.CFrame = CFrame.new(0, 0, 0) * CFrame.fromEulerAngles(math.rad(-60), 0, 0)
     game.Players.LocalPlayer.CameraMinZoomDistance = 150
     game.Players.LocalPlayer.CameraMaxZoomDistance = 150
 
 task.wait(6)
 Lib.Network.Invoke("Slingshot_Toggle")
 task.wait(3)
-Lib.Network.Fire("Pets_UnequipAll")
-task.wait(7)
 game:GetService("VirtualInputManager"):SendKeyEvent(true, "Q", false, game)
+task.wait(7)
+Lib.Network.Fire("Pets_UnequipAll")
 task.wait()
 game:GetService("ReplicatedStorage").Network["Hype Wheel: Claim"]:InvokeServer()

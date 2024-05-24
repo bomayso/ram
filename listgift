@@ -130,11 +130,11 @@ local Network = game.ReplicatedStorage:WaitForChild('Network')
 local Class = "Misc"
 local Name = "Large Gift Bag"
 
-local Cost = 11900
+local Cost = 12100
 local Class1 = "Misc"
 local Name1 = "Gift Bag"
 
-local Cost1 = 3600
+local Cost1 = 3800
 local Class2 = "Misc"
 local Name2 = "Mini Chest"
 

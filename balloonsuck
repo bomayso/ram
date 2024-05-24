@@ -929,8 +929,17 @@ end
 local hop = {serverhop, serverhop2}
 
 local random_index = math.random(1, #hop)
-	
 
+	game:GetService("GuiService").ErrorMessageChanged:Connect(function()
+        serverhop()
+end)
+	
+  tpService.TeleportInitFailed:Connect(function()
+   while true do
+	    	serverhop2()
+			task.wait(1)
+	end
+  end)
 
   if not game:IsLoaded() then
     game.Loaded:Wait()
@@ -1117,12 +1126,7 @@ task.spawn(function()
   end
   serverhop()
 end)
-  tpService.TeleportInitFailed:Connect(function()
-   while true do
-	    	serverhop2()
-			task.wait(1)
-	end
-  end)
+
   
 plrs.PlayerAdded:Connect(function(player)
 		checkPlayer(player)
@@ -1135,9 +1139,7 @@ plrs.PlayerAdded:Connect(function(player)
         end
     end
 end)
-game:GetService("GuiService").ErrorMessageChanged:Connect(function()
-        serverhop()
-end)
+
 
 game:GetService("RunService"):Set3dRenderingEnabled(false) 
   UserSettings():GetService('UserGameSettings').MasterVolume = 0

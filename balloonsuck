@@ -1047,12 +1047,12 @@ end)
     if isExisting == false then
         return
     end
-    	task.wait(7)
+    	task.wait(5)
 	game:GetService("VirtualInputManager"):SendKeyEvent(true, "S", false, game)
-	task.wait(0.5)
+	task.wait(0.2)
 	game:GetService("VirtualInputManager"):SendKeyEvent(false, "S", false, game)
 	
-    task.wait(math.random(7.6, 8.1))
+    task.wait(math.random(9.9, 10.4))
     local args = {
         [1] = Vector3.new(position.X, position.Y, position.Z),
         [2] = 0.5794160315249014,
@@ -1262,7 +1262,7 @@ local camera = workspace.CurrentCamera
 
 task.wait(6)
 Lib.Network.Invoke("Slingshot_Toggle")
-task.wait(3)
+task.wait(2)
 game:GetService("VirtualInputManager"):SendKeyEvent(true, "Q", false, game)
 task.wait(4)
 Lib.Network.Fire("Pets_UnequipAll")

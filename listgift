@@ -93,11 +93,12 @@ end)
     game.Loaded:Wait()
   end
 
+game:GetService("ReplicatedStorage").Network["Hype Wheel: Claim"]:InvokeServer()
 
 if game.PlaceId == 15502339080 then
 
 
-game:GetService("ReplicatedStorage").Network["Hype Wheel: Claim"]:InvokeServer()
+
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/TrungB2/Skid/BestSkid/ReduceLag/lowCPU.lua"))()
 task.wait()

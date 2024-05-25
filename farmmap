@@ -2064,7 +2064,2978 @@ AutoClickToggle:OnChanged(function()
         end
     end)
 end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
 
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
+AutoClickToggle:OnChanged(function()
+    local BreakablesConn = nil
+    local BreakablesTempFolder = game.ReplicatedStorage:FindFirstChild("BreakablesTempFolder") or Instance.new("Folder")
+    BreakablesTempFolder.Name = "BreakablesTempFolder"
+    BreakablesTempFolder.Parent = game.ReplicatedStorage
+    if Options.AutoClick.Value then
+        for i, v in Breakables:GetChildren() do
+            v.Parent = BreakablesTempFolder
+        end
+        BreakablesConn = Breakables.ChildAdded:Connect(function(v)
+            task.wait()
+            v.Parent = BreakablesTempFolder
+        end)
+    elseif BreakablesConn then
+        BreakablesConn:Disconnect()
+        BreakablesConn = nil
+    end
+    spawn(function()
+        while(Options.AutoClick.Value) do
+            local MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+            for i, Target in BreakablesTempFolder:GetChildren() do
+                pcall(function()
+                    if MaxZone == Target:GetAttribute("ParentID") then
+                        Network.Breakables_PlayerDealDamage:FireServer(Target.Name)
+                        task.wait()
+                        MaxZone, MaxZoneInfo = Library["ZoneCmds"].GetMaxOwnedZone()
+                    end
+                end)
+            end
+            task.wait()
+        end
+    end)
+end)
 -- AUTO USE POTIONS
 AutoPotionsToggle:OnChanged(function()
     AutoPotionsToggle = Options.AutoPotions.Value

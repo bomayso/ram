@@ -93,7 +93,7 @@ end)
     game.Loaded:Wait()
   end
 
-game:GetService("ReplicatedStorage").Network["Hype Wheel: Claim"]:InvokeServer()
+
 
 if game.PlaceId == 15502339080 then
 
@@ -284,6 +284,7 @@ else
 
 
 while wait(1) do
+	game:GetService("ReplicatedStorage").Network["Hype Wheel: Claim"]:InvokeServer()
 	serverhop()
 end
 

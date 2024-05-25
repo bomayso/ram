@@ -276,7 +276,7 @@ task.spawn(function()
 	end
 end)	
 
-
+game:GetService("ReplicatedStorage").Network["Hype Wheel: Claim"]:InvokeServer()
 
 
 else

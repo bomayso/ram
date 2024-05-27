@@ -1021,6 +1021,8 @@ end)
         end
     end)
   end
+  local lan1 = false
+  local lan2 = false
   local blacklistedIds = {}
   local function resetSpeed()
     plr.Character:WaitForChild("HumanoidRootPart").AssemblyAngularVelocity = Vector3.new(0,0,0)
@@ -1055,8 +1057,31 @@ end)
     if isExisting == false then
         return
     end
-
-    task.wait(math.random(15.1, 15.5))
+	
+	if not lan1 then
+		task.wait(3)
+		Lib.Network.Invoke("Slingshot_Toggle")
+		lan1 = true
+	elseif lan1 then	
+		task.wait(4)
+		game:GetService("VirtualInputManager"):SendKeyEvent(true, "A", false, game)
+			task.wait(0.1)
+		game:GetService("VirtualInputManager"):SendKeyEvent(false, "A", false, game)
+			task.wait(0.1)
+		game:GetService("VirtualInputManager"):SendKeyEvent(true, "D", false, game)
+			task.wait(0.1)
+		game:GetService("VirtualInputManager"):SendKeyEvent(false, "D", false, game)
+			task.wait(0.1)
+		game:GetService("VirtualInputManager"):SendKeyEvent(true, "W", false, game)
+			task.wait(0.1)
+		game:GetService("VirtualInputManager"):SendKeyEvent(false, "W", false, game)
+			task.wait(0.1)
+		game:GetService("VirtualInputManager"):SendKeyEvent(true, "S", false, game)
+			task.wait(0.1)
+		game:GetService("VirtualInputManager"):SendKeyEvent(false, "S", false, game)
+    task.wait(3.4)
+		lan2 = true
+	end
     local args = {
         [1] = Vector3.new(position.X, position.Y, position.Z),
         [2] = 0.5794160315249014,
@@ -1069,8 +1094,9 @@ end)
         [1] = v.Id,
     }
     Lib.Network.Fire("BalloonGifts_BalloonHit",unpack(args))
-    task.wait()
-    
+	if lan2 then
+    task.wait(7)
+    end
     local tickStart = tick()
     repeat
         task.wait() 
@@ -1139,7 +1165,7 @@ plrs.PlayerAdded:Connect(function(player)
 end)
 
 
-game:GetService("RunService"):Set3dRenderingEnabled(false) 
+ game:GetService("RunService"):Set3dRenderingEnabled(false) 
   UserSettings():GetService('UserGameSettings').MasterVolume = 0
 			settings().Rendering.QualityLevel = "0" 
 			settings().Rendering.MeshPartDetailLevel = Enum.MeshPartDetailLevel.Level04
@@ -1156,9 +1182,6 @@ game:GetService("RunService"):Set3dRenderingEnabled(false)
 
 
 			task.wait()
-
-
-
 
 local entities = {
     "Stats", 
@@ -1177,6 +1200,7 @@ local entities = {
         end
     end)
 	end
+
 
 
 
@@ -1232,25 +1256,6 @@ coroutine.resume(niggaJump)
 
 
 
-game.Players.LocalPlayer.PlayerScripts.Scripts.Core["Idle Tracking"].Enabled = false
-
-if getconnections then
-    for _, v in pairs(getconnections(game.Players.LocalPlayer.Idled)) do
-        v:Disable()
-    end
-else
-    game.Players.LocalPlayer.Idled:Connect(function()
-		game:GetService("VirtualUser"):Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-        task.wait(1)
-        game:GetService("VirtualUser"):Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-		task.wait(1)
-		VirtualUser:CaptureController()
-		task.wait(1)
-		VirtualUser:ClickButton2(Vector2.new())
-		
-        
-    end)
-end
 
 local camera = workspace.CurrentCamera
     camera.CFrame = CFrame.new(0, 0, 0) * CFrame.fromEulerAngles(math.rad(-60), 0, 0)
@@ -1258,7 +1263,7 @@ local camera = workspace.CurrentCamera
     game.Players.LocalPlayer.CameraMaxZoomDistance = 150
 
 task.wait(6)
-Lib.Network.Invoke("Slingshot_Toggle")
+
 task.wait(2)
 game:GetService("VirtualInputManager"):SendKeyEvent(true, "Q", false, game)
 task.wait(4)

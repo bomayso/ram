@@ -70,11 +70,11 @@ local alts = {
 "YBg8xcAG",
 "qZRXDKQ9",
 "NCgqQ36Z",
-"rxhSM7vx",
 "k4RT3cDy",
 "NcG0JN6h",
 "wYGablwY",
 "yP3E6Mss",
+"tQzyMh1s",
 "VgRXAPwB",
 "xp8WBE5O",
 "i0pFiEYy",
@@ -84,7 +84,6 @@ local alts = {
 "TJX9M0vM",
 "tRBUO5MP",
 "QDO5kCMS",
-"EvRZKjTJ",
 "p6ScCLJF",
 "ii3W5b1i",
 "CQJKy7Iu",
@@ -113,6 +112,7 @@ local alts = {
 "yhoitJV6",
 "crSRQtom",
 "ibqAmzFz",
+"OHglxyCu",
 "fZJypRZq",
 "ej0kbdd8",
 "kBNwXM6A",
@@ -373,12 +373,12 @@ local alts = {
 "MYgIK4PK",
 "xa1D4MI3",
 "kgC583E0",
-"e1n3PKYZ",
 "crd7xEPI",
 "KmPPzr5Q",
 "LfAw8MU4",
 "PH4A4BGM",
 "MWXI0mBO",
+"thfm9vrC",
 "SKv4rtLq",
 "PQiFb5wg",
 "JvR3hWUS",
@@ -795,7 +795,6 @@ local alts = {
 "wbKFdRqv",
 "MhgGT8Tg",
 "YQz7bZra",
-
 }
 local config = {
  
@@ -1058,15 +1057,15 @@ end)
     if isExisting == false then
         return
     end
-	
 	if not lan1 then
-		task.wait(math.random(20, 22))
+		task.wait(2)
 		Lib.Network.Invoke("Slingshot_Toggle")
+		task.wait()
 		lan1 = true
-	elseif lan1 then	
-		task.wait(math.random(15.1, 15.6))
-		
-	end
+	else
+		task.wait(math.random(15.1, 15.2))
+	end	
+
     local args = {
         [1] = Vector3.new(position.X, position.Y, position.Z),
         [2] = 0.5794160315249014,
@@ -1231,7 +1230,7 @@ local VirtualUser = game:service'VirtualUser'
 
 local niggaJump = coroutine.create(function ()
     while 1 do 
-        wait(math.random(20, 40))
+        wait(math.random(30, 60))
         game.Players.LocalPlayer.Character.Humanoid.Jump = true
     end
 end)

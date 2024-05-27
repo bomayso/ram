@@ -1095,7 +1095,7 @@ end)
     }
     Lib.Network.Fire("BalloonGifts_BalloonHit",unpack(args))
 	if lan2 then
-    task.wait(7)
+    task.wait(math.random(7, 7.5))
     end
     local tickStart = tick()
     repeat

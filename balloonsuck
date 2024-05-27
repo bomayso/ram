@@ -1255,7 +1255,7 @@ else
 		
         
     end)
-en
+end
 
 
 local camera = workspace.CurrentCamera

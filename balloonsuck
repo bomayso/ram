@@ -1063,8 +1063,8 @@ end)
 		Lib.Network.Invoke("Slingshot_Toggle")
 		lan1 = true
 	elseif lan1 then	
-		task.wait(8.1)
-		lan2 = true
+		task.wait(math.random(15.1, 15.6))
+		
 	end
     local args = {
         [1] = Vector3.new(position.X, position.Y, position.Z),
@@ -1078,9 +1078,7 @@ end)
         [1] = v.Id,
     }
     Lib.Network.Fire("BalloonGifts_BalloonHit",unpack(args))
-	if lan2 then
-    task.wait(math.random(7, 7.5))
-    end
+
     local tickStart = tick()
     repeat
         task.wait() 

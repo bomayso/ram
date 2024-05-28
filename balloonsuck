@@ -1060,14 +1060,9 @@ end)
     if isExisting == false then
         return
     end
-	if not lan1 then
-		task.wait(2)
-		Lib.Network.Invoke("Slingshot_Toggle")
-		task.wait()
-		lan1 = true
-	else
-		task.wait(math.random(15.1, 15.2))
-	end	
+
+task.wait(15.1)
+
 
     local args = {
         [1] = Vector3.new(position.X, position.Y, position.Z),
@@ -1265,7 +1260,7 @@ local camera = workspace.CurrentCamera
     game.Players.LocalPlayer.CameraMaxZoomDistance = 150
 
 task.wait(6)
-
+Lib.Network.Invoke("Slingshot_Toggle")
 task.wait(2)
 game:GetService("VirtualInputManager"):SendKeyEvent(true, "Q", false, game)
 task.wait(4)

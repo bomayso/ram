@@ -1151,35 +1151,9 @@ end)
 			settings().Rendering.MeshPartDetailLevel = Enum.MeshPartDetailLevel.Level04
 
 
-            game:GetService("Workspace").__THINGS.Cannons:remove()
-            game:GetService("Workspace").__THINGS.Flags:remove()
-            game:GetService("Workspace").__THINGS.Ultimates:remove()
-            game:GetService("Workspace").__THINGS.AnimatedBreakables:remove()
-            game:GetService("Workspace").__THINGS.MagicOrbs:remove()
-            game:GetService("Workspace").__THINGS.Chests:remove()
-
-
-
 
 			task.wait()
 
-local entities = {
-    "Stats", 
-    "Chat", 
-    "Debris",
-    "CoreGui",
-    "PlayerGui"
- 
-}
-
-
-	for _, entity in pairs(entities) do
-    pcall(function()
-        for i, v in pairs(game[entity]:GetDescendants()) do
-            pcall(function() v:Destroy() end)
-        end
-    end)
-	end
 
 
 
@@ -1224,40 +1198,6 @@ local entities = {
 		
     end 
 
-local VirtualUser = game:service'VirtualUser'
-
-local niggaJump = coroutine.create(function ()
-    while 1 do 
-        wait(math.random(30, 60))
-        game.Players.LocalPlayer.Character.Humanoid.Jump = true
-    end
-end)
-coroutine.resume(niggaJump)
-
-game.Players.LocalPlayer.PlayerScripts.Scripts.Core["Idle Tracking"].Enabled = false
-if getconnections then
-    for _, v in pairs(getconnections(game.Players.LocalPlayer.Idled)) do
-        v:Disable()
-    end
-else
-    game.Players.LocalPlayer.Idled:Connect(function()
-		game:GetService("VirtualUser"):Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-        task.wait(1)
-        game:GetService("VirtualUser"):Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-		task.wait(1)
-		VirtualUser:CaptureController()
-		task.wait(1)
-		VirtualUser:ClickButton2(Vector2.new())
-		
-        
-    end)
-end
-
-
-local camera = workspace.CurrentCamera
-    camera.CFrame = CFrame.new(0, 0, 0) * CFrame.fromEulerAngles(math.rad(-60), 0, 0)
-    game.Players.LocalPlayer.CameraMinZoomDistance = 150
-    game.Players.LocalPlayer.CameraMaxZoomDistance = 150
 
 task.wait(6)
 Lib.Network.Invoke("Slingshot_Toggle")

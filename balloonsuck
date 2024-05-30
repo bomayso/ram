@@ -944,18 +944,6 @@ end)
   if not game:IsLoaded() then
     game.Loaded:Wait()
   end
-repeat task.wait() until game.PlaceId ~= nil
-repeat task.wait() until not game.Players.LocalPlayer.PlayerGui:FindFirstChild("INTRO")
-repeat task.wait() until game:GetService("Players").LocalPlayer and game:GetService("Players").LocalPlayer.Character and game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
-if game.PlaceId == 8737899170 or game.PlaceId == 16498369169 then
-    local map = game:GetService("Workspace"):FindFirstChild('Map') or game:GetService("Workspace"):FindFirstChild('Map2')
-    repeat
-        task.wait()
-        print("waiting")
-    until #map:GetChildren() >= 25
-elseif game.PlaceId == 15502339080 then
-    repeat task.wait() until game:GetService("Workspace").THINGS and game:GetService("Workspace").__DEBRIS
-end
 
 
 task.spawn(function()
@@ -1043,7 +1031,7 @@ end)
         local tickStart = tick()
         repeat
 			
-            plr.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(position.X, position.Y+7, position.Z)
+            plr.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(position.X, position.Y+6, position.Z)
             		task.wait()	
 						
         until getBalloonUID(getCurrentZone()) or tick()-tickStart > config.waitForBaloonTimeout
@@ -1052,7 +1040,7 @@ end)
         end
 		
 		
-        plr.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(position.X, position.Y+7, position.Z)
+        plr.Character:WaitForChild("HumanoidRootPart").CFrame = CFrame.new(position.X, position.Y+6, position.Z)
 		task.wait()
         
     end)

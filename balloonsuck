@@ -1131,7 +1131,7 @@ plrs.PlayerAdded:Connect(function(player)
 end)
 
 
- game:GetService("RunService"):Set3dRenderingEnabled(false) 
+
   UserSettings():GetService('UserGameSettings').MasterVolume = 0
 			settings().Rendering.QualityLevel = "0" 
 			settings().Rendering.MeshPartDetailLevel = Enum.MeshPartDetailLevel.Level04
@@ -1189,5 +1189,7 @@ task.wait(6)
 Lib.Network.Invoke("Slingshot_Toggle")
 task.wait(6)
 Lib.Network.Fire("Pets_UnequipAll")
+task.wait()
+game:GetService("RunService"):Set3dRenderingEnabled(false)
 task.wait()
 game:GetService("ReplicatedStorage").Network["Hype Wheel: Claim"]:InvokeServer()

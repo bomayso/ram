@@ -230,21 +230,7 @@ end)
 
 
 
-local VirtualUser = game:service'VirtualUser'
-game:service'Players'.LocalPlayer.Idled:connect(function()
-VirtualUser:CaptureController()
-VirtualUser:ClickButton2(Vector2.new())
-end)
 
-local niggaJump = coroutine.create(function ()
-    while 1 do 
-        wait(30)
-        game.Players.LocalPlayer.Character.Humanoid.Jump = true
-    end
-end)
-coroutine.resume(niggaJump)
-
-game:GetService("VirtualInputManager"):SendKeyEvent(true, "Q", false, game)
 
 plrs.PlayerAdded:Connect(function(player)
 	

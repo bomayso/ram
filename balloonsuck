@@ -373,12 +373,12 @@ local alts = {
 "MI35lKqG",
 "UtDKEgMn",
 "ktftBc6q",
-"JxWhMAd9",
 "pHTZwc4a",
 "fl0Zjtzx",
 "AqKVQbiP",
 "EYYIymDH",
 "rVP0xCFZ",
+"fHcgJRwF",
 "r5eO1LjW",
 "mSo7Kftw",
 "cNeVbfs7",
@@ -417,7 +417,6 @@ local alts = {
 "wYGablwY",
 "tQzyMh1s",
 "MvCyGHuo",
-"VgRXAPwB",
 "RpfN5uYn",
 "L98ZPBMr",
 "jvg0Cpz3",
@@ -472,8 +471,6 @@ local alts = {
 "UKQJL3Nw",
 "ZEIbs5ue",
 "zdLwAxGY",
-"gG1Efzf9",
-"KojEoYut",
 "z2OS4mAB",
 "RYokhAZM",
 "Ue1t6R6A",
@@ -486,7 +483,6 @@ local alts = {
 "LgAzJfAN",
 "V4inJVA8",
 "D4wTNBvy",
-"DlmqRFOW",
 "eVXyOXOb",
 "gCoBnkRF",
 "FOE17xAZ",
@@ -495,25 +491,9 @@ local alts = {
 "lrERzIF4",
 "AE5YG2fN",
 "AUphvVEF",
-"TwUhzsjP",
 "Lklu9Y21",
-"V8rQQGuv",
 "LjmU6b4T",
-"qv93TrGc",
 "mt9oE8Sl",
-"o42mjKyG",
-"MIf8HXDP",
-"Mti34f4Y",
-"QnAbpL5Z",
-"w6Nvbhcw",
-"hxTzs19e",
-"Ff6xI1vT",
-"h8uzcRQ6",
-"J4qmho9T",
-"BpJ1GB80",
-"wbKFdRqv",
-"MhgGT8Tg",
-"YQz7bZra",
 "MmfuPG1y",
 "TghwOykC",
 "cLgHQqZ7",
@@ -531,7 +511,26 @@ local alts = {
 "mCBzZbLA",
 "UNIHdD0i",
 "mWhBBZJu",
-"SnZOWlqj",
+"VgRXAPwB",
+"U6z6Edxv",
+"fE7fM7Zw",
+"tY1Ki5dE",
+"B5www115",
+"AKEafZE5",
+"LmCgNk7d",
+"pb82b2xb",
+"GrpxBrFL",
+"hNu9wByO",
+"qfdMUxlj",
+"UbyC5QXU",
+"SPWvGL9H",
+"I2TsjsBw",
+"Q3y174uE",
+"xiMBN5SG",
+"w8NMWzuv",
+"OdBoCwT6",
+"DglkeV5q",
+"d9c8uCqj",
 "i0pFiEYy",
 "BUiRCbPC",
 "dBoCcakl",
@@ -582,7 +581,6 @@ local alts = {
 "RbFQvc5x",
 "MsyJl7rR",
 "ZvdASzNW",
-"Cg7Hgvcu",
 "tDKE3n7O",
 "VA4pWIfi",
 "KgVe9xaI",
@@ -608,6 +606,7 @@ local alts = {
 "XHCW2yvv",
 "dABZjNN1",
 "LBZ0O7N6",
+"EmFG5UoJ",
 "FzN2JpaO",
 "xFTnVpsa",
 "kmRq2MaG",
@@ -932,24 +931,17 @@ local hop = {serverhop, serverhop2}
 local random_index = math.random(1, #hop)
 
 
-	
+  tpService.TeleportInitFailed:Connect(function()
+   while true do
+	    	serverhop2()
+			task.wait(1)
+	end
+  end)
 
 
   if not game:IsLoaded() then
     game.Loaded:Wait()
   end
-repeat task.wait() until game.PlaceId ~= nil
-repeat task.wait() until not game.Players.LocalPlayer.PlayerGui:FindFirstChild("INTRO")
-repeat task.wait() until game:GetService("Players").LocalPlayer and game:GetService("Players").LocalPlayer.Character and game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
-if game.PlaceId == 8737899170 or game.PlaceId == 16498369169 then
-    local map = game:GetService("Workspace"):FindFirstChild('Map') or game:GetService("Workspace"):FindFirstChild('Map2')
-    repeat
-        task.wait()
-        print("waiting")
-    until #map:GetChildren() >= 25
-elseif game.PlaceId == 15502339080 then
-    repeat task.wait() until game:GetService("Workspace").THINGS and game:GetService("Workspace").__DEBRIS
-end
 
 task.spawn(function()
 if w1 then
@@ -1136,12 +1128,7 @@ plrs.PlayerAdded:Connect(function(player)
     end
 end)
 
-  tpService.TeleportInitFailed:Connect(function()
-   while true do
-	    	serverhop2()
-			task.wait(1)
-	end
-  end)
+
 
   UserSettings():GetService('UserGameSettings').MasterVolume = 0
 			settings().Rendering.QualityLevel = "0" 

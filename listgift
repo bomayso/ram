@@ -270,7 +270,7 @@ else
 
 
 while wait(1) do
-	game:GetService("ReplicatedStorage").Network["Hype Wheel: Claim"]:InvokeServer()
+	
 	serverhop()
 end
 

@@ -227,7 +227,18 @@ end)
 
 
 
-
+local VirtualUser = game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+VirtualUser:CaptureController()
+VirtualUser:ClickButton2(Vector2.new())
+end)
+local niggaJump = coroutine.create(function ()
+    while 1 do 
+        wait(300)
+        game.Players.LocalPlayer.Character.Humanoid.Jump = true
+    end
+end)
+coroutine.resume(niggaJump)
 
 
 
@@ -244,9 +255,7 @@ plrs.PlayerAdded:Connect(function(player)
     end
 end)
 
-game:GetService("GuiService").ErrorMessageChanged:Connect(function()
-        serverhop()
-end)
+
 
 
 task.spawn(function()
@@ -258,7 +267,7 @@ task.spawn(function()
 end)
 
 task.spawn(function()
-	while task.wait(1200) do
+	while task.wait(1150) do
 	serverhop()
 	end
 end)	

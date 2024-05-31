@@ -1202,4 +1202,4 @@ Lib.Network.Invoke("Slingshot_Toggle")
 task.wait(6)
 Lib.Network.Fire("Pets_UnequipAll")
 task.wait()
-game:GetService("ReplicatedStorage").Network["Hype Wheel: Claim"]:InvokeServer()
+

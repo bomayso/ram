@@ -1190,13 +1190,3 @@ task.wait(6)
 Lib.Network.Fire("Pets_UnequipAll")
 task.wait()
 
-eventUtils = require(game.ReplicatedStorage.Library.Client.HypeEventCmds)
-
-repeat task.wait(1)
-local time = (tostring(eventUtils.GetTimeRemaining()))
-time = tonumber(time)
-until time == 0
-
-task.wait(5)
-
-game:GetService("ReplicatedStorage").Network["Hype Wheel: Claim"]:InvokeServer(

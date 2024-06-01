@@ -75,8 +75,14 @@ task.spawn(function()
 	end
 end)  
 
-task.spawn(function()
 
+
+task.spawn(function()
+game:GetService("GuiService").ErrorMessageChanged:Connect(function()
+        while true do
+				serverhop()
+			task.wait(1)
+end)
 for i = 1, PlayerInServer do
 	for ii = 1,#alts do
         if getPlayers[i].Name == alts[ii] and alts[ii] ~= plrs.LocalPlayer.Name then

@@ -1046,7 +1046,7 @@ end)
         return
     end
 
-task.wait(15.1)
+task.wait(math.random(15.1, 15.6))
 
 
     local args = {

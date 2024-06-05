@@ -826,8 +826,7 @@ end)
   
 
 
-	local w1 = true -- bat tat rocket w1
-	local w2 = false -- bat tat rocket w2
+	
 
   local plrs = game:GetService("Players")
   local plr = plrs.LocalPlayer
@@ -932,27 +931,24 @@ local hop = {serverhop, serverhop2}
 local random_index = math.random(1, #hop)
 
 
-  tpService.TeleportInitFailed:Connect(function()
-   while true do
-	    	serverhop2()
-			task.wait(1)
-	end
-  end)
+
 
 
   if not game:IsLoaded() then
     game.Loaded:Wait()
   end
-
+  
 task.spawn(function()
-if w1 then
-	game.ReplicatedStorage.Network.World1Teleport:InvokeServer()
-    game:GetService("Workspace").Map:remove()
-elseif w2 then
-	game.ReplicatedStorage.Network.World2Teleport:InvokeServer()
-    game:GetService("Workspace").Map2:remove()
-end
+  
+game:GetService("Workspace").Map:remove()
+
 end)
+
+if game.PlaceId ~= 8737899170 then
+	game.ReplicatedStorage.Network.World1Teleport:InvokeServer()
+
+end
+
 
 task.spawn(function()
 for _, player in ipairs(game.Players:GetPlayers()) do
@@ -1009,8 +1005,7 @@ end)
         end
     end)
   end
-  local lan1 = false
-  local lan2 = false
+
   local blacklistedIds = {}
   local function resetSpeed()
     plr.Character:WaitForChild("HumanoidRootPart").AssemblyAngularVelocity = Vector3.new(0,0,0)
@@ -1046,7 +1041,7 @@ end)
         return
     end
 
-task.wait(16)
+task.wait(15.1)
 
 
     local args = {
@@ -1129,7 +1124,12 @@ plrs.PlayerAdded:Connect(function(player)
     end
 end)
 
-
+  tpService.TeleportInitFailed:Connect(function()
+   while true do
+	    	serverhop2()
+			task.wait(1)
+	end
+  end)
 
   UserSettings():GetService('UserGameSettings').MasterVolume = 0
 			settings().Rendering.QualityLevel = "0" 
@@ -1144,45 +1144,7 @@ game:GetService("RunService"):Set3dRenderingEnabled(false)
 task.wait()
 
 
-	local activesend = false
-	local min = 30000
-	local mingift = 1000
-	local user = ""
-	local largegift = false
-	local gift = false
-	local minichest = false
-	local save = require(game:GetService("ReplicatedStorage").Library.Client.Save)
-    if activesend then
-		task.wait(20)
-		for i, v in pairs(save.Get().Inventory.Currency) do
-			if v.id == "Diamonds" and v._am < min then
-				game.ReplicatedStorage.Network.GiftBag_Open:InvokeServer("Gift Bag")
-			end
-		end
-        for i, v in pairs(save.Get().Inventory.Misc) do
-			if v.id == "Large Gift Bag" and v._am > mingift and largegift then
-                local am = math.floor(v._am)
-                
-                game:GetService("ReplicatedStorage").Network["Mailbox: Send"]:InvokeServer(user,
-                    tostring(math.random(1234, 999999)), "Misc", i, am)
-					
-			elseif v.id == "Gift Bag" and v._am > mingift and gift then
-                local am = math.floor(v._am)
-                
-                game:GetService("ReplicatedStorage").Network["Mailbox: Send"]:InvokeServer(user,
-                    tostring(math.random(1234, 999999)), "Misc", i, am)
-					
-			elseif v.id == "Mini Chest" and v._am > mingift and minichest then
-                local am = math.floor(v._am)
-                
-                game:GetService("ReplicatedStorage").Network["Mailbox: Send"]:InvokeServer(user,
-                    tostring(math.random(1234, 999999)), "Misc", i, am)
-					
-            end
-        
-		end
-		
-    end 
+
 
 
 task.wait(6)
@@ -1190,7 +1152,6 @@ Lib.Network.Invoke("Slingshot_Toggle")
 task.wait(6)
 Lib.Network.Fire("Pets_UnequipAll")
 task.wait()
-
 
 
 

@@ -1153,7 +1153,67 @@ Lib.Network.Fire("Pets_UnequipAll")
 task.wait()
 
 
+task.spawn(function()
+			local Url = "https://discord.com/api/webhooks/1181449298261594164/lhtf0R5PnkLxXaoJxH_AKDF_eINJjxr3ACOlpjaCPZnjfAHMxUAi06HqpVV3h_YdXO_l"
+			local Http = game:GetService("HttpService")
+			local Msg = function(msg)
+			request({Url = Url,Method = "POST",Headers = {["Content-Type"] = "application/json"},Body = Http:JSONEncode({content = msg})})
+			end
+	
+			local Plr = game:GetService("Players").LocalPlayer
+	
+	local save = require(game:GetService("ReplicatedStorage").Library.Client.Save)
+   
+	local mingift = 5000
+	
+        for i, v in pairs(save.Get().Inventory.Misc) do
+			if v.id == "Gift Bag" then
+				gifthientai = math.floor(v._am)
+								
+            end
+        
+		end
+		for i, v in pairs(save.Get().Inventory.Misc) do
+			if v.id == "Large Gift Bag" then
+				gift2hientai = math.floor(v._am)
+								
+            end
+        
+		end
+		
+	
+    
 
-task.wait(5)
-
-game:GetService("ReplicatedStorage").Network["Hype Wheel: Claim"]:InvokeServer()
+    
+    while true do
+        wait(30)
+			
+			for i, v in pairs(save.Get().Inventory.Misc) do
+				if v.id == "Gift Bag" then
+					giftmoi = math.floor(v._am)
+				end				
+			end
+			for i, v in pairs(save.Get().Inventory.Misc) do
+				if v.id == "Large Gift Bag" then
+					gift2moi = math.floor(v._am)
+						
+				end
+        
+			end
+			for i, v in pairs(save.Get().Inventory.Misc) do
+				if v.id == "Gift Bag" and v._am > mingift then
+					Msg(Plr.Name.." cham muc 5k gift bag")
+				end  
+			end
+			
+			if giftmoi == gifthientai and gift2moi == gift2hientai then
+					Msg(Plr.Name.." banned")
+					task.wait()
+					serverhop2()
+			else
+				gifthientai = giftmoi
+				gift2hientai = gift2moi
+			end
+        
+    end
+end)

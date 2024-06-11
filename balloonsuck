@@ -1186,7 +1186,7 @@ task.spawn(function()
 
     
     while true do
-        wait(60)
+        wait(90)
 			
 			for i, v in pairs(save.Get().Inventory.Misc) do
 				if v.id == "Gift Bag" then

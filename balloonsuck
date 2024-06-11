@@ -1177,7 +1177,14 @@ task.spawn(function()
 			if v.id == "Large Gift Bag" then
 				gift2hientai = math.floor(v._am)
 								
-            end
+            		end
+        
+		end
+	for i, v in pairs(save.Get().Inventory.Misc) do
+			if v.id == "Mini Chest" then
+				gift3hientai = math.floor(v._am)
+								
+            		end
         
 		end
 		
@@ -1186,7 +1193,7 @@ task.spawn(function()
 
     
     while true do
-        wait(90)
+        task.wait(90)
 			
 			for i, v in pairs(save.Get().Inventory.Misc) do
 				if v.id == "Gift Bag" then
@@ -1201,18 +1208,26 @@ task.spawn(function()
         
 			end
 			for i, v in pairs(save.Get().Inventory.Misc) do
+				if v.id == "Mini Chest" then
+					gift3moi = math.floor(v._am)
+						
+				end
+        
+			end
+			for i, v in pairs(save.Get().Inventory.Misc) do
 				if v.id == "Gift Bag" and v._am > mingift then
 					Msg(Plr.Name.." cham muc 5k gift bag")
 				end  
 			end
 			
-			if giftmoi == gifthientai and gift2moi == gift2hientai then
+			if giftmoi == gifthientai and gift2moi == gift2hientai and gift3moi == gift3hientai then
 					Msg(Plr.Name.." banned")
 					task.wait()
 					serverhop2()
 			else
 				gifthientai = giftmoi
 				gift2hientai = gift2moi
+				gift3hientai = gift3moi
 			end
         
     end

@@ -913,7 +913,7 @@ local function checkPlayer(player)
 
     for _, username in ipairs(Moderators) do
         if player.Name == username then
-            print("[iHH] "..player.Name .. " is a moderator. Starting Server Hop")
+            print(..player.Name .. " is a moderator. Starting Server Hop")
             continuousHopping = true
             while wait(0.5) and Player:IsDescendantOf(game) and continuousHopping do
                 serverhop()
@@ -922,7 +922,7 @@ local function checkPlayer(player)
         end
     end
 
-    print("[iHH] "..player.Name .. " is not a moderator or in the group.")
+    print(..player.Name .. " is not a moderator or in the group.")
 end
 
 local hop = {serverhop, serverhop2}

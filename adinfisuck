@@ -1,0 +1,83 @@
+task.spawn(function()
+	while true do
+    local playerName = game.Players.LocalPlayer.Name
+    local currentTime = os.date("%Y-%m-%d %H:%M:%S")
+    local dataToWrite = "Username: " .. playerName .. ", Time: " .. currentTime
+    local fileName = "checktime.txt"
+    writefile(fileName, dataToWrite)
+    task.wait(2)
+	end
+end)
+
+_G.Config =  { UserID = "a6eb4e69-060d-42b0-99b5-834601bb6da2", discord_id = 332193090825748484 , Note = "Pc", } 
+
+  local plrs = game:GetService("Players") 
+  local plr = plrs.LocalPlayer
+  local tpService = game:GetService("TeleportService")
+
+local function getServers()
+    local url =
+        string.format("https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=Asc&limit=100&excludeFullGames=true", game.PlaceId)
+    local servers = game:GetService("HttpService"):JSONDecode(game:HttpGet(url)).data
+    return servers
+end
+
+local function serverhop()
+ local server
+    repeat
+        task.wait(1)
+        server = getServers()[Random.new():NextInteger(1, 100)]
+	
+    until server.id ~= game.JobId
+	
+   
+    tpService:TeleportToPlaceInstance(game.PlaceId, server.id, plr)
+end
+
+  tpService.TeleportInitFailed:Connect(function()
+   while true do
+	    	serverhop()
+			task.wait(5)
+	end
+  end)
+
+
+task.spawn(function()
+wait(30)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/skadidau/unfazedfree/main/animedefender"))()
+end)
+
+getgenv().Setting = {
+    AutoSkipWave=true,
+    AutoClaimQuest = true,
+    CapFps = true,
+    FpsBoost = true,
+    BlackScreen = true,
+    AutoReturnLobbyIfAnotherPlayInMatch=true,
+
+
+    WebhookUrl = "https://discord.com/api/webhooks/1181449298261594164/lhtf0R5PnkLxXaoJxH_AKDF_eINJjxr3ACOlpjaCPZnjfAHMxUAi06HqpVV3h_YdXO_l",
+    OneClickNewSetting = { 
+        Enable = true,
+        Feed = true,
+        Leave=true,
+        IgnoreEquipBest = false,
+        LeaveWave = false,
+        RequiredLevel = 35,
+        AllUnitsToGo = {"Admiral Of Lava"},
+        SnipeBannerUnits = {"Admiral Of Lava"}, --Snipe Unit Must Be In All Units To Use
+        TradingSnipe = false,
+        ForceInf = true, --Ignore Level, Unit
+        AnyUnitMythical_Secret = {
+            StartInfinite=true,
+            Feed=true,
+            IgnoreLevel = false
+        },
+        TradingSnipeUnits = {"Admiral Of Lava"},
+        MaxGemUnit = 1000,
+    },
+}
+if getgenv().Loaded  then
+    return 
+end
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/57d5eebd9b111f1639a5970102487168.lua"))()

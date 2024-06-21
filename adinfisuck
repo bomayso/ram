@@ -18,7 +18,7 @@ wait(30)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/skadidau/unfazedfree/main/animedefender"))()
 end)
 
-local Loaded = true
+
 
 getgenv().Setting = {
 	Chapter = "FooshaVillage_Chapter1",
@@ -28,15 +28,15 @@ getgenv().Setting = {
     AutoReplay = false,
     Play = false, -- Must be On To Auto Play Macro
     AutoClaimQuest = true,
-    AutoReturnLobby=true,
+    AutoReturnLobby = true,
     BlackScreen = true,
-    AutoReturnLobbyIfAnotherPlayInMatch=true,
+    AutoReturnLobbyIfAnotherPlayInMatch = true,
     SpoofName = true,
-    AutoSkipWave=true,
+    AutoSkipWave = true,
     AutoLeaveWave = false,
     AutoSellWave = false,
     MentionEveryone = false,
-    SelectAutoLeftWave=30,
+    SelectAutoLeftWave = 30,
     AutoEquipBest = false,
     MacroPlayMode = "Default", --Default
     CapFps = false,
@@ -61,7 +61,7 @@ getgenv().Setting = {
     OneClickNewSetting = { 
         Enable = true,
         Feed = true,
-        Leave=true,
+        Leave = true,
         AllChapter = false,
         IgnoreEquipBest = false,
         LeaveWave = false,
@@ -82,4 +82,5 @@ getgenv().Setting = {
 if getgenv().Loaded  then
     return 
 end
+local Loaded = true
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/57d5eebd9b111f1639a5970102487168.lua"))()

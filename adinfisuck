@@ -47,6 +47,8 @@ wait(30)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/skadidau/unfazedfree/main/animedefender"))()
 end)
 
+local Loaded = true
+
 getgenv().Setting = {
     AutoSkipWave=true,
     AutoClaimQuest = true,

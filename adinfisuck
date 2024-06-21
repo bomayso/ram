@@ -18,7 +18,9 @@ wait(30)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/skadidau/unfazedfree/main/animedefender"))()
 end)
 
-
+  if not game:IsLoaded() then
+    game.Loaded:Wait()
+  end
 
 getgenv().Setting = {
 	Chapter = "FooshaVillage_Infinite",

@@ -21,7 +21,7 @@ end)
 
 
 getgenv().Setting = {
-	Chapter = "FooshaVillage_Chapter1",
+	Chapter = "FooshaVillage_Infinite",
     AutoAllChapter = false,
     Difficulty = "Normal",
     AutoStartMap = true,
@@ -31,7 +31,7 @@ getgenv().Setting = {
     AutoReturnLobby = true,
     BlackScreen = true,
     AutoReturnLobbyIfAnotherPlayInMatch = true,
-    SpoofName = true,
+    SpoofName = false,
     AutoSkipWave = true,
     AutoLeaveWave = false,
     AutoSellWave = false,
@@ -82,5 +82,5 @@ getgenv().Setting = {
 if getgenv().Loaded  then
     return 
 end
-local Loaded = true
+local daubuoi = true
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/57d5eebd9b111f1639a5970102487168.lua"))()

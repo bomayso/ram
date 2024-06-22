@@ -22,67 +22,14 @@ end)
     game.Loaded:Wait()
   end
 
-getgenv().Setting = {
-	Chapter = "FooshaVillage_Infinite",
-    AutoAllChapter = false,
-    Difficulty = "Normal",
-    AutoStartMap = true,
-    AutoReplay = false,
-    Play = false, -- Must be On To Auto Play Macro
-    AutoClaimQuest = true,
-    AutoReturnLobby = true,
-    BlackScreen = true,
-    AutoReturnLobbyIfAnotherPlayInMatch = true,
-    SpoofName = false,
-    AutoSkipWave = true,
-    AutoLeaveWave = false,
-    AutoSellWave = false,
-    MentionEveryone = false,
-    SelectAutoLeftWave = 30,
-    AutoEquipBest = true,
-    MacroPlayMode = "Default", --Default
-    CapFps = false,
-    FpsBoost = true,
-    RandomAiMover = false,
-    WebhookUrl = "https://discord.com/api/webhooks/1181449298261594164/lhtf0R5PnkLxXaoJxH_AKDF_eINJjxr3ACOlpjaCPZnjfAHMxUAi06HqpVV3h_YdXO_l",
-    ChallengeIgnore = {},
-    ChallengeMacro = {},
-    StoryMacro = {},
-    RaidSetting = {
-        RaidName = "Cursed Dungeon",
-        AutoJoin = false,
-        AutoLeaveIfRaidStarts  = false, --
-    },
-    BannerSummon = { 
-        Enable = false,
-        Banner = "Standard"
-    },
-
-
-   
-    OneClickNewSetting = { 
-        Enable = true,
-        Feed = true,
-        Leave = true,
-        AllChapter = false,
-        IgnoreEquipBest = false,
-        LeaveWave = false,
-        RequiredLevel = 25,
-        AllUnitsToGo = {"Admiral Of Lava"},
-        SnipeBannerUnits = {"Admiral Of Lava"}, --Snipe Unit Must Be In All Units To Use
-        TradingSnipe = false,
-        ForceInf = true, --Ignore Level, Unit
-        AnyUnitMythical_Secret = {
-            StartInfinite=true,
-            Feed=true,
-            IgnoreLevel = false
-        },
-        TradingSnipeUnits = {"Admiral Of Lava"},
-        MaxGemUnit = 1000,
-    },
+repeat wait() until game.Players.LocalPlayer
+getgenv().Key = "37c8838bd7bf078d"
+getgenv()["Black Screen"] = false
+getgenv()["Auto Leave Infinite"] = {
+    ["Auto Leave"] = true,
+    ["Wave"] = 31
 }
-if getgenv().Loaded  then
-    return 
-end
-
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/57d5eebd9b111f1639a5970102487168.lua"))()
+getgenv().Webhook = true
+getgenv().UrlWebhook = "https://discord.com/api/webhooks/1181449298261594164/lhtf0R5PnkLxXaoJxH_AKDF_eINJjxr3ACOlpjaCPZnjfAHMxUAi06HqpVV3h_YdXO_l"
+daubuoi = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-KaitunAD.lua"))()

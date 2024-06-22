@@ -24,7 +24,7 @@ end)
 
 repeat wait() until game.Players.LocalPlayer
 getgenv().Key = "37c8838bd7bf078d"
-getgenv()["Black Screen"] = false
+getgenv()["Black Screen"] = true
 getgenv()["Auto Leave Infinite"] = {
     ["Auto Leave"] = true,
     ["Wave"] = 31

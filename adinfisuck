@@ -17,6 +17,39 @@ task.spawn(function()
 wait(30)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/skadidau/unfazedfree/main/animedefender"))()
 end)
+  local plrs = game:GetService("Players") 
+  local plr = plrs.LocalPlayer
+  local tpService = game:GetService("TeleportService")
+
+local function getServers()
+    local url =
+        string.format("https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=Asc&limit=100&excludeFullGames=true", game.PlaceId)
+    local servers = game:GetService("HttpService"):JSONDecode(game:HttpGet(url)).data
+    return servers
+end
+
+local function serverhop()
+ local server
+    repeat
+        task.wait(1)
+        server = getServers()[Random.new():NextInteger(1, 100)]
+
+    until server.id ~= game.JobId
+
+
+    tpService:TeleportToPlaceInstance(game.PlaceId, server.id, plr)
+end
+
+  tpService.TeleportInitFailed:Connect(function()
+   
+	    	serverhop()
+			
+	
+  end)
+
+game:GetService("GuiService").ErrorMessageChanged:Connect(function()
+        serverhop()
+end)
 
   if not game:IsLoaded() then
     game.Loaded:Wait()

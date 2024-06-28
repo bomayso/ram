@@ -1,10 +1,11 @@
   local plrs = game:GetService("Players") 
   local plr = plrs.LocalPlayer
   local tpService = game:GetService("TeleportService")
+local gameid = 17017769292
 
 local function getServers()
     local url =
-        string.format("https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=Asc&limit=100&excludeFullGames=true", 17017769292)
+        string.format("https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=Asc&limit=100&excludeFullGames=true", gameid)
     local servers = game:GetService("HttpService"):JSONDecode(game:HttpGet(url)).data
     return servers
 end
@@ -18,7 +19,7 @@ local function serverhop()
     until server.id ~= game.JobId
 
 
-    tpService:TeleportToPlaceInstance(17017769292, server.id, plr)
+    tpService:TeleportToPlaceInstance(gameid, server.id, plr)
 end
 
 task.spawn(function()
@@ -46,7 +47,7 @@ end)
 
 game:GetService'GuiService'.ErrorMessageChanged:Connect(function()
         local Code2 = game:GetService'GuiService':GetErrorCode().Value
-		print(Code2)
+		
 		if Code2 > 0 then
 			serverhop()
 		end	
@@ -60,7 +61,7 @@ task.spawn(function()
 	while true do
 	task.wait(3)
 	local Code = game:GetService'GuiService':GetErrorCode().Value
-	print(Code)
+	
 		if Code > 0 then
 			serverhop()
 		end

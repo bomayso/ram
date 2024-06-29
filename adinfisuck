@@ -33,13 +33,7 @@ game:service'Players'.LocalPlayer.Idled:connect(function()
 VirtualUser:CaptureController()
 VirtualUser:ClickButton2(Vector2.new())
 end)
-local niggaJump = coroutine.create(function ()
-    while 1 do 
-        wait(300)
-        game.Players.LocalPlayer.Character.Humanoid.Jump = true
-    end
-end)
-coroutine.resume(niggaJump)
+
 
 getgenv().Key = "37c8838bd7bf078d"
 getgenv().TargetUnitRoll = {

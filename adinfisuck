@@ -35,7 +35,7 @@ VirtualUser:ClickButton2(Vector2.new())
 end)
 
 
-getgenv().Key = "104008368b77422a"
+getgenv().Key = "3c15199c62e436d1"
 getgenv().TargetUnitRoll = {
     "Admiral Of Lava",
 }

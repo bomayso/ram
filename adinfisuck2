@@ -1,0 +1,61 @@
+task.spawn(function()
+	while true do
+    local playerName = game.Players.LocalPlayer.Name
+    local currentTime = os.date("%Y-%m-%d %H:%M:%S")
+    local dataToWrite = "Username: " .. playerName .. ", Time: " .. currentTime
+    local fileName = "checktime.txt"
+    writefile(fileName, dataToWrite)
+    task.wait(2)
+	end
+end)
+
+_G.Config =  { UserID = "a6eb4e69-060d-42b0-99b5-834601bb6da2", discord_id = 332193090825748484 , Note = "daubuoi", } 
+
+
+
+task.spawn(function()
+wait(30)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/skadidau/unfazedfree/main/animedefender"))()
+end)
+
+
+
+  if not game:IsLoaded() then
+    game.Loaded:Wait()
+  end
+
+
+
+repeat wait() until game.Players.LocalPlayer
+
+local VirtualUser = game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+VirtualUser:CaptureController()
+VirtualUser:ClickButton2(Vector2.new())
+end)
+
+
+getgenv().Key = "37c8838bd7bf078d"
+getgenv().TargetUnitRoll = {
+    "Admiral Of Lava",
+}
+getgenv().GemRollUnit = 2500
+getgenv().notRollUnitTarget = false
+getgenv().UseSavePosition = false
+getgenv()["Black Screen"] = true
+getgenv()["Auto Leave Infinite"] = {
+    ["Auto Leave"] = true,
+    ["Method"] = {
+        ["Sell"] = true,
+        ["Leave"] = false,
+    },
+    ["Wave"] = 46
+}
+getgenv().Webhook =  {
+    ["Webhook"] = true,
+    ["Url"] = "https://discord.com/api/webhooks/1181449298261594164/lhtf0R5PnkLxXaoJxH_AKDF_eINJjxr3ACOlpjaCPZnjfAHMxUAi06HqpVV3h_YdXO_l",
+    ["Roll Unit"] = true,
+    ["Story/Infinite"] = true,
+}
+daubuoi = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-KaitunAD.lua"))()

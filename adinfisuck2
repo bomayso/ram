@@ -19,10 +19,28 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/skadidau/unfazedfree/
 end)
 
 
+game:GetService'GuiService'.ErrorMessageChanged:Connect(function()
+        local Code2 = game:GetService'GuiService':GetErrorCode().Value
+
+		if Code2 > 0 then
+			game:Shutdown()
+		end	
+end)
 
   if not game:IsLoaded() then
     game.Loaded:Wait()
   end
+
+task.spawn(function()
+	while true do
+	task.wait(5)
+	local Code = game:GetService'GuiService':GetErrorCode().Value
+
+		if Code > 0 then
+			game:Shutdown()
+		end
+	end
+end)
 
 
 

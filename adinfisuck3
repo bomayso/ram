@@ -18,9 +18,7 @@ wait(30)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/skadidau/unfazedfree/main/animedefender"))()
 end)
 
-
-
- game:GetService'GuiService'.ErrorMessageChanged:Connect(function()
+game:GetService'GuiService'.ErrorMessageChanged:Connect(function()
         local Code2 = game:GetService'GuiService':GetErrorCode().Value
 
 		if Code2 > 0 then
@@ -42,7 +40,6 @@ task.spawn(function()
 		end
 	end
 end)
-
 
 repeat wait() until game.Players.LocalPlayer
 

@@ -24,16 +24,6 @@ end)
     game.Loaded:Wait()
   end
 
-task.spawn(function()
-	while true do
-	task.wait(5)
-	local Code = game:GetService'GuiService':GetErrorCode().Value
-
-		if Code == 277 or 267 or 268 then
-			game:Shutdown()
-		end
-	end
-end)
 
 repeat wait() until game.Players.LocalPlayer
 

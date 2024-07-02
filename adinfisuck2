@@ -29,7 +29,7 @@ task.spawn(function()
 	task.wait(5)
 	local Code = game:GetService'GuiService':GetErrorCode().Value
 
-		if Code == 277 or 267 then
+		if Code == 277 or 267 or 268 then
 			game:Shutdown()
 		end
 	end

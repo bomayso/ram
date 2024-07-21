@@ -45,6 +45,27 @@ end)
   if not game:IsLoaded() then
     game.Loaded:Wait()
   end
+task.spawn(function()
+	if game.PlaceId == 17017769292 then
+		 for i, v in pairs(game.Players:GetPlayers()) do
+            if v ~= game.Players.LocalPlayer then
+                pcall(function()
+                    local Character = v.Character
+                    Character:Destroy()
+                end)
+            end
+        end
+		task.wait()
+		for _, v in pairs(game.Players:GetChildren()) do
+        	for _, v2 in pairs(v.Character:GetDescendants()) do
+                    if v2:IsA("BasePart") or v2:IsA("Decal") then
+                        v2.Transparency = 1
+                    end
+                end
+        end
+	
+	end
+end)
 
 task.spawn(function()
 wait(120)

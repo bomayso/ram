@@ -73,6 +73,7 @@ if game.PlaceId == 17017769292 then
 	serverhop()
 end
 end)
+daubuoi = true
 wait(5)
 _G.Webhook  = {['WebhookLink'] = 'https://discord.com/api/webhooks/1181449298261594164/lhtf0R5PnkLxXaoJxH_AKDF_eINJjxr3ACOlpjaCPZnjfAHMxUAi06HqpVV3h_YdXO_l', ['SendWebhookReward'] = true} -- Notify when end match
 _G.SettingsAD = {
@@ -85,5 +86,5 @@ _G.SettingsAD = {
 getgenv().Key = "MARU-WOCO-XVX5U-ZTS6-A9M71-DF7C"
 getgenv().id = "332193090825748484"
 getgenv().Script_Mode = "Kaitun_Script"
-daubuoi = true
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MaruBitkub/main/Mobile.lua"))()

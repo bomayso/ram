@@ -73,28 +73,20 @@ if game.PlaceId == 17017769292 then
 	serverhop()
 end
 end)
-
-getgenv().Key = "b6c65897df1f61c10dead785"
-getgenv().TargetUnitRoll = {
-    "Admiral Of Lava",
-}
-getgenv().GemRollUnit = 2500
-getgenv().notRollUnitTarget = false
-getgenv().UseSavePosition = false
-getgenv()["Black Screen"] = true
-getgenv()["Auto Leave Infinite"] = {
-    ["Auto Leave"] = true,
-    ["Method"] = {
-        ["Sell"] = true,
-        ["Leave"] = false,
-    },
-    ["Wave"] = 46
-}
-getgenv().Webhook =  {
-    ["Webhook"] = true,
-    ["Url"] = "https://discord.com/api/webhooks/1181449298261594164/lhtf0R5PnkLxXaoJxH_AKDF_eINJjxr3ACOlpjaCPZnjfAHMxUAi06HqpVV3h_YdXO_l",
-    ["Roll Unit"] = true,
-    ["Story/Infinite"] = true,
-}
 daubuoi = true
-loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-KaitunAD.lua"))()
+if game.PlaceId == 17017769292 then
+wait(5)
+end
+_G.Webhook  = {['WebhookLink'] = 'https://discord.com/api/webhooks/1181449298261594164/lhtf0R5PnkLxXaoJxH_AKDF_eINJjxr3ACOlpjaCPZnjfAHMxUAi06HqpVV3h_YdXO_l', ['SendWebhookReward'] = true} -- Notify when end match
+_G.SettingsAD = {
+    ["LeaveAtWave"] = 46,
+    ["DelayStartLobby"] = 1,
+    ["MethodLeave"] = "Sell", -- Sell, Leave,
+    ["ReplayInStoryMode"] = false, -- Use when u want to play only story mode ( next time will go to next chapter too when disconnect )
+    ["BlackScreen"] = true
+}
+getgenv().Key = "MARU-WOCO-XVX5U-ZTS6-A9M71-DF7C"
+getgenv().id = "332193090825748484"
+getgenv().Script_Mode = "Kaitun_Script"
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xshiba/MaruBitkub/main/Mobile.lua"))()

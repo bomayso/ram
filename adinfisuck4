@@ -68,7 +68,7 @@ task.spawn(function()
 end)
 
 task.spawn(function()
-wait(60)
+wait(120)
 if game.PlaceId == 17017769292 then
 	serverhop()
 end

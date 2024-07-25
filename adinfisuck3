@@ -74,6 +74,15 @@ if game.PlaceId == 17017769292 then
 end
 end)
 
+task.spawn(function()
+wait(60)
+if game.PlaceId == 17017769292 then
+getgenv().Key = "8767305a6d1af603cb392f51"
+daubuoi = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-KaitunAD.lua"))()
+end
+end)
+
 getgenv().Config = {
 	["AutoSave"] = true,
 	["ItemPrice"] = 1,

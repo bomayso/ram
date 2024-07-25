@@ -196,16 +196,9 @@ getgenv().Config = {
 	["AutoEquipBest"] = false
 }
 
-getgenv().Key= "k4cb1f9ff896f5ffdb3528a7"
-
-daubuoi = true
 
 
-if game.PlaceId == 17017769292 then
-	repeat wait()spawn(function()loadstring(game:HttpGet("https://nousigi.com/loader.lua"))()end)wait(3)until Joebiden
-end
 
-getgenv().Key = "db8d3560d953df3bab27d32d"
 getgenv().TargetUnitRoll = {
     "Admiral Of Lava",
 }
@@ -229,6 +222,15 @@ getgenv().Webhook =  {
 }
 
 
+
+
+
 if game.PlaceId ~= 17017769292 then
+getgenv().Key = "db8d3560d953df3bab27d32d"
+daubuoi = true
 loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-KaitunAD.lua"))()
+else
+getgenv().Key= "k4cb1f9ff896f5ffdb3528a7"
+daubuoi = true
+repeat wait()spawn(function()loadstring(game:HttpGet("https://nousigi.com/loader.lua"))()end)wait(3)until Joebiden
 end

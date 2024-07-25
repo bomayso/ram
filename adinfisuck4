@@ -37,7 +37,7 @@ _G.Config =  { UserID = "a6eb4e69-060d-42b0-99b5-834601bb6da2", discord_id = 332
 
 
 task.spawn(function()
-wait(30)
+wait(60)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/skadidau/unfazedfree/main/animedefender"))()
 end)
 
@@ -74,14 +74,6 @@ if game.PlaceId == 17017769292 then
 end
 end)
 
-task.spawn(function()
-wait(60)
-if game.PlaceId == 17017769292 then
-getgenv().Key = "b6c65897df1f61c10dead785"
-daubuoi = true
-loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-KaitunAD.lua"))()
-end
-end)
 
 getgenv().Config = {
 	["AutoSave"] = true,
@@ -193,10 +185,10 @@ getgenv().Config = {
 	["UpgradeAndPlace"] = false,
 	["JoinHighest"] = false,
 	["AutoJoinHoster"] = false,
-	["DeleteMap"] = false,
+	["DeleteMap"] = true,
 	["WaitForJoiner"] = false,
 	["BuyItem"] = false,
-	["BlackScreen"] = false,
+	["BlackScreen"] = true,
 	["UnitPrice"] = 1,
 	["AutoJoinWorld"] = true,
 	["MiddlePos"] = {

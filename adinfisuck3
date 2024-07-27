@@ -37,7 +37,7 @@ _G.Config =  { UserID = "a6eb4e69-060d-42b0-99b5-834601bb6da2", discord_id = 332
 
 
 task.spawn(function()
-wait(60)
+wait(70)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/skadidau/unfazedfree/main/animedefender"))()
 end)
 
@@ -90,7 +90,7 @@ end)
 end)
 
 task.spawn(function()
-wait(120)
+wait(80)
 if game.PlaceId == 17017769292 then
 	serverhop()
 end

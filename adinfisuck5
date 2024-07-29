@@ -1,0 +1,262 @@
+  local plrs = game:GetService("Players") 
+  local plr = plrs.LocalPlayer
+  local tpService = game:GetService("TeleportService")
+
+local function getServers()
+    local url =
+        string.format("https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=Asc&limit=25&excludeFullGames=true", 17017769292)
+    local servers = game:GetService("HttpService"):JSONDecode(game:HttpGet(url)).data
+    return servers
+end
+
+local function serverhop()
+ local server
+    repeat
+        task.wait(1)
+        server = getServers()[Random.new():NextInteger(1, 25)]
+
+    until server.id ~= game.JobId
+
+
+    tpService:TeleportToPlaceInstance(17017769292, server.id, plr)
+end
+
+task.spawn(function()
+	while true do
+    local playerName = game.Players.LocalPlayer.Name
+    local currentTime = os.date("%Y-%m-%d %H:%M:%S")
+    local dataToWrite = "Username: " .. playerName .. ", Time: " .. currentTime
+    local fileName = "checktime.txt"
+    writefile(fileName, dataToWrite)
+    task.wait(2)
+	end
+end)
+
+_G.Config =  { UserID = "a6eb4e69-060d-42b0-99b5-834601bb6da2", discord_id = 332193090825748484 , Note = "daubuoi", } 
+
+
+
+task.spawn(function()
+wait(70)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/skadidau/unfazedfree/main/animedefender"))()
+end)
+
+
+  if not game:IsLoaded() then
+    game.Loaded:Wait()
+  end
+task.spawn(function()
+		for i,v in next, workspace:GetDescendants() do
+    pcall(function()
+        v.Transparency = 1
+    end)
+end
+for i,v in next, getnilinstances() do
+    pcall(function()
+        v.Transparency = 1
+        for i1,v1 in next, v:GetDescendants() do
+            v1.Transparency = 1
+        end
+    end)
+end
+a = workspace
+a.DescendantAdded:Connect(function(v)
+    pcall(function()
+        v.Transparency = 1
+    end)
+end)
+
+		 for i, v in pairs(game.Players:GetPlayers()) do
+            if v ~= game.Players.LocalPlayer then
+                pcall(function()
+                    local Character = v.Character
+                    Character:Destroy()
+                end)
+            end
+        end
+		task.wait()
+		for _, v in pairs(game.Players:GetChildren()) do
+        	for _, v2 in pairs(v.Character:GetDescendants()) do
+                    if v2:IsA("BasePart") or v2:IsA("Decal") then
+                        v2.Transparency = 1
+                    end
+                end
+        end
+	
+
+end)
+
+task.spawn(function()
+wait(80)
+if game.PlaceId == 17017769292 then
+	serverhop()
+end
+end)
+
+
+getgenv().Config = {
+	["AutoSave"] = true,
+	["ItemPrice"] = 1,
+	["WH_MatchComplete"] = false,
+	["AutoPlay"] = false,
+	["JoinerList"] = {
+		[1] = "No joiner in the list"
+	},
+	["AutoSummonStandard"] = false,
+	["AutoUseAbility"] = false,
+	["AutoPlayNext"] = false,
+	["SelectPortalMacro"] = {
+
+	},
+	["AutoLeave"] = false,
+	["AutoSell"] = false,
+	["LSImplosion"] = 100000,
+	["LSDelay"] = 0.4,
+	["AutoJoinTower"] = false,
+	["SelectRaidWorld"] = {
+		["Cursed Train"] = false,
+		["Cursed Dungeon"] = false
+	},
+	["AutoUpgrade"] = false,
+	["AutoConvertTicket"] = true,
+	["LeaveSellWave"] = 1,
+	["AutoRejoin"] = false,
+	["ABBHopServer"] = false,
+	["AutoJoinMirror"] = false,
+	["LSBomb"] = 1,
+	["AutoClaimBattlePass"] = false,
+	["AutoBuyBooth"] = false,
+	["AutoClaimQuest"] = false,
+	["TPLobbyIfPlayer"] = false,
+	["SelectTowerMacro"] = {
+
+	},
+	["IgnoreMacroTiming"] = false,
+	["SelectRaidMacro"] = {
+
+	},
+	["WH_BoothBought"] = false,
+	["TeleportLobbyNewBanner"] = false,
+	["AutoJoinRaid"] = false,
+	["PlayMacro"] = false,
+	["BoostFPS"] = false,
+	["ABBHopDelay"] = 0,
+	["JoinerCooldown"] = 0,
+	["UnselectIfSummoned"] = false,
+	["WH_BannerSummoned"] = false,
+	["LSLoop"] = 2,
+	["AutoSkip"] = false,
+	["DeleteRarity"] = {
+		["Epic"] = false,
+		["Legendary"] = false,
+		["Rare"] = false
+	},
+	["HillHeight"] = {
+		["Snowy Woods"] = 2,
+		["Cursed Kingdom Portal"] = 2,
+		["Crystal Cave"] = 2,
+		["Hall of Mirrors"] = 2,
+		["Cursed Dungeon"] = 2,
+		["Blue Planet"] = 2,
+		["Tower of Eternity"] = 2,
+		["Windmill Village"] = 2,
+		["Solar Temple Portal"] = 2,
+		["Cursed Train"] = 2,
+		["Haunted City"] = 2,
+		["Cursed Academy"] = 2,
+		["Ancient Dragon Portal"] = 2,
+		["Underwater Temple"] = 2,
+		["Swordsman Dojo"] = 2,
+		["Lunar Temple Portal"] = 2,
+		["Demon Portal"] = 2
+	},
+	["AutoReplay"] = false,
+	["AutoReturnLobby"] = false,
+	["PlaceGap"] = {
+		["Snowy Woods"] = 3.25,
+		["Cursed Kingdom Portal"] = 3.25,
+		["Crystal Cave"] = 3.25,
+		["Hall of Mirrors"] = 3.25,
+		["Cursed Dungeon"] = 3.25,
+		["Blue Planet"] = 3.25,
+		["Tower of Eternity"] = 3.25,
+		["Windmill Village"] = 3.25,
+		["Solar Temple Portal"] = 3.25,
+		["Cursed Train"] = 3.25,
+		["Haunted City"] = 3.25,
+		["Cursed Academy"] = 3.25,
+		["Ancient Dragon Portal"] = 3.25,
+		["Underwater Temple"] = 3.25,
+		["Swordsman Dojo"] = 3.25,
+		["Lunar Temple Portal"] = 3.25,
+		["Demon Portal"] = 3.25
+	},
+	["HardMode"] = false,
+	["SelectChapter"] = "Infinite",
+	["SelectChallengeMacro"] = {
+
+	},
+	["AutoJoinChallenge"] = false,
+	["AutoJoinPortal"] = false,
+	["AutoSummonLimited"] = false,
+	["SelectWorld"] = "Windmill Village",
+	["BuyUnit"] = false,
+	["UpgradeAndPlace"] = false,
+	["JoinHighest"] = false,
+	["AutoJoinHoster"] = false,
+	["DeleteMap"] = true,
+	["WaitForJoiner"] = false,
+	["BuyItem"] = false,
+	["BlackScreen"] = true,
+	["UnitPrice"] = 1,
+	["AutoJoinWorld"] = true,
+	["MiddlePos"] = {
+
+	},
+	["AutoEquipBest"] = false
+}
+
+
+
+
+getgenv().TargetUnitRoll = {
+    "Admiral Of Lava",
+}
+getgenv().GemRollUnit = 2500
+getgenv().notRollUnitTarget = false
+getgenv().UseSavePosition = false
+getgenv()["Black Screen"] = true
+getgenv()["Auto Leave Infinite"] = {
+    ["Auto Leave"] = true,
+    ["Method"] = {
+        ["Sell"] = true,
+        ["Leave"] = false,
+    },
+    ["Wave"] = 46
+}
+getgenv().Webhook =  {
+    ["Webhook"] = true,
+    ["Url"] = "https://discord.com/api/webhooks/1181449298261594164/lhtf0R5PnkLxXaoJxH_AKDF_eINJjxr3ACOlpjaCPZnjfAHMxUAi06HqpVV3h_YdXO_l",
+    ["Roll Unit"] = true,
+    ["Story/Infinite"] = true,
+}
+
+task.spawn(function()
+wait(60)
+if game.PlaceId == 17017769292 then
+getgenv().Key = "300246b1fab809c3de8cbb0d"
+daubuoi = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-KaitunAD.lua"))()
+end
+end)
+
+
+if game.PlaceId ~= 17017769292 then
+getgenv().Key = "300246b1fab809c3de8cbb0d"
+daubuoi = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-KaitunAD.lua"))()
+else
+getgenv().Key= "kce932e8ec844724a7de8dcb"
+daubuoi = true
+repeat wait()spawn(function()loadstring(game:HttpGet("https://nousigi.com/loader.lua"))()end)wait(3)until Joebiden
+end

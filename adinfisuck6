@@ -127,9 +127,9 @@ getgenv().Config = {
 	["ABBHopServer"] = false,
 	["AutoJoinMirror"] = false,
 	["LSBomb"] = 1,
-	["AutoClaimBattlePass"] = false,
+	["AutoClaimBattlePass"] = true,
 	["AutoBuyBooth"] = false,
-	["AutoClaimQuest"] = false,
+	["AutoClaimQuest"] = true,
 	["TPLobbyIfPlayer"] = false,
 	["SelectTowerMacro"] = {
 

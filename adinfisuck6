@@ -121,7 +121,7 @@ getgenv().Config = {
 		["Cursed Dungeon"] = false
 	},
 	["AutoUpgrade"] = false,
-	["AutoConvertTicket"] = true,
+	["AutoConvertTicket"] = false,
 	["LeaveSellWave"] = 1,
 	["AutoRejoin"] = false,
 	["ABBHopServer"] = false,

@@ -141,7 +141,7 @@ getgenv().Config = {
 	["TeleportLobbyNewBanner"] = false,
 	["AutoJoinRaid"] = false,
 	["PlayMacro"] = false,
-	["BoostFPS"] = false,
+	["BoostFPS"] = true,
 	["ABBHopDelay"] = 0,
 	["JoinerCooldown"] = 0,
 	["UnselectIfSummoned"] = false,
@@ -149,9 +149,9 @@ getgenv().Config = {
 	["LSLoop"] = 2,
 	["AutoSkip"] = false,
 	["DeleteRarity"] = {
-		["Epic"] = false,
-		["Legendary"] = false,
-		["Rare"] = false
+		["Epic"] = true,
+		["Legendary"] = true,
+		["Rare"] = true
 	},
 	["HillHeight"] = {
 		["Snowy Woods"] = 2,
@@ -200,7 +200,7 @@ getgenv().Config = {
 	},
 	["AutoJoinChallenge"] = false,
 	["AutoJoinPortal"] = false,
-	["AutoSummonLimited"] = false,
+	["AutoSummonLimited"] = true,
 	["SelectWorld"] = "Windmill Village",
 	["BuyUnit"] = false,
 	["UpgradeAndPlace"] = false,
@@ -215,14 +215,30 @@ getgenv().Config = {
 	["MiddlePos"] = {
 
 	},
-	["AutoEquipBest"] = false
+	["LimitedSummonUnit"] = {
+		["Spirit Mage"] = true,
+		["Demon Knight"] = true,
+		["Storm Swordsman"] = true,
+		["Sky Swordsman"] = true
+	},
+	["SelectDeleteRarity"] = {
+		["Legendary"] = false,
+		["Shiny Epic"] = true,
+		["Epic"] = false,
+		["Mythic"] = true,
+		["Shiny Rare"] = true,
+		["Shiny Legendary"] = false,
+		["Rare"] = false
+	},
+	["AutoDeleteUnit"] = true,
+	["AutoEquipBest"] = true
 }
 
 
 
-
 getgenv().TargetUnitRoll = {
-    "Admiral Of Lava",
+    "Aether Knight",
+	"Admiral Of Lava",
 }
 getgenv().GemRollUnit = 2500
 getgenv().notRollUnitTarget = false

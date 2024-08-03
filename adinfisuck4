@@ -258,7 +258,7 @@ getgenv().Webhook =  {
 }
 
 task.spawn(function()
-wait(600)
+wait(300)
 if game.PlaceId == 17017769292 then
 getgenv().Key = "514dd192bfa4b8737b131035"
 daubuoi = true

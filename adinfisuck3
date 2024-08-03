@@ -263,7 +263,7 @@ getgenv().Webhook =  {
 task.spawn(function()
 wait(600)
 if game.PlaceId == 17017769292 then
-getgenv().Key = "b6c65897df1f61c10dead785"
+getgenv().Key = "300246b1fab809c3de8cbb0d"
 daubuoi = true
 loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-KaitunAD.lua"))()
 end
@@ -271,7 +271,7 @@ end)
 
 
 if game.PlaceId ~= 17017769292 then
-getgenv().Key = "b6c65897df1f61c10dead785"
+getgenv().Key = "300246b1fab809c3de8cbb0d"
 daubuoi = true
 loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-KaitunAD.lua"))()
 else

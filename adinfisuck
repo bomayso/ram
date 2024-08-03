@@ -89,7 +89,7 @@ end)
 end)
 
 task.spawn(function()
-wait(1000)
+wait(100)
 if game.PlaceId == 17017769292 then
 	serverhop()
 end
@@ -200,7 +200,7 @@ getgenv().Config = {
 	},
 	["AutoJoinChallenge"] = false,
 	["AutoJoinPortal"] = false,
-	["AutoSummonLimited"] = true,
+	["AutoSummonLimited"] = false,
 	["SelectWorld"] = "Windmill Village",
 	["BuyUnit"] = false,
 	["UpgradeAndPlace"] = false,
@@ -237,7 +237,7 @@ getgenv().Config = {
 
 
 getgenv().TargetUnitRoll = {
-    
+    "Aether Knight",
 	"Admiral Of Lava",
 }
 getgenv().GemRollUnit = 2500
@@ -269,12 +269,7 @@ end
 end)
 
 
-if game.PlaceId ~= 17017769292 then
+
 getgenv().Key = "2d3049c97754b7410e3eb64b"
 daubuoi = true
 loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-KaitunAD.lua"))()
-else
-getgenv().Key= "k61c5961a637fdfc80cafa30"
-daubuoi = true
-repeat wait()spawn(function()loadstring(game:HttpGet("https://nousigi.com/loader.lua"))()end)wait(3)until Joebiden
-end

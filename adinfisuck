@@ -269,7 +269,12 @@ end
 end)
 
 
-
+if game.PlaceId ~= 17017769292 then
 getgenv().Key = "2d3049c97754b7410e3eb64b"
 daubuoi = true
 loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-KaitunAD.lua"))()
+else
+getgenv().Key= "k61c5961a637fdfc80cafa30"
+daubuoi = true
+repeat wait()spawn(function()loadstring(game:HttpGet("https://nousigi.com/loader.lua"))()end)wait(3)until Joebiden
+end

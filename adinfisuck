@@ -230,8 +230,8 @@ getgenv().Config = {
 		["Shiny Legendary"] = false,
 		["Rare"] = false
 	},
-	["AutoDeleteUnit"] = true,
-	["AutoEquipBest"] = true
+	["AutoDeleteUnit"] = false,
+	["AutoEquipBest"] = false
 }
 
 

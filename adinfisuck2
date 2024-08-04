@@ -200,7 +200,7 @@ getgenv().Config = {
 	},
 	["AutoJoinChallenge"] = false,
 	["AutoJoinPortal"] = false,
-	["AutoSummonLimited"] = true,
+	["AutoSummonLimited"] = false,
 	["SelectWorld"] = "Windmill Village",
 	["BuyUnit"] = false,
 	["UpgradeAndPlace"] = false,
@@ -230,8 +230,8 @@ getgenv().Config = {
 		["Shiny Legendary"] = false,
 		["Rare"] = false
 	},
-	["AutoDeleteUnit"] = true,
-	["AutoEquipBest"] = true
+	["AutoDeleteUnit"] = false,
+	["AutoEquipBest"] = false
 }
 
 
@@ -269,8 +269,12 @@ end
 end)
 
 
-
+if game.PlaceId ~= 17017769292 then
 getgenv().Key = "db8d3560d953df3bab27d32d"
 daubuoi = true
 loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-KaitunAD.lua"))()
-
+else
+getgenv().Key= "k4cb1f9ff896f5ffdb3528a7"
+daubuoi = true
+repeat wait()spawn(function()loadstring(game:HttpGet("https://nousigi.com/loader.lua"))()end)wait(3)until Joebiden
+end

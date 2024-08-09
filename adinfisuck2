@@ -253,7 +253,7 @@ getgenv()["Auto Leave Infinite"] = {
         ["Sell"] = true,
         ["Leave"] = false,
     },
-    ["Wave"] = 44
+    ["Wave"] = 45
 }
 getgenv().Webhook =  {
     ["Webhook"] = true,

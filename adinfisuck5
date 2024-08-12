@@ -4,7 +4,7 @@
 
 local function getServers()
     local url =
-        string.format("https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=Asc&limit=25&excludeFullGames=true", 17017769292)
+        string.format("https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=Asc&limit=100&excludeFullGames=true", 17764698696)
     local servers = game:GetService("HttpService"):JSONDecode(game:HttpGet(url)).data
     return servers
 end
@@ -13,12 +13,12 @@ local function serverhop()
  local server
     repeat
         task.wait(1)
-        server = getServers()[Random.new():NextInteger(1, 25)]
+        server = getServers()[Random.new():NextInteger(1, 100)]
 
     until server.id ~= game.JobId
 
 
-    tpService:TeleportToPlaceInstance(17017769292, server.id, plr)
+    tpService:TeleportToPlaceInstance(17764698696, server.id, plr)
 end
 
 task.spawn(function()
@@ -46,6 +46,18 @@ end)
     game.Loaded:Wait()
   end
 
+task.spawn(function()
+wait(3)
+ if game.PlaceId == 17017769292 and Level == nil then
+ while true do
+
+	serverhop()
+ task.wait(1)
+	end
+	end
+end)
+
+Level = game:GetService('ReplicatedStorage').Remotes.GetInventory:InvokeServer().Level
 
 
 task.spawn(function()
@@ -89,145 +101,14 @@ end)
 
 end)
 
+task.spawn(function()
+wait(60)
+if game.PlaceId == 17017769292 or 17764698696 then
+	serverhop()
+end
+end)
 
 
-getgenv().Config = {
-	["AutoSave"] = true,
-	["ItemPrice"] = 1,
-	["WH_MatchComplete"] = false,
-	["AutoPlay"] = false,
-	["JoinerList"] = {
-		[1] = "No joiner in the list"
-	},
-	["AutoSummonStandard"] = false,
-	["AutoUseAbility"] = false,
-	["AutoPlayNext"] = false,
-	["SelectPortalMacro"] = {
-
-	},
-	["AutoLeave"] = false,
-	["AutoSell"] = false,
-	["LSImplosion"] = 100000,
-	["LSDelay"] = 0.4,
-	["AutoJoinTower"] = false,
-	["SelectRaidWorld"] = {
-		["Cursed Train"] = false,
-		["Cursed Dungeon"] = false
-	},
-	["AutoUpgrade"] = false,
-	["AutoConvertTicket"] = false,
-	["LeaveSellWave"] = 1,
-	["AutoRejoin"] = true,
-	["ABBHopServer"] = false,
-	["AutoJoinMirror"] = false,
-	["LSBomb"] = 1,
-	["AutoClaimBattlePass"] = true,
-	["AutoBuyBooth"] = false,
-	["AutoClaimQuest"] = true,
-	["TPLobbyIfPlayer"] = false,
-	["SelectTowerMacro"] = {
-
-	},
-	["IgnoreMacroTiming"] = false,
-	["SelectRaidMacro"] = {
-
-	},
-	["WH_BoothBought"] = false,
-	["TeleportLobbyNewBanner"] = false,
-	["AutoJoinRaid"] = false,
-	["PlayMacro"] = false,
-	["BoostFPS"] = true,
-	["ABBHopDelay"] = 0,
-	["JoinerCooldown"] = 0,
-	["UnselectIfSummoned"] = false,
-	["WH_BannerSummoned"] = false,
-	["LSLoop"] = 2,
-	["AutoSkip"] = false,
-	["DeleteRarity"] = {
-		["Epic"] = true,
-		["Legendary"] = true,
-		["Rare"] = true
-	},
-	["HillHeight"] = {
-		["Snowy Woods"] = 2,
-		["Cursed Kingdom Portal"] = 2,
-		["Crystal Cave"] = 2,
-		["Hall of Mirrors"] = 2,
-		["Cursed Dungeon"] = 2,
-		["Blue Planet"] = 2,
-		["Tower of Eternity"] = 2,
-		["Windmill Village"] = 2,
-		["Solar Temple Portal"] = 2,
-		["Cursed Train"] = 2,
-		["Haunted City"] = 2,
-		["Cursed Academy"] = 2,
-		["Ancient Dragon Portal"] = 2,
-		["Underwater Temple"] = 2,
-		["Swordsman Dojo"] = 2,
-		["Lunar Temple Portal"] = 2,
-		["Demon Portal"] = 2
-	},
-	["AutoReplay"] = false,
-	["AutoReturnLobby"] = false,
-	["PlaceGap"] = {
-		["Snowy Woods"] = 3.25,
-		["Cursed Kingdom Portal"] = 3.25,
-		["Crystal Cave"] = 3.25,
-		["Hall of Mirrors"] = 3.25,
-		["Cursed Dungeon"] = 3.25,
-		["Blue Planet"] = 3.25,
-		["Tower of Eternity"] = 3.25,
-		["Windmill Village"] = 3.25,
-		["Solar Temple Portal"] = 3.25,
-		["Cursed Train"] = 3.25,
-		["Haunted City"] = 3.25,
-		["Cursed Academy"] = 3.25,
-		["Ancient Dragon Portal"] = 3.25,
-		["Underwater Temple"] = 3.25,
-		["Swordsman Dojo"] = 3.25,
-		["Lunar Temple Portal"] = 3.25,
-		["Demon Portal"] = 3.25
-	},
-	["HardMode"] = false,
-	["SelectChapter"] = "Infinite",
-	["SelectChallengeMacro"] = {
-
-	},
-	["AutoJoinChallenge"] = false,
-	["AutoJoinPortal"] = false,
-	["AutoSummonLimited"] = false,
-	["SelectWorld"] = "Windmill Village",
-	["BuyUnit"] = false,
-	["UpgradeAndPlace"] = false,
-	["JoinHighest"] = false,
-	["AutoJoinHoster"] = false,
-	["DeleteMap"] = true,
-	["WaitForJoiner"] = false,
-	["BuyItem"] = false,
-	["BlackScreen"] = true,
-	["UnitPrice"] = 1,
-	["AutoJoinWorld"] = true,
-	["MiddlePos"] = {
-
-	},
-	["LimitedSummonUnit"] = {
-		["Spirit Mage"] = true,
-		["Demon Knight"] = true,
-		["Storm Swordsman"] = true,
-		["Sky Swordsman"] = true
-	},
-	["SelectDeleteRarity"] = {
-		["Legendary"] = false,
-		["Shiny Epic"] = true,
-		["Epic"] = true,
-		["Mythic"] = false,
-		["Shiny Rare"] = true,
-		["Shiny Legendary"] = false,
-		["Rare"] = true
-	},
-	["AutoDeleteUnit"] = false,
-	["AutoEquipBest"] = true
-}
 
 
 
@@ -255,13 +136,6 @@ getgenv().Webhook =  {
 }
 
 
-
-if game.PlaceId ~= 17017769292 then
 getgenv().Key = "2d3049c97754b7410e3eb64b"
 daubuoi = true
 loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-KaitunAD.lua"))()
-else
-getgenv().Key= "k96463d820a655740d069ead"
-daubuoi = true
-repeat wait()spawn(function()loadstring(game:HttpGet("https://nousigi.com/loader.lua"))()end)wait(3)until Joebiden
-end

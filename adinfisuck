@@ -4,7 +4,7 @@
 
 local function getServers()
     local url =
-        string.format("https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=Asc&limit=25&excludeFullGames=true", 17017769292)
+        string.format("https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=Asc&limit=100&excludeFullGames=true", 17017769292)
     local servers = game:GetService("HttpService"):JSONDecode(game:HttpGet(url)).data
     return servers
 end
@@ -13,7 +13,7 @@ local function serverhop()
  local server
     repeat
         task.wait(1)
-        server = getServers()[Random.new():NextInteger(1, 25)]
+        server = getServers()[Random.new():NextInteger(1, 100)]
 
     until server.id ~= game.JobId
 
@@ -47,17 +47,16 @@ end)
   end
 
 task.spawn(function()
-if game.PlaceId == 17017769292 then
-	while true do
-	task.wait(2)
-	local Code = game:GetService'GuiService':GetErrorCode().Value
-	print(Code)
-		if Code == 772 then
-			serverhop()
-		end
+wait(3)
+ if game.PlaceId == 17017769292 and Level == nil then
+ while true do
+ task.wait(1)
+	serverhop()
 	end
 	end
 end)
+
+Level = game:GetService('ReplicatedStorage').Remotes.GetInventory:InvokeServer().Level
 
 task.spawn(function()
 		for i,v in next, workspace:GetDescendants() do

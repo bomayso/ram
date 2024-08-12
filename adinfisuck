@@ -46,7 +46,18 @@ end)
     game.Loaded:Wait()
   end
 
-
+task.spawn(function()
+if game.PlaceId == 17017769292 then
+	while true do
+	task.wait(2)
+	local Code = game:GetService'GuiService':GetErrorCode().Value
+	print(Code)
+		if Code == 772 then
+			serverhop()
+		end
+	end
+	end
+end)
 
 task.spawn(function()
 		for i,v in next, workspace:GetDescendants() do

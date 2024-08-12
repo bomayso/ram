@@ -47,7 +47,7 @@ end)
   end
 
 task.spawn(function()
-wait(3)
+wait(2)
  if game.PlaceId == 17017769292 and Level == nil then
  while true do
 

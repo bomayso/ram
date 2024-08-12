@@ -124,7 +124,7 @@ getgenv().Webhook =  {
 }
 
 
-getgenv().Key = "514dd192bfa4b8737b131035"
+getgenv().Key = "b6c65897df1f61c10dead785"
 daubuoi = true
 loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-KaitunAD.lua"))()
 

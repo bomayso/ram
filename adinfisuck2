@@ -50,8 +50,9 @@ task.spawn(function()
 wait(3)
  if game.PlaceId == 17017769292 and Level == nil then
  while true do
- task.wait(1)
+
 	serverhop()
+ task.wait(1)
 	end
 	end
 end)

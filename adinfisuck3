@@ -267,7 +267,14 @@ getgenv().Webhook =  {
     ["Story/Infinite"] = true,
 }
 
-
+task.spawn(function()
+wait(60)
+if game.PlaceId == 17017769292 or game.PlaceId == 17764698696 then
+getgenv().Key = "8767305a6d1af603cb392f51"
+daubuoi = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-KaitunAD.lua"))()
+end
+end)
 
 if game.PlaceId ~= 17017769292 and game.PlaceId ~= 17764698696 then
 getgenv().Key = "8767305a6d1af603cb392f51"

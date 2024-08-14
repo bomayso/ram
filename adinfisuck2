@@ -13,7 +13,7 @@ local function serverhop()
  local server
     repeat
         task.wait(1)
-        server = getServers()[Random.new():NextInteger(1, 25)]
+        server = getServers()[Random.new():NextInteger(1, 100)]
 
     until server.id ~= game.JobId
 
@@ -155,7 +155,7 @@ getgenv().Config = {
 	["UnselectIfSummoned"] = false,
 	["WH_BannerSummoned"] = false,
 	["LSLoop"] = 2,
-	["AutoSkip"] = false,
+	["AutoSkip"] = true,
 	["DeleteRarity"] = {
 		["Epic"] = true,
 		["Legendary"] = true,
@@ -207,7 +207,7 @@ getgenv().Config = {
 
 	},
 	["AutoJoinChallenge"] = false,
-	["AutoJoinPortal"] = false,
+	["AutoJoinPortal"] = true,
 	["AutoSummonLimited"] = false,
 	["SelectWorld"] = "Windmill Village",
 	["BuyUnit"] = false,
@@ -238,6 +238,8 @@ getgenv().Config = {
 		["Shiny Legendary"] = false,
 		["Rare"] = true
 	},
+	["SelectPortal"]={["Lunar Portal"]=false,["Solar Portal"]=false,["Cursed Kingdom Portal"]=false,["Ancient Dragon Portal"]=false,["Demon Portal"]=true},
+	["PortalRarity"]={["Legendary"]=true,["Mythic"]=false,["Rare"]=true,["Epic"]=true,["Secret"]=false},
 	["AutoDeleteUnit"] = false,
 	["AutoEquipBest"] = true
 }
@@ -247,6 +249,7 @@ getgenv().Config = {
 getgenv().TargetUnitRoll = {
     "Aether Knight",
 	"Admiral Of Lava",
+	"Jadefire Knight",
 }
 getgenv().GemRollUnit = 2500
 getgenv().notRollUnitTarget = false
@@ -260,13 +263,31 @@ getgenv()["Auto Leave Infinite"] = {
     },
     ["Wave"] = 45
 }
+
+getgenv().Portal = {
+    ["Enabled"] = true, 
+    ["Name Portal"] = "Demon Portal", -- support only 2 portal lunar and Demon
+    ["Rarity Portal"] = {
+        ["Rare"] = true,
+        ["Epic"] = true,
+        ["Legendary"] = true,
+    },
+    ["Unit"] = {
+        ["Use All Unit"] = false,
+        ["Custom Unit"] = {
+            "Aether Knight",
+			"Admiral Of Lava",
+			"Jadefire Knight",
+        }
+    },
+}
+
 getgenv().Webhook =  {
     ["Webhook"] = true,
     ["Url"] = "https://discord.com/api/webhooks/1181449298261594164/lhtf0R5PnkLxXaoJxH_AKDF_eINJjxr3ACOlpjaCPZnjfAHMxUAi06HqpVV3h_YdXO_l",
     ["Roll Unit"] = true,
     ["Story/Infinite"] = true,
 }
-
 task.spawn(function()
 wait(60)
 if game.PlaceId == 17017769292 or game.PlaceId == 17764698696 then

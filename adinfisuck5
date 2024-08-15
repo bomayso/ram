@@ -55,7 +55,7 @@ task.spawn(function()
 				game:Shutdown()
 					task.wait(1)
 			end
-		end
+		
 		else
 			while true do
 			task.wait(2)
@@ -64,7 +64,7 @@ task.spawn(function()
 						game:Shutdown()
 					end
 			end
-
+		end
 end)
 
 Level = game:GetService('ReplicatedStorage').Remotes.GetInventory:InvokeServer().Level

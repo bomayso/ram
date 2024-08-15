@@ -285,7 +285,7 @@ getgenv().Portal = {
         ["Use All Unit"] = false,
         ["Custom Unit"] = {
             "Aether Knight",
-			"Admiral Of Lava",
+			
 			"Jadefire Knight",
         }
     },

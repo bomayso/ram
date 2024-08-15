@@ -52,7 +52,7 @@ wait(2)
  if game.PlaceId == 17017769292 and Level == nil then
  while true do
 
-	serverhop()
+	game:Shutdown()
  task.wait(1)
 	end
 	end

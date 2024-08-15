@@ -71,6 +71,7 @@ Level = game:GetService('ReplicatedStorage').Remotes.GetInventory:InvokeServer()
 
 
 task.spawn(function()
+wait(15)
 		for i,v in next, workspace:GetDescendants() do
     pcall(function()
         v.Transparency = 1

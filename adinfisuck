@@ -32,13 +32,17 @@ task.spawn(function()
 	end
 end)
 
-_G.Config =  { UserID = "a6eb4e69-060d-42b0-99b5-834601bb6da2", discord_id = 332193090825748484 , Note = "daubuoi", } 
+_G.UserID = "fe33d442d40ad4293a2a662c8e8fad46"
+
+local PlaceId_AnimeDef = {17764698696,17017769292,17018663967,17633071278,17078425946,17456575820,17490500437,17513685680,17620826119} --Anime-Defenders
 
 
 
 task.spawn(function()
 wait(70)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/skadidau/unfazedfree/main/animedefender"))()
+if table.find(PlaceId_AnimeDef, game.PlaceId) then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/bomayso/ram/main/trackad", true))()
+end
 end)
 
 

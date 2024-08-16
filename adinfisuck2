@@ -142,6 +142,7 @@ getgenv().Portal = {
         ["Rare"] = true,
         ["Epic"] = true,
         ["Legendary"] = true,
+	["Mythical"] = false,
     },
     ["Unit"] = {
         ["Use All Unit"] = false,

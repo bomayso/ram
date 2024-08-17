@@ -52,31 +52,9 @@ end)
 
 
 
-task.spawn(function()
-		wait(2)
-		if game.PlaceId == 17017769292 and Level == nil then
-			while true do
-
-				game:Shutdown()
-					task.wait(1)
-			end
-		
-		else
-			while true do
-			task.wait(2)
-				local Code = game:GetService'GuiService':GetErrorCode().Value
-					if Code ~= 0 then
-						game:Shutdown()
-					end
-			end
-		end
-end)
-
-Level = game:GetService('ReplicatedStorage').Remotes.GetInventory:InvokeServer().Level
-
 
 task.spawn(function()
-wait(15)
+wait(10)
 		for i,v in next, workspace:GetDescendants() do
     pcall(function()
         v.Transparency = 1

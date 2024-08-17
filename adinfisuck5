@@ -254,7 +254,7 @@ getgenv().Config = {
 		["Rare"] = true
 	},
 	["SelectPortal"]={["Lunar Portal"]=false,["Solar Portal"]=false,["Cursed Kingdom Portal"]=false,["Ancient Dragon Portal"]=false,["Demon Portal"]=true},
-	["PortalRarity"]={["Legendary"]=true,["Mythic"]=false,["Rare"]=true,["Epic"]=true,["Secret"]=false},
+	["PortalRarity"]={["Legendary"]=true,["Mythic"]=true,["Rare"]=true,["Epic"]=true,["Secret"]=false},
 	["AutoDeleteUnit"] = false,
 	["AutoEquipBest"] = true
 }

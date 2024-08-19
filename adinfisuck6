@@ -4,7 +4,7 @@
 
 local function getServers()
     local url =
-        string.format("https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=Asc&limit=25&excludeFullGames=true", 17017769292)
+        string.format("https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=Asc&limit=25&excludeFullGames=true", 17764698696)
     local servers = game:GetService("HttpService"):JSONDecode(game:HttpGet(url)).data
     return servers
 end
@@ -13,12 +13,12 @@ local function serverhop()
  local server
     repeat
         task.wait(1)
-        server = getServers()[Random.new():NextInteger(1, 25)]
+        server = getServers()[Random.new():NextInteger(1, 100)]
 
     until server.id ~= game.JobId
 
 
-    tpService:TeleportToPlaceInstance(17017769292, server.id, plr)
+    tpService:TeleportToPlaceInstance(17764698696, server.id, plr)
 end
 
 task.spawn(function()
@@ -32,15 +32,18 @@ task.spawn(function()
 	end
 end)
 
-_G.Config =  { UserID = "a6eb4e69-060d-42b0-99b5-834601bb6da2", discord_id = 332193090825748484 , Note = "daubuoi", } 
+_G.UserID = "fe33d442d40ad4293a2a662c8e8fad46"
+
+local PlaceId_AnimeDef = {17764698696,17017769292,17018663967,17633071278,17078425946,17456575820,17490500437,17513685680,17620826119} --Anime-Defenders
 
 
 
 task.spawn(function()
 wait(70)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/skadidau/unfazedfree/main/animedefender"))()
+if table.find(PlaceId_AnimeDef, game.PlaceId) then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/bomayso/ram/main/trackad", true))()
+end
 end)
-
 
   if not game:IsLoaded() then
     game.Loaded:Wait()
@@ -48,7 +51,10 @@ end)
 
 
 
+
+
 task.spawn(function()
+wait(10)
 		for i,v in next, workspace:GetDescendants() do
     pcall(function()
         v.Transparency = 1
@@ -89,12 +95,6 @@ end)
 
 end)
 
-task.spawn(function()
-wait(100)
-if game.PlaceId == 17017769292 then
-	serverhop()
-end
-end)
 
 
 getgenv().Config = {
@@ -123,7 +123,7 @@ getgenv().Config = {
 	["AutoUpgrade"] = false,
 	["AutoConvertTicket"] = false,
 	["LeaveSellWave"] = 1,
-	["AutoRejoin"] = false,
+	["AutoRejoin"] = true,
 	["ABBHopServer"] = false,
 	["AutoJoinMirror"] = false,
 	["LSBomb"] = 1,
@@ -148,7 +148,7 @@ getgenv().Config = {
 	["UnselectIfSummoned"] = false,
 	["WH_BannerSummoned"] = false,
 	["LSLoop"] = 2,
-	["AutoSkip"] = false,
+	["AutoSkip"] = true,
 	["DeleteRarity"] = {
 		["Epic"] = true,
 		["Legendary"] = true,
@@ -200,8 +200,8 @@ getgenv().Config = {
 
 	},
 	["AutoJoinChallenge"] = false,
-	["AutoJoinPortal"] = false,
-	["AutoSummonLimited"] = true,
+	["AutoJoinPortal"] = true,
+	["AutoSummonLimited"] = false,
 	["SelectWorld"] = "Windmill Village",
 	["BuyUnit"] = false,
 	["UpgradeAndPlace"] = false,
@@ -225,21 +225,24 @@ getgenv().Config = {
 	["SelectDeleteRarity"] = {
 		["Legendary"] = false,
 		["Shiny Epic"] = true,
-		["Epic"] = false,
-		["Mythic"] = true,
+		["Epic"] = true,
+		["Mythic"] = false,
 		["Shiny Rare"] = true,
 		["Shiny Legendary"] = false,
-		["Rare"] = false
+		["Rare"] = true
 	},
-	["AutoDeleteUnit"] = true,
+	["SelectPortal"]={["Lunar Portal"]=false,["Solar Portal"]=false,["Cursed Kingdom Portal"]=false,["Ancient Dragon Portal"]=false,["Demon Portal"]=true},
+	["PortalRarity"]={["Legendary"]=true,["Mythic"]=true,["Rare"]=true,["Epic"]=true,["Secret"]=false},
+	["AutoDeleteUnit"] = false,
 	["AutoEquipBest"] = true
 }
 
 
 
 getgenv().TargetUnitRoll = {
-    "Aether Knight",
+ 
 	"Admiral Of Lava",
+	
 }
 getgenv().GemRollUnit = 2500
 getgenv().notRollUnitTarget = false
@@ -251,8 +254,27 @@ getgenv()["Auto Leave Infinite"] = {
         ["Sell"] = true,
         ["Leave"] = false,
     },
-    ["Wave"] = 46
+    ["Wave"] = 45
 }
+
+getgenv().Portal = {
+    ["Enabled"] = true, 
+    ["Name Portal"] = "Demon Portal", -- support only 2 portal lunar and Demon
+    ["Rarity Portal"] = {
+        ["Rare"] = true,
+        ["Epic"] = true,
+        ["Legendary"] = true,
+    },
+    ["Unit"] = {
+        ["Use All Unit"] = false,
+        ["Custom Unit"] = {
+            "Aether Knight",
+			
+			"Jadefire Knight",
+        }
+    },
+}
+
 getgenv().Webhook =  {
     ["Webhook"] = true,
     ["Url"] = "https://discord.com/api/webhooks/1181449298261594164/lhtf0R5PnkLxXaoJxH_AKDF_eINJjxr3ACOlpjaCPZnjfAHMxUAi06HqpVV3h_YdXO_l",
@@ -262,20 +284,14 @@ getgenv().Webhook =  {
 
 task.spawn(function()
 wait(60)
-if game.PlaceId == 17017769292 then
-getgenv().Key = "300246b1fab809c3de8cbb0d"
+if game.PlaceId == 17017769292 or game.PlaceId == 17764698696 then
+getgenv().Key = "db8d3560d953df3bab27d32d"
 daubuoi = true
 loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-KaitunAD.lua"))()
 end
 end)
 
 
-if game.PlaceId ~= 17017769292 then
-getgenv().Key = "300246b1fab809c3de8cbb0d"
+getgenv().Key = "db8d3560d953df3bab27d32d"
 daubuoi = true
 loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-KaitunAD.lua"))()
-else
-getgenv().Key= "kdf21f9bfdb14d717dee450d"
-daubuoi = true
-repeat wait()spawn(function()loadstring(game:HttpGet("https://nousigi.com/loader.lua"))()end)wait(3)until Joebiden
-end

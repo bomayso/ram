@@ -53,7 +53,6 @@ end)
 
 
 
-
 task.spawn(function()
 wait(10)
 		for i,v in next, workspace:GetDescendants() do
@@ -284,20 +283,18 @@ getgenv().Webhook =  {
 }
 
 task.spawn(function()
-wait(60)
+wait(100)
 if game.PlaceId == 17017769292 or game.PlaceId == 17764698696 then
-getgenv().Key = "b6c65897df1f61c10dead785"
-daubuoi = true
-loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-KaitunAD.lua"))()
+game:Shutdown()
 end
 end)
 
 if game.PlaceId ~= 17017769292 and game.PlaceId ~= 17764698696 then
-getgenv().Key = "b6c65897df1f61c10dead785"
+getgenv().Key = "514dd192bfa4b8737b131035"
 daubuoi = true
 loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-KaitunAD.lua"))()
 else
-getgenv().Key= "kce932e8ec844724a7de8dcb"
+getgenv().Key= "7835dd941a2473695114fec4"
 daubuoi = true
-repeat wait()spawn(function()loadstring(game:HttpGet("https://nousigi.com/loader.lua"))()end)wait(3)until Joebiden
+loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-KaitunAD.lua"))()
 end

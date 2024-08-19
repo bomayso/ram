@@ -45,10 +45,10 @@ if table.find(PlaceId_AnimeDef, game.PlaceId) then
 end
 end)
 
+
   if not game:IsLoaded() then
     game.Loaded:Wait()
   end
-
 
 
 
@@ -283,21 +283,18 @@ getgenv().Webhook =  {
 }
 
 task.spawn(function()
-wait(60)
+wait(100)
 if game.PlaceId == 17017769292 or game.PlaceId == 17764698696 then
-getgenv().Key = "514dd192bfa4b8737b131035"
-daubuoi = true
-loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-KaitunAD.lua"))()
+game:Shutdown()
 end
 end)
 
-
 if game.PlaceId ~= 17017769292 and game.PlaceId ~= 17764698696 then
-getgenv().Key = "514dd192bfa4b8737b131035"
+getgenv().Key = "2d3049c97754b7410e3eb64b"
 daubuoi = true
 loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-KaitunAD.lua"))()
 else
-getgenv().Key= "k96463d820a655740d069ead"
+getgenv().Key= "e7241f7bf928db415d316520"
 daubuoi = true
-repeat wait()spawn(function()loadstring(game:HttpGet("https://nousigi.com/loader.lua"))()end)wait(3)until Joebiden
+loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-KaitunAD.lua"))()
 end

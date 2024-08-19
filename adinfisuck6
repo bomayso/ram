@@ -258,7 +258,7 @@ getgenv()["Auto Leave Infinite"] = {
 }
 
 getgenv().Portal = {
-    ["Enabled"] = true, 
+    ["Enabled"] = false, 
     ["Name Portal"] = "Demon Portal", -- support only 2 portal lunar and Demon
     ["Rarity Portal"] = {
         ["Rare"] = true,

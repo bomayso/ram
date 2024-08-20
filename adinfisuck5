@@ -283,7 +283,7 @@ getgenv().Webhook =  {
 }
 
 task.spawn(function()
-wait(100)
+wait(120)
 if game.PlaceId == 17017769292 or game.PlaceId == 17764698696 then
 game:Shutdown()
 end

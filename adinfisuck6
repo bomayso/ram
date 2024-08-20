@@ -256,7 +256,17 @@ getgenv()["Auto Leave Infinite"] = {
     },
     ["Wave"] = 45
 }
-
+getgenv().Auto_Equip = {
+    ["Equip Best"] = true,
+    ["Custom Equip"] = {
+        ["Enabled"] = false,
+        ["Units"] = {
+    "Aether Knight",
+	"Admiral Of Lava",
+	"Jadefire Knight",
+        },
+    },
+}
 getgenv().Portal = {
     ["Enabled"] = false, 
     ["Name Portal"] = "Demon Portal", -- support only 2 portal lunar and Demon

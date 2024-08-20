@@ -242,7 +242,7 @@ getgenv().Config = {
 getgenv().TargetUnitRoll = {
 
 	"Admiral Of Lava",
-,
+
 }
 getgenv().GemRollUnit = 2500
 getgenv().notRollUnitTarget = false

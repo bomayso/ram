@@ -307,7 +307,7 @@ getgenv().Key = "8767305a6d1af603cb392f51"
 daubuoi = true
 loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-KaitunAD.lua"))()
 else
-getgenv().Key= "db8d3560d953df3bab27d32d"
+getgenv().Key= "ae0e0825d1ceddc39ff6abd8"
 daubuoi = true
 loadstring(game:HttpGet("https://raw.githubusercontent.com/obiiyeuem/vthangsitink/main/BananaCat-KaitunAD.lua"))()
 end

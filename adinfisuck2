@@ -241,7 +241,9 @@ getgenv().Config = {
 
 getgenv().TargetUnitRoll = {
 
+	 "Aether Knight",
 	"Admiral Of Lava",
+	"Jadefire Knight",
 
 }
 getgenv().GemRollUnit = 2500

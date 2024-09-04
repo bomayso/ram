@@ -248,6 +248,10 @@ getgenv().TargetUnitRoll = {
 	"Jadefire Knight",
 
 }
+getgenv().Speed = {
+    ["Speed"] = 2,
+    ["Wave Active Speed"] = 4,
+}
 getgenv().GemRollUnit = 2500
 getgenv().notRollUnitTarget = false
 getgenv().UseSavePosition = false
@@ -274,11 +278,12 @@ getgenv().Auto_Equip = {
 getgenv().Portal = {
     ["Enabled"] = true, 
     ["Name Portal"] = "Demon Portal", -- support only 2 portal lunar and Demon
+	["Auto Get Portal"] = false,
     ["Rarity Portal"] = {
         ["Rare"] = true,
         ["Epic"] = true,
         ["Legendary"] = true,
-	["Mythical"] = true,
+		["Mythical"] = true,
     },
     ["Unit"] = {
         ["Use All Unit"] = false,
@@ -289,7 +294,6 @@ getgenv().Portal = {
         }
     },
 }
-
 getgenv().Webhook =  {
     ["Webhook"] = true,
     ["Url"] = "https://discord.com/api/webhooks/1181449298261594164/lhtf0R5PnkLxXaoJxH_AKDF_eINJjxr3ACOlpjaCPZnjfAHMxUAi06HqpVV3h_YdXO_l",

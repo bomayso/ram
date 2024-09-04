@@ -249,8 +249,8 @@ getgenv().TargetUnitRoll = {
 
 }
 getgenv().Speed = {
-    ["Speed"] = 1,
-    ["Wave Active Speed"] = 4,
+    ["Speed"] = 2,
+    ["Wave Active Speed"] = 5,
 }
 getgenv().GemRollUnit = 2500
 getgenv().notRollUnitTarget = false

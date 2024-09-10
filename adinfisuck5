@@ -283,11 +283,11 @@ getgenv().Portal = {
     ["Name Portal"] = "Demon Portal", -- support only 2 portal lunar and Demon
 	["Auto Get Portal"] = false,
     ["Rarity Portal"] = {
-        ["Rare"] = false,
-        ["Epic"] = false,
-        ["Legendary"] = false,
+        ["Rare"] = true,
+        ["Epic"] = true,
+        ["Legendary"] = true,
 		["Mythical"] = false,
-["Secret"] = true,
+["Secret"] = false,
     },
     ["Unit"] = {
         ["Use All Unit"] = false,

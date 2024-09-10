@@ -240,7 +240,13 @@ getgenv().Config = {
 }
 
 
+getgenv().TargetUnitRoll = {
 
+	 "Aether Knight",
+	"Admiral Of Lava",
+	"Jadefire Knight",
+
+}
 getgenv().Speed = {
     ["Speed"] = 2,
     ["Wave Active Speed"] = 5,

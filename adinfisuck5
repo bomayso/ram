@@ -241,13 +241,6 @@ getgenv().Config = {
 
 
 
-getgenv().TargetUnitRoll = {
-
-	 "Aether Knight",
-	"Admiral Of Lava",
-	"Jadefire Knight",
-
-}
 getgenv().Speed = {
     ["Speed"] = 2,
     ["Wave Active Speed"] = 5,
@@ -255,7 +248,7 @@ getgenv().Speed = {
 getgenv().GemRollUnit = 2500
 getgenv().notRollUnitTarget = false
 getgenv().UseSavePosition = false
-getgenv()["Black Screen"] = true
+getgenv()["Black Screen"] = false
 getgenv()["Auto Leave Infinite"] = {
     ["Auto Leave"] = true,
     ["Method"] = {
@@ -272,6 +265,7 @@ getgenv().Auto_Equip = {
     "Aether Knight",
 	"Admiral Of Lava",
 	"Jadefire Knight",
+"The Demon Lord",
         },
     },
 }
@@ -284,12 +278,13 @@ getgenv().Portal = {
         ["Epic"] = true,
         ["Legendary"] = true,
 		["Mythical"] = true,
+["Secret"] = true,
     },
     ["Unit"] = {
         ["Use All Unit"] = false,
         ["Custom Unit"] = {
             "Aether Knight",
-			
+	"The Demon Lord",
 			"Jadefire Knight",
         }
     },
@@ -300,6 +295,7 @@ getgenv().Webhook =  {
     ["Roll Unit"] = true,
     ["Story/Infinite"] = true,
 }
+
 
 task.spawn(function()
 wait(120)

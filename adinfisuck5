@@ -245,9 +245,12 @@ getgenv().Speed = {
     ["Speed"] = 2,
     ["Wave Active Speed"] = 5,
 }
+getgenv().UseSavePosition = {
+    ["Enabled"] = false,
+    ["File Name"] = ""
+}
 getgenv().GemRollUnit = 2500
 getgenv().notRollUnitTarget = false
-getgenv().UseSavePosition = false
 getgenv()["Black Screen"] = false
 getgenv()["Auto Leave Infinite"] = {
     ["Auto Leave"] = true,

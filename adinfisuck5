@@ -257,7 +257,7 @@ getgenv().UseSavePosition = {
 }
 getgenv().GemRollUnit = 2500
 getgenv().notRollUnitTarget = false
-getgenv()["Black Screen"] = false
+getgenv()["Black Screen"] = true
 getgenv()["Auto Leave Infinite"] = {
     ["Auto Leave"] = true,
     ["Method"] = {
@@ -283,10 +283,10 @@ getgenv().Portal = {
     ["Name Portal"] = "Demon Portal", -- support only 2 portal lunar and Demon
 	["Auto Get Portal"] = false,
     ["Rarity Portal"] = {
-        ["Rare"] = true,
-        ["Epic"] = true,
-        ["Legendary"] = true,
-		["Mythical"] = true,
+        ["Rare"] = false,
+        ["Epic"] = false,
+        ["Legendary"] = false,
+		["Mythical"] = false,
 ["Secret"] = true,
     },
     ["Unit"] = {

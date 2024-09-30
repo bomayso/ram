@@ -36,19 +36,21 @@ _G.UserID = "fe33d442d40ad4293a2a662c8e8fad46"
 
 local PlaceId_AnimeDef = {17764698696,17017769292,17018663967,17633071278,17078425946,17456575820,17490500437,17513685680,17620826119} --Anime-Defenders
 
+_G.Config =  { UserID = "a6eb4e69-060d-42b0-99b5-834601bb6da2", discord_id = 332193090825748484 , Note = "Space X", } 
 
 
 task.spawn(function()
 wait(70)
 if table.find(PlaceId_AnimeDef, game.PlaceId) then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/bomayso/ram/main/trackad", true))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/skadidau/unfazedfree/main/animedefender"))()
 end
 end)
+
 
   if not game:IsLoaded() then
     game.Loaded:Wait()
   end
-
 
 
 
@@ -97,158 +99,23 @@ end)
 
 
 
-getgenv().Config = {
-	["AutoSave"] = true,
-	["ItemPrice"] = 1,
-	["WH_MatchComplete"] = false,
-	["AutoPlay"] = false,
-	["JoinerList"] = {
-		[1] = "No joiner in the list"
-	},
-	["AutoSummonStandard"] = false,
-	["AutoUseAbility"] = false,
-	["AutoPlayNext"] = false,
-	["SelectPortalMacro"] = {
-
-	},
-	["AutoLeave"] = false,
-	["AutoSell"] = false,
-	["LSImplosion"] = 100000,
-	["LSDelay"] = 0.4,
-	["AutoJoinTower"] = false,
-	["SelectRaidWorld"] = {
-		["Cursed Train"] = false,
-		["Cursed Dungeon"] = false
-	},
-	["AutoUpgrade"] = false,
-	["AutoConvertTicket"] = false,
-	["LeaveSellWave"] = 1,
-	["AutoRejoin"] = true,
-	["ABBHopServer"] = false,
-	["AutoJoinMirror"] = false,
-	["LSBomb"] = 1,
-	["AutoClaimBattlePass"] = true,
-	["AutoBuyBooth"] = false,
-	["AutoClaimQuest"] = true,
-	["TPLobbyIfPlayer"] = false,
-	["SelectTowerMacro"] = {
-
-	},
-	["IgnoreMacroTiming"] = false,
-	["SelectRaidMacro"] = {
-
-	},
-	["WH_BoothBought"] = false,
-	["TeleportLobbyNewBanner"] = false,
-	["AutoJoinRaid"] = false,
-	["PlayMacro"] = false,
-	["BoostFPS"] = true,
-	["ABBHopDelay"] = 0,
-	["JoinerCooldown"] = 0,
-	["UnselectIfSummoned"] = false,
-	["WH_BannerSummoned"] = false,
-	["LSLoop"] = 2,
-	["AutoSkip"] = true,
-	["DeleteRarity"] = {
-		["Epic"] = true,
-		["Legendary"] = true,
-		["Rare"] = true
-	},
-	["HillHeight"] = {
-		["Snowy Woods"] = 2,
-		["Cursed Kingdom Portal"] = 2,
-		["Crystal Cave"] = 2,
-		["Hall of Mirrors"] = 2,
-		["Cursed Dungeon"] = 2,
-		["Blue Planet"] = 2,
-		["Tower of Eternity"] = 2,
-		["Windmill Village"] = 2,
-		["Solar Temple Portal"] = 2,
-		["Cursed Train"] = 2,
-		["Haunted City"] = 2,
-		["Cursed Academy"] = 2,
-		["Ancient Dragon Portal"] = 2,
-		["Underwater Temple"] = 2,
-		["Swordsman Dojo"] = 2,
-		["Lunar Temple Portal"] = 2,
-		["Demon Portal"] = 2
-	},
-	["AutoReplay"] = false,
-	["AutoReturnLobby"] = false,
-	["PlaceGap"] = {
-		["Snowy Woods"] = 3.25,
-		["Cursed Kingdom Portal"] = 3.25,
-		["Crystal Cave"] = 3.25,
-		["Hall of Mirrors"] = 3.25,
-		["Cursed Dungeon"] = 3.25,
-		["Blue Planet"] = 3.25,
-		["Tower of Eternity"] = 3.25,
-		["Windmill Village"] = 3.25,
-		["Solar Temple Portal"] = 3.25,
-		["Cursed Train"] = 3.25,
-		["Haunted City"] = 3.25,
-		["Cursed Academy"] = 3.25,
-		["Ancient Dragon Portal"] = 3.25,
-		["Underwater Temple"] = 3.25,
-		["Swordsman Dojo"] = 3.25,
-		["Lunar Temple Portal"] = 3.25,
-		["Demon Portal"] = 3.25
-	},
-	["HardMode"] = false,
-	["SelectChapter"] = "Infinite",
-	["SelectChallengeMacro"] = {
-
-	},
-	["AutoJoinChallenge"] = false,
-	["AutoJoinPortal"] = true,
-	["AutoSummonLimited"] = false,
-	["SelectWorld"] = "Windmill Village",
-	["BuyUnit"] = false,
-	["UpgradeAndPlace"] = false,
-	["JoinHighest"] = false,
-	["AutoJoinHoster"] = false,
-	["DeleteMap"] = true,
-	["WaitForJoiner"] = false,
-	["BuyItem"] = false,
-	["BlackScreen"] = true,
-	["UnitPrice"] = 1,
-	["AutoJoinWorld"] = true,
-	["MiddlePos"] = {
-
-	},
-	["LimitedSummonUnit"] = {
-		["Spirit Mage"] = true,
-		["Demon Knight"] = true,
-		["Storm Swordsman"] = true,
-		["Sky Swordsman"] = true
-	},
-	["SelectDeleteRarity"] = {
-		["Legendary"] = false,
-		["Shiny Epic"] = true,
-		["Epic"] = true,
-		["Mythic"] = false,
-		["Shiny Rare"] = true,
-		["Shiny Legendary"] = false,
-		["Rare"] = true
-	},
-	["SelectPortal"]={["Lunar Portal"]=false,["Solar Portal"]=false,["Cursed Kingdom Portal"]=false,["Ancient Dragon Portal"]=false,["Demon Portal"]=true},
-	["PortalRarity"]={["Legendary"]=true,["Mythic"]=true,["Rare"]=true,["Epic"]=true,["Secret"]=false},
-	["AutoDeleteUnit"] = false,
-	["AutoEquipBest"] = true
-}
-
-
-
 getgenv().TargetUnitRoll = {
- 
-	 "Aether Knight",
+
+	"Aether Knight",
 	"Admiral Of Lava",
 	"Jadefire Knight",
-	
+
+}
+getgenv().Speed = {
+    ["Speed"] = 2,
+    ["Wave Active Speed"] = 5,
+}
+getgenv().UseSavePosition = {
+    ["Enabled"] = false,
+    ["File Name"] = ""
 }
 getgenv().GemRollUnit = 2500
 getgenv().notRollUnitTarget = false
-getgenv().UseSavePosition = false
 getgenv()["Black Screen"] = true
 getgenv()["Auto Leave Infinite"] = {
     ["Auto Leave"] = true,
@@ -266,34 +133,36 @@ getgenv().Auto_Equip = {
     "Aether Knight",
 	"Admiral Of Lava",
 	"Jadefire Knight",
+	"The Demon Lord",
         },
     },
 }
 getgenv().Portal = {
     ["Enabled"] = false, 
     ["Name Portal"] = "Demon Portal", -- support only 2 portal lunar and Demon
+	["Auto Get Portal"] = false,
     ["Rarity Portal"] = {
         ["Rare"] = true,
         ["Epic"] = true,
         ["Legendary"] = true,
+		["Mythical"] = true,
+		["Secret"] = true,
     },
     ["Unit"] = {
         ["Use All Unit"] = false,
         ["Custom Unit"] = {
             "Aether Knight",
-			
+			"The Demon Lord",
 			"Jadefire Knight",
         }
     },
 }
-
 getgenv().Webhook =  {
     ["Webhook"] = true,
     ["Url"] = "https://discord.com/api/webhooks/1181449298261594164/lhtf0R5PnkLxXaoJxH_AKDF_eINJjxr3ACOlpjaCPZnjfAHMxUAi06HqpVV3h_YdXO_l",
     ["Roll Unit"] = true,
     ["Story/Infinite"] = true,
 }
-
 
 
 

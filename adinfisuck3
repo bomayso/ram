@@ -4,7 +4,7 @@
 
 local function getServers()
     local url =
-        string.format("https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=Asc&limit=25&excludeFullGames=true", 17764698696)
+        string.format("https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=Asc&limit=100&excludeFullGames=true", 17764698696)
     local servers = game:GetService("HttpService"):JSONDecode(game:HttpGet(url)).data
     return servers
 end

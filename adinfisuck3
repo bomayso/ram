@@ -52,7 +52,18 @@ end)
     game.Loaded:Wait()
   end
 
+task.spawn(function()
+wait(2)
+ if game.PlaceId == 17017769292 and Level == nil then
+ while true do
+ 
+	serverhop()
+	task.wait(1)
+	end
+	end
+end)
 
+Level = game:GetService('ReplicatedStorage').Remotes.GetInventory:InvokeServer().Level
 
 
 task.spawn(function()

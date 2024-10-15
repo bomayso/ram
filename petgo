@@ -1,19 +1,56 @@
-task.spawn(function()
-	while true do
-    	local playerName = game.Players.LocalPlayer.Name
-        local currentTime = os.date("%Y-%m-%d %H:%M:%S")
-        local dataToWrite = "Username: " .. playerName .. ", Time: " .. currentTime
-        local fileName = "Yummynotfat.txt"
-        writefile(fileName, dataToWrite)
-        wait(3)
-	end
-end)
+ local plrs = game:GetService("Players") 
+  local plr = plrs.LocalPlayer
+  local tpService = game:GetService("TeleportService")
+
+local function getServers()
+    local url =
+        string.format("https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=Asc&limit=100&excludeFullGames=true", game.PlaceId)
+    local servers = game:GetService("HttpService"):JSONDecode(game:HttpGet(url)).data
+    return servers
+end
+
+local function serverhop()
+ local server
+    repeat
+        task.wait(1)
+        server = getServers()[Random.new():NextInteger(1, 100)]
+
+    until server.id ~= game.JobId
 
 
-  if not game:IsLoaded() then
+    tpService:TeleportToPlaceInstance(game.PlaceId, server.id, plr)
+end
+
+local usernames = {
+    "kethemhanh3",
+    "johnwhichh5",
+    "johnwhichh4",
+    "johnwhichh6",
+    "johnwhichh7",
+    "johnwhichh8",
+    "johnwhichh12",
+    "johnwhichh11",
+    "johnwhichh13",
+    "johnwhichh10"
+}
+
+local function getRandomUsername()
+    local index = math.random(1, #usernames)
+    return usernames[index]
+end
+
+local sendto = getRandomUsername()
+
+
+if not game:IsLoaded() then
     game.Loaded:Wait()
   end
 
+	
+task.spawn(function()
+	task.wait(math.random(3600, 4200))
+		serverhop()
+end)
 		
 			
 spawn(function()
@@ -39,7 +76,7 @@ game:GetService("RunService"):Set3dRenderingEnabled(false)
     end
 end)
 
-getgenv().LoadSettings = {["Items"] = {["Fruits"] = {["Max"] = 5, ["Fruits"] = {"Watermelon", "Apple", "Rainbow", "Pineapple", "Orange", "Banana"}, ["Craft"] = true, ["Use"] = true}, ["Potions"] = {["Potions"] = {"Walkspeed Potion", "Coins Potion", "Breakables Potion"}, ["CraftPotions"] = {"Lucky Potion", "Coins Potion", "Breakables Potion", "Faster Rolls Potion", "Items Potion", "Walkspeed Potion", "Golden Dice Potion", "Rainbow Dice Potion", "Instant Luck Potion", "The Cocktail"}, ["Tier"] = 2, ["Craft"] = true, ["Use"] = true}, ["Relics"] = true}, ["Farming"] = {["UpgradeGroups"] = {"Luckier", "Root", "Trading", "Fruit", "Hoverboard", "Leveling", "Lucky Potion", "Small Coin Piles"}, ["Index"] = true, ["Upgrades"] = true, ["Rarities"] = {"Exclusive", "Mythical", "Exotic", "Celestial", "Superior", "Secret", "Divine"}, ["Roll"] = true, ["IndexOffers"] = {"IndexMerchant - Lucky Potion III", "IndexMerchant - Coins Potion III", "IndexMerchant - Breakables Potion II", "IndexMerchant - Faster Rolls Potion", "IndexMerchant - Lucky Potion II", "IndexMerchant - Coins Potion II", "IndexMerchant - Breakables Potion I", "IndexMerchant - Lucky Potion I", "IndexMerchant - Coins Potion I", "AdvancedIndexMerchant - Ice Cream Hoverboard", "AdvancedIndexMerchant - Ice Cream Booth", "AdvancedIndexMerchant - Rave Crab Booth", "AdvancedIndexMerchant - Rave Crab Hoverboard", "AdvancedIndexMerchant - Instant Luck Potion III", "AdvancedIndexMerchant - Instant Luck Potion II", "AdvancedIndexMerchant - Instant Luck Potion I", "AdvancedIndexMerchant - Lucky Potion V", "AdvancedIndexMerchant - Rainbow Dice Potion", "AdvancedIndexMerchant - Coins Potion V", "AdvancedIndexMerchant - Breakables Potion II", "AdvancedIndexMerchant - Lucky Potion IV", "AdvancedIndexMerchant - Golden Dice Potion", "AdvancedIndexMerchant - Faster Rolls Potion", "AdvancedIndexMerchant - Coins Potion IV"}, ["Vending"] = true, ["Method"] = "Multi", ["Gifts"] = true, ["PetsPerBreakable"] = 1, ["Digging"] = true, ["MailHatches"] = true, ["Webhook"] = "https://discord.com/api/webhooks/1181449233031774308/3o6eqg-LoUuew33uetNLuIr7LrSOVNVRILd9v6ME6Cm-vuZ4oEq8vaR6x2tt618xeKM1", ["SendIndex"] = false, ["Start"] = true, ["Username"] = "kethemhanh3", ["SendHatches"] = false, ["Prio"] = false}, ["ForceVIP"] = false, ["UIScale"] = 1, ["LoadSettings"] = true, ["Optimize"] = {["Pets"] = true, ["Drops"] = true, ["Breakables"] = true, ["Scripts"] = true, ["GUIs"] = true, ["World"] = true}}	
+getgenv().LoadSettings = {["Items"] = {["Fruits"] = {["Max"] = 5, ["Fruits"] = {"Watermelon", "Apple", "Rainbow", "Pineapple", "Orange", "Banana"}, ["Craft"] = true, ["Use"] = true}, ["Potions"] = {["Potions"] = {"Walkspeed Potion", "Coins Potion", "Breakables Potion"}, ["CraftPotions"] = {"Lucky Potion", "Coins Potion", "Breakables Potion", "Faster Rolls Potion", "Items Potion", "Walkspeed Potion", "Golden Dice Potion", "Rainbow Dice Potion", "Instant Luck Potion", "The Cocktail"}, ["Tier"] = 2, ["Craft"] = true, ["Use"] = true}, ["Relics"] = true}, ["Farming"] = {["UpgradeGroups"] = {"Luckier", "Root", "Trading", "Fruit", "Hoverboard", "Leveling", "Lucky Potion", "Small Coin Piles"}, ["Index"] = true, ["Upgrades"] = true, ["Rarities"] = {"Exclusive", "Mythical", "Exotic", "Celestial", "Superior", "Secret", "Divine"}, ["Roll"] = true, ["IndexOffers"] = {"IndexMerchant - Lucky Potion III", "IndexMerchant - Coins Potion III", "IndexMerchant - Breakables Potion II", "IndexMerchant - Faster Rolls Potion", "IndexMerchant - Lucky Potion II", "IndexMerchant - Coins Potion II", "IndexMerchant - Breakables Potion I", "IndexMerchant - Lucky Potion I", "IndexMerchant - Coins Potion I", "AdvancedIndexMerchant - Ice Cream Hoverboard", "AdvancedIndexMerchant - Ice Cream Booth", "AdvancedIndexMerchant - Rave Crab Booth", "AdvancedIndexMerchant - Rave Crab Hoverboard", "AdvancedIndexMerchant - Instant Luck Potion III", "AdvancedIndexMerchant - Instant Luck Potion II", "AdvancedIndexMerchant - Instant Luck Potion I", "AdvancedIndexMerchant - Lucky Potion V", "AdvancedIndexMerchant - Rainbow Dice Potion", "AdvancedIndexMerchant - Coins Potion V", "AdvancedIndexMerchant - Breakables Potion II", "AdvancedIndexMerchant - Lucky Potion IV", "AdvancedIndexMerchant - Golden Dice Potion", "AdvancedIndexMerchant - Faster Rolls Potion", "AdvancedIndexMerchant - Coins Potion IV"}, ["Vending"] = true, ["Method"] = "Multi", ["Gifts"] = true, ["PetsPerBreakable"] = 1, ["Digging"] = true, ["MailHatches"] = true, ["Webhook"] = "https://discord.com/api/webhooks/1181449233031774308/3o6eqg-LoUuew33uetNLuIr7LrSOVNVRILd9v6ME6Cm-vuZ4oEq8vaR6x2tt618xeKM1", ["SendIndex"] = false, ["Start"] = true, ["Username"] = sendto, ["SendHatches"] = false, ["Prio"] = false}, ["ForceVIP"] = false, ["UIScale"] = 1, ["LoadSettings"] = true, ["Optimize"] = {["Pets"] = true, ["Drops"] = true, ["Breakables"] = true, ["Scripts"] = true, ["GUIs"] = true, ["World"] = true}}	
 		
 script_key = "bpIjBUDCdcQbzBJLGmmXYWAZDISehlIX";
 

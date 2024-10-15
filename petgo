@@ -17,7 +17,7 @@ end)
 		
 			
 spawn(function()
-
+game:GetService("RunService"):Set3dRenderingEnabled(false)
 		for _, v in pairs(game.Players:GetChildren()) do
         	for _, v2 in pairs(v.Character:GetDescendants()) do
                     if v2:IsA("BasePart") or v2:IsA("Decal") then

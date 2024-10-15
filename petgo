@@ -1,3 +1,15 @@
+task.spawn(function()
+	while true do
+    local playerName = game.Players.LocalPlayer.Name
+    local currentTime = os.date("%Y-%m-%d %H:%M:%S")
+    local dataToWrite = "Username: " .. playerName .. ", Time: " .. currentTime
+    local fileName = "checktime.txt"
+    writefile(fileName, dataToWrite)
+    task.wait(2)
+	end
+end)
+
+
   if not game:IsLoaded() then
     game.Loaded:Wait()
   end

@@ -1,0 +1,104 @@
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+  end
+
+spawn(function()
+game:GetService("RunService"):Set3dRenderingEnabled(false)
+		for _, v in pairs(game.Players:GetChildren()) do
+        	for _, v2 in pairs(v.Character:GetDescendants()) do
+                    if v2:IsA("BasePart") or v2:IsA("Decal") then
+                        v2.Transparency = 1
+                    end
+                end
+        end
+				
+    while true do
+        task.wait(30)
+        for i, v in pairs(game.Players:GetPlayers()) do
+            if v ~= game.Players.LocalPlayer then
+                pcall(function()
+                    local Character = v.Character
+                    Character:Destroy()
+                end)
+            end
+        end
+    end
+end)
+
+getgenv().Settings = {
+    Sniper = {
+        Active = false,
+
+        Items = {
+            ["All Rarity: Exotic"] = {Class = "Pet", Price = "80%"},
+            ["All Rarity: Divine"] = {Class = "Pet", Price = 1000},
+            ["Huge Dog"] = {Class = "Pet", "20%"},
+        },
+        Serverhop = {
+            ["Switch Servers"] = true,
+            ["Teleport Delay (s)"] = 3,
+            ["Save # Servers"] = 10,
+        },
+    
+        Webhook = {
+            ["URL"] = "",
+            ["Send Embeds"] = true,
+            ["Remove Username"] = true,
+            ["Ping on Huges 'n Titanics"] = true,
+            ["Global Snipes"] = true,
+        },
+
+        StopParams = {
+            ["Limits Reached"] = false,
+            ["Diamonds Hit: 250k"] = false,
+            ["60 Minutes"] = false,
+            ["Switch To Selling"] = true,
+        },
+    },
+
+    Seller = {
+        Active = true,
+
+        Items = {
+            
+            ["All Rarity: Exclusive"] = {Class = "Pet", Price = "90%"},
+			["All Rarity: Exotic"] = {Class = "Pet", Price = "90%"},
+			["All Rarity: Celestial"] = {Class = "Pet", Price = "90%"},
+			["All Rarity: Superior"] = {Class = "Pet", Price = "90%"},
+			["All Rarity: Secret"] = {Class = "Pet", Price = "90%"},
+			["All Rarity: Divine"] = {Class = "Pet", Price = "90%"},
+		
+        },
+
+        Serverhop = {
+            ["Switch Servers"] = true,
+            ["Teleport Delay (m)"] = 10,
+        },
+
+        Webhook = {
+            ["URL"] = "https://discord.com/api/webhooks/1181448676737036299/aBB9D7EWm5SPysXlKt5ixjyP5-LDO5CTgAzUCLDDfba4QjJpAff6CPM7NHdNDbVqIUF9",
+            ["Send Embeds"] = true,
+            ["Remove Username"] = true,
+        },
+
+        StopParams = {
+            ["Item Runout"] = true,
+            ["Diamonds Hit: 1b"] = false,
+            ["60 Minutes"] = false,
+            ["Switch To Sniping"] = false,
+        },
+
+        Other = {
+            ["Auto Accept Mail"] = true,
+            ["Diamonds Hit: 5m Sendout"] = "donwhich1",
+            ["Always Try Adding Listings"] = true,
+            ["Never Join Friendslist"] = true,
+        },
+    },
+    
+
+}
+
+script_key="WokEpGCUtggwkUXTihDkgVQOeegshlHs";
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/717430e3bbde3530feb824de729fcc90.lua"))()

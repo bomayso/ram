@@ -1,8 +1,72 @@
-if not game:IsLoaded() then
+local alts = {
+    "kethemhanh3",
+    "johnwhichh5",
+    "johnwhichh4",
+    "johnwhichh6",
+    "johnwhichh7",
+    "johnwhichh8",
+    "johnwhichh12",
+    "johnwhichh11",
+    "johnwhichh13",
+    "johnwhichh10"
+}
+local plazaid = 19006211286
+ local plrs = game:GetService("Players")
+  local plr = plrs.LocalPlayer
+  
+  local replicatedStorage = game:GetService("ReplicatedStorage")
+  local Lib = require(replicatedStorage.Library)
+  local plrs = game:GetService("Players") 
+  local plr = plrs.LocalPlayer
+  local tpService = game:GetService("TeleportService")
+  
+	local getPlayers = plrs:GetPlayers()
+	local PlayerInServer = #getPlayers
+	local HttpService = game:GetService("HttpService")
+
+
+
+
+ local function getServers()
+    local url =
+        string.format("https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=Desc&limit=100&excludeFullGames=true", plazaid)
+    local servers = game:GetService("HttpService"):JSONDecode(game:HttpGet(url)).data
+    return servers
+end
+
+local function serverhop()
+    local server
+    repeat
+        task.wait(1)
+        server = getServers()[Random.new():NextInteger(1, 100)]
+    until server.id ~= game.JobId
+    tpService:TeleportToPlaceInstance(plazaid, server.id, plr)
+end
+
+
+
+
+task.spawn(function()
+game:GetService("GuiService").ErrorMessageChanged:Connect(function()
+        while true do
+				serverhop()
+			task.wait(1)
+end)
+for i = 1, PlayerInServer do
+	for ii = 1,#alts do
+        if getPlayers[i].Name == alts[ii] and alts[ii] ~= plrs.LocalPlayer.Name then
+        	while true do
+				serverhop()
+			task.wait(1)
+	    	end
+        end
+    end
+end
+end)
+
+ if not game:IsLoaded() then
     game.Loaded:Wait()
   end
-
-
 
 getgenv().Settings = {
     Sniper = {
@@ -40,18 +104,18 @@ getgenv().Settings = {
 
         Items = {
             
-            		["All Rarity: Exclusive"] = {Class = "Pet", Price = "-3%"},
-			["All Rarity: Exotic"] = {Class = "Pet", Price = "-3%"},
-			["All Rarity: Celestial"] = {Class = "Pet", Price = "-3%"},
-			["All Rarity: Superior"] = {Class = "Pet", Price = "-3%"},
-			["All Rarity: Secret"] = {Class = "Pet", Price = "-3%"},
-			["All Rarity: Divine"] = {Class = "Pet", Price = "-3%"},
-			["All Rarity: Mythical"] = {Class = "Pet", Price = "-3%"},
+            		["All Rarity: Exclusive"] = {Class = "Pet", Price = "-4%"},
+			["All Rarity: Exotic"] = {Class = "Pet", Price = "-4%"},
+			["All Rarity: Celestial"] = {Class = "Pet", Price = "-4%"},
+			["All Rarity: Superior"] = {Class = "Pet", Price = "-4%"},
+			["All Rarity: Secret"] = {Class = "Pet", Price = "-4%"},
+			["All Rarity: Divine"] = {Class = "Pet", Price = "-4%"},
+			["All Rarity: Mythical"] = {Class = "Pet", Price = "-4%"},
         },
 
         Serverhop = {
             ["Switch Servers"] = true,
-            ["Teleport Delay (m)"] = math.random(10,15),
+            ["Teleport Delay (m)"] = 99999,
         },
 
         Webhook = {
@@ -78,8 +142,94 @@ getgenv().Settings = {
 
 }
 
+if game.PlaceId == 19006211286 then
+
+
+
+
+task.spawn(function()
+    while task.wait(30) do
+        
+		for _, v in pairs(game.Players:GetChildren()) do
+        	for _, v2 in pairs(v.Character:GetDescendants()) do
+                    if v2:IsA("BasePart") or v2:IsA("Decal") then
+                        v2.Transparency = 1
+                    end
+                end
+        end
+        for i, v in pairs(game.Players:GetPlayers()) do
+            if v ~= game.Players.LocalPlayer then
+                pcall(function()
+                    local Character = v.Character
+                    Character:Destroy()
+                end)
+            end
+        end
+	
+    end
+end)
+
+
+
+local VirtualUser = game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+VirtualUser:CaptureController()
+VirtualUser:ClickButton2(Vector2.new())
+end)
+local niggaJump = coroutine.create(function ()
+    while 1 do 
+        wait(300)
+        game.Players.LocalPlayer.Character.Humanoid.Jump = true
+    end
+end)
+coroutine.resume(niggaJump)
+
+
+
 script_key="WokEpGCUtggwkUXTihDkgVQOeegshlHs";
 
 daubuoi = true
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/717430e3bbde3530feb824de729fcc90.lua"))()
+
+
+plrs.PlayerAdded:Connect(function(player)
+	
+	for i = 1,#alts do
+		if player.Name == alts[i] and alts[i] ~= plrs.LocalPlayer.Name then
+			task.wait(1)
+	    	serverhop()
+			
+			
+        end
+    end
+end)
+
+
+
+
+task.spawn(function()
+    while task.wait(60) do
+        if #game.Players:GetPlayers() < 15 then
+            serverhop()
+        end
+    end
+end)
+
+task.spawn(function()
+	while task.wait(math.random(900,1000)) do
+	serverhop()
+	end
+end)	
+
+
+else
+
+daubuoi = true
+
+while wait(1) do
+	
+	serverhop()
+end
+
+end   

@@ -129,6 +129,7 @@ getgenv().Settings = {
 }
 
 task.spawn(function()
+	game:GetService("RunService"):Set3dRenderingEnabled(false)
     while task.wait(30) do
         
 		for _, v in pairs(game.Players:GetChildren()) do

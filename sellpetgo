@@ -45,13 +45,7 @@ end
 
 
 
-
 task.spawn(function()
-game:GetService("GuiService").ErrorMessageChanged:Connect(function()
-        while true do
-				serverhop()
-			task.wait(1)
-end)
 for i = 1, PlayerInServer do
 	for ii = 1,#alts do
         if getPlayers[i].Name == alts[ii] and alts[ii] ~= plrs.LocalPlayer.Name then
@@ -104,7 +98,7 @@ getgenv().Settings = {
 
         Items = {
             
-            		["All Rarity: Exclusive"] = {Class = "Pet", Price = "-4%"},
+            ["All Rarity: Exclusive"] = {Class = "Pet", Price = "-4%"},
 			["All Rarity: Exotic"] = {Class = "Pet", Price = "-4%"},
 			["All Rarity: Celestial"] = {Class = "Pet", Price = "-4%"},
 			["All Rarity: Superior"] = {Class = "Pet", Price = "-4%"},
@@ -171,18 +165,6 @@ end)
 
 
 
-local VirtualUser = game:service'VirtualUser'
-game:service'Players'.LocalPlayer.Idled:connect(function()
-VirtualUser:CaptureController()
-VirtualUser:ClickButton2(Vector2.new())
-end)
-local niggaJump = coroutine.create(function ()
-    while 1 do 
-        wait(300)
-        game.Players.LocalPlayer.Character.Humanoid.Jump = true
-    end
-end)
-coroutine.resume(niggaJump)
 
 
 
@@ -217,7 +199,7 @@ task.spawn(function()
 end)
 
 task.spawn(function()
-	while task.wait(math.random(900,1000)) do
+	while task.wait(math.random(900, 1000)) do
 	serverhop()
 	end
 end)	

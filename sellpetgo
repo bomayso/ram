@@ -51,7 +51,7 @@ getgenv().Settings = {
 
         Serverhop = {
             ["Switch Servers"] = true,
-            ["Teleport Delay (m)"] = 10,
+            ["Teleport Delay (m)"] = math.random(10,15),
         },
 
         Webhook = {

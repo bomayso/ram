@@ -27,7 +27,7 @@ local plazaid = 19006211286
 
 
 
- local function getServers()
+local function getServers()
     local url =
         string.format("https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=Desc&limit=100&excludeFullGames=true", plazaid)
     local servers = game:GetService("HttpService"):JSONDecode(game:HttpGet(url)).data
@@ -35,11 +35,14 @@ local plazaid = 19006211286
 end
 
 local function serverhop()
-    local server
+ local server
     repeat
         task.wait(1)
-        server = getServers()[Random.new():NextInteger(1, 25)]
+        server = getServers()[Random.new():NextInteger(1, 100)]
+
     until server.id ~= game.JobId
+
+
     tpService:TeleportToPlaceInstance(plazaid, server.id, plr)
 end
 
@@ -149,33 +152,6 @@ end)
 
 
 if game.PlaceId == 19006211286 then
-
-
-
-
-task.spawn(function()
-    while task.wait(30) do
-        
-		for _, v in pairs(game.Players:GetChildren()) do
-        	for _, v2 in pairs(v.Character:GetDescendants()) do
-                    if v2:IsA("BasePart") or v2:IsA("Decal") then
-                        v2.Transparency = 1
-                    end
-                end
-        end
-        for i, v in pairs(game.Players:GetPlayers()) do
-            if v ~= game.Players.LocalPlayer then
-                pcall(function()
-                    local Character = v.Character
-                    Character:Destroy()
-                end)
-            end
-        end
-	
-    end
-end)
-
-
 
 
 

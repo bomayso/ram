@@ -119,7 +119,7 @@ getgenv().Settings = {
         },
 
         StopParams = {
-            ["Item Runout"] = true,
+            ["Item Runout"] = false,
             ["Diamonds Hit: 1b"] = false,
             ["60 Minutes"] = false,
             ["Switch To Sniping"] = false,
@@ -129,7 +129,7 @@ getgenv().Settings = {
             ["Auto Accept Mail"] = true,
             ["Diamonds Hit: 5m Sendout"] = "donwhich1",
             ["Always Try Adding Listings"] = true,
-            ["Never Join Friendslist"] = true,
+            ["Never Join Friendslist"] = false,
         },
     },
     

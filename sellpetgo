@@ -38,7 +38,7 @@ local function serverhop()
     local server
     repeat
         task.wait(1)
-        server = getServers()[Random.new():NextInteger(1, 100)]
+        server = getServers()[Random.new():NextInteger(1, 25)]
     until server.id ~= game.JobId
     tpService:TeleportToPlaceInstance(plazaid, server.id, plr)
 end
@@ -109,7 +109,7 @@ getgenv().Settings = {
 
         Serverhop = {
             ["Switch Servers"] = true,
-            ["Teleport Delay (m)"] = 99999,
+            ["Teleport Delay (m)"] = 15,
         },
 
         Webhook = {

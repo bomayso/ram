@@ -199,8 +199,11 @@ task.spawn(function()
 end)
 
 task.spawn(function()
-	while task.wait(math.random(900, 1000)) do
+	wait(math.random(900, 1000))
+	while true do
+	
 	serverhop()
+	wait(1)
 	end
 end)	
 

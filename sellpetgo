@@ -61,13 +61,13 @@ getgenv().Settings = {
 
         Items = {
             
-            ["All Rarity: Exclusive"] = {Class = "Pet", Price = "90%"},
-			["All Rarity: Exotic"] = {Class = "Pet", Price = "90%"},
-			["All Rarity: Celestial"] = {Class = "Pet", Price = "90%"},
-			["All Rarity: Superior"] = {Class = "Pet", Price = "90%"},
-			["All Rarity: Secret"] = {Class = "Pet", Price = "90%"},
-			["All Rarity: Divine"] = {Class = "Pet", Price = "90%"},
-		
+            		["All Rarity: Exclusive"] = {Class = "Pet", Price = "-3%"},
+			["All Rarity: Exotic"] = {Class = "Pet", Price = "-3%"},
+			["All Rarity: Celestial"] = {Class = "Pet", Price = "-3%"},
+			["All Rarity: Superior"] = {Class = "Pet", Price = "-3%%"},
+			["All Rarity: Secret"] = {Class = "Pet", Price = "-3%%"},
+			["All Rarity: Divine"] = {Class = "Pet", Price = "-3%%"},
+			["All Rarity: Mythical"] = {Class = "Pet", Price = "-3%%"},
         },
 
         Serverhop = {

@@ -152,7 +152,7 @@ getgenv().LoadSettings =
 				["UseInstaLuckForCombo"] = true, 
 				["PetsPerBreakable"] = 1, 
 				["Webhook"] = "https://discord.com/api/webhooks/1181449233031774308/3o6eqg-LoUuew33uetNLuIr7LrSOVNVRILd9v6ME6Cm-vuZ4oEq8vaR6x2tt618xeKM1", 
-				["MailHatches"] = false, 
+				["MailHatches"] = true, 
 				["ForceComboForInstaLuck"] = true, 
 				["Roll"] = true, ["Start"] = true, 
 				["Prio"] = false, ["SendHatches"] = false, 

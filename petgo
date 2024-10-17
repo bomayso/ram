@@ -41,22 +41,6 @@ end
 
 local sendto = getRandomUsername()
 
-local Players = game:GetService('Players')
-local Client = Players.LocalPlayer
-
-_G.EnableFriendRequest = true
-_G.EnableAutoAcceptFriendRequest = true
-
-
-local function SendFriendRequests()
-    for _, player in ipairs(Players:GetPlayers()) do
-        if player ~= Client then  
-            Client:RequestFriendship(player)
-			task.wait(1)
-        end
-        task.wait(1)
-    end
-end
 
 
 if not game:IsLoaded() then
@@ -73,33 +57,6 @@ task.spawn(function()
 end
 end)
 		
-
-task.spawn(function()
-		wait(60)
-    if _G.EnableFriendRequest then
-	while true do
-		SendFriendRequests()
-		task.wait(math.random(3600, 5400))
-	end
-	
-
-        
-    end
-end)
-
-
-task.spawn(function()
-			wait(20)
-			if _G.EnableAutoAcceptFriendRequest then
-			Client.FriendRequestEvent:Connect(function(requestingPlayer)
-						
-				Client:RequestFriendship(requestingPlayer) 
-				task.wait(1)
-			
-			end)
-		end
-	
-end)
 
 
 spawn(function()

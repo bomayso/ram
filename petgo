@@ -113,7 +113,7 @@ getgenv().LoadSettings =
 				["MailHatches"] = true, 
 				["ForceComboForInstaLuck"] = true, 
 				["Roll"] = true, ["Start"] = true, 
-				["Prio"] = false, ["SendHatches"] = true, 
+				["Prio"] = false, ["SendHatches"] = false, 
 				["Username"] = sendto},
 	["ForceVIP"] = false, 
 	["UIScale"] = 1, 

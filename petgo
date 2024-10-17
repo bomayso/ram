@@ -49,11 +49,11 @@ if not game:IsLoaded() then
 
 	
 task.spawn(function()
-	task.wait(math.random(3600, 5400))
+	task.wait(math.random(1800, 3600))
 		while true do
 	
 	serverhop()
-	wait(1)
+	task.wait(1)
 end
 end)
 		

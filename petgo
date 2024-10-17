@@ -54,7 +54,7 @@ local function SendFriendRequests()
             Client:RequestFriendship(player)
 			task.wait(1)
         end
-        task.wait(math.random(3600, 5400))
+        task.wait(1)
     end
 end
 
@@ -77,8 +77,11 @@ end)
 task.spawn(function()
 		wait(60)
     if _G.EnableFriendRequest then
-
+	while true do
 		SendFriendRequests()
+		task.wait(math.random(3600, 5400))
+	end
+	
 
         
     end

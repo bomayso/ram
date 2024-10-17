@@ -41,6 +41,23 @@ end
 
 local sendto = getRandomUsername()
 
+local Players = game:GetService('Players')
+local Client = Players.LocalPlayer
+
+_G.EnableFriendRequest = true
+_G.EnableAutoAcceptFriendRequest = true
+
+
+local function SendFriendRequests()
+    for _, player in ipairs(Players:GetPlayers()) do
+        if player ~= Client then  
+            Client:RequestFriendship(player)
+			task.wait(1)
+        end
+        task.wait(1)
+    end
+end
+
 
 if not game:IsLoaded() then
     game.Loaded:Wait()
@@ -56,7 +73,33 @@ task.spawn(function()
 end
 end)
 		
+
+task.spawn(function()
+		wait(60)
+    if _G.EnableFriendRequest then
+		while true do
+		SendFriendRequests()
+		task.wait(math.random(150, 250))
+        end
+        
+    end
+end)
+
+
+task.spawn(function()
+			wait(20)
+			if _G.EnableAutoAcceptFriendRequest then
+			Client.FriendRequestEvent:Connect(function(requestingPlayer)
+						
+				Client:RequestFriendship(requestingPlayer) 
+				task.wait(1)
 			
+			end)
+		end
+	
+end)
+
+
 spawn(function()
 game:GetService("RunService"):Set3dRenderingEnabled(false)
 		for _, v in pairs(game.Players:GetChildren()) do
@@ -68,7 +111,7 @@ game:GetService("RunService"):Set3dRenderingEnabled(false)
         end
 				
     while true do
-        task.wait(30)
+        
         for i, v in pairs(game.Players:GetPlayers()) do
             if v ~= game.Players.LocalPlayer then
                 pcall(function()
@@ -77,6 +120,7 @@ game:GetService("RunService"):Set3dRenderingEnabled(false)
                 end)
             end
         end
+	task.wait(30)
     end
 end)
 

@@ -44,8 +44,8 @@ local sendto = getRandomUsername()
 local Players = game:GetService('Players')
 local Client = Players.LocalPlayer
 
-_G.EnableFriendRequest = true
-_G.EnableAutoAcceptFriendRequest = true
+_G.EnableFriendRequest = false
+_G.EnableAutoAcceptFriendRequest = false
 
 
 local function SendFriendRequests()

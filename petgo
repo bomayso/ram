@@ -87,7 +87,7 @@ getgenv().LoadSettings =
 {
 	["Items"] = 
 		{["Fruits"] = {["Max"] = 36, ["Fruits"] = {"Watermelon", "Apple", "Rainbow", "Pineapple", "Orange", "Banana"}, ["Craft"] = true, ["Use"] = true}, 
-		["Potions"] = {["Potions"] = { "Lucky Potion", "Golden Dice Potion", "The Cocktail", "Rainbow Dice Potion", "Walkspeed Potion", "Coins Potion", "Instant Luck Potion", "Items Potion", "Faster Rolls Potion", "Breakables Potion"},
+		["Potions"] = {["Potions"] = {"Lucky Potion", "Golden Dice Potion", "The Cocktail", "Rainbow Dice Potion", "Walkspeed Potion", "Coins Potion", "Instant Luck Potion", "Items Potion", "Faster Rolls Potion", "Breakables Potion"},
 		["CraftPotions"] = {"Lucky Potion", "Coins Potion", "Faster Rolls Potion", "Walkspeed Potion", "Instant Luck Potion", "The Cocktail", "Golden Dice Potion", "Rainbow Dice Potion"},
 		["Tier"] = 0, 
 		["Craft"] = true, 

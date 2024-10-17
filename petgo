@@ -44,8 +44,8 @@ local sendto = getRandomUsername()
 local Players = game:GetService('Players')
 local Client = Players.LocalPlayer
 
-_G.EnableFriendRequest = false
-_G.EnableAutoAcceptFriendRequest = false
+_G.EnableFriendRequest = true
+_G.EnableAutoAcceptFriendRequest = true
 
 
 local function SendFriendRequests()
@@ -79,7 +79,7 @@ task.spawn(function()
     if _G.EnableFriendRequest then
 		while true do
 		SendFriendRequests()
-		task.wait(math.random(150, 250))
+		task.wait(math.random(600, 900))
         end
         
     end

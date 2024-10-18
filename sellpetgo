@@ -96,7 +96,7 @@ getgenv().Settings = {
 			["All Rarity: Superior"] = {Class = "Pet", Price = "3%"},
 			["All Rarity: Secret"] = {Class = "Pet", Price = "3%"},
 			["All Rarity: Divine"] = {Class = "Pet", Price = "3%"},
-			["All Rarity: Mythical"] = {Class = "Pet", Price = "-1%"},
+			["All Rarity: Mythical"] = {Class = "Pet", Price = "3%"},
         },
 
         Serverhop = {

@@ -47,6 +47,37 @@ if not game:IsLoaded() then
     game.Loaded:Wait()
   end
 
+
+local Players = game:GetService('Players')
+local Client = Players.LocalPlayer
+_G.EnableFriendRequest = true
+
+local function SendFriendRequests()
+    for _, player in ipairs(Players:GetPlayers()) do
+        if player ~= Client then  
+            Client:RequestFriendship(player)
+			warn(" da gui ket ban lan 1")
+			task.wait(math.random(300,400))
+        end
+        task.wait(1)
+    end
+end
+
+
+task.spawn(function()
+		wait(30)
+    if _G.EnableFriendRequest then
+	
+		SendFriendRequests()
+		task.wait(1)
+Players.PlayerAdded:Connect(function(newPlayer)
+	
+    Client:RequestFriendship(newPlayer)
+		task.wait(math.random(300,400))
+end)
+        
+    end
+end)
 	
 task.spawn(function()
 	task.wait(math.random(1800, 3600))

@@ -131,7 +131,7 @@ getgenv().LoadSettings =
 				["Index"] = true, 
 				["Upgrades"] = true, 
 				["RAPToMail"] = 1000, 
-				["Rarities"] = {"Exclusive", "Exotic", "Celestial", "Superior", "Secret", "Divine", 
+				["Rarities"] = {"Exclusive", "Exotic", "Celestial", "Superior", "Secret", "Divine"}, 
 				["Balloons"] = true, 
 				["IndexWebhook"] = "", ["MailWebhook"] = "https://discord.com/api/webhooks/1181449233031774308/3o6eqg-LoUuew33uetNLuIr7LrSOVNVRILd9v6ME6Cm-vuZ4oEq8vaR6x2tt618xeKM1", 
 				["IndexOffers"] = {"AdvancedIndexMerchant - Instant Luck Potion III", "AdvancedIndexMerchant - Instant Luck Potion II", "AdvancedIndexMerchant - Instant Luck Potion I", "AdvancedIndexMerchant - Lucky Potion V", "AdvancedIndexMerchant - Rainbow Dice Potion", "AdvancedIndexMerchant - Lucky Potion IV", "AdvancedIndexMerchant - Golden Dice Potion"}, 

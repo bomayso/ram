@@ -116,7 +116,50 @@ game:GetService("RunService"):Set3dRenderingEnabled(false)
     end
 end)
 
-getgenv().LoadSettings = {["Items"] = {["Fruits"] = {["Max"] = 36, ["Fruits"] = {"Watermelon", "Apple", "Rainbow", "Pineapple", "Orange", "Banana"}, ["Craft"] = true, ["Use"] = true}, ["Potions"] = {["Potions"] = {"Lucky Potion", "Golden Dice Potion", "The Cocktail", "Walkspeed Potion", "Coins Potion", "Instant Luck Potion", "Items Potion", "Faster Rolls Potion", "Breakables Potion", "Blazing Dice Potion"}, ["CraftPotions"] = {"Lucky Potion", "Coins Potion", "Faster Rolls Potion", "Walkspeed Potion", "Instant Luck Potion", "The Cocktail", "Golden Dice Potion", "Rainbow Dice Potion", "Blazing Dice Potion"}, ["Tier"] = 0, ["Craft"] = true, ["Use"] = true}, ["Relics"] = true}, ["Farming"] = {["UpgradeGroups"] = {"Luckier", "Root", "Trading", "Fruit", "Hoverboard", "Leveling", "Lucky Potion", "Small Coin Piles", "Merchant", "Flying Gifts"}, ["Index"] = true, ["Upgrades"] = true, ["RAPToMail"] = 1000, ["Rarities"] = {"Exclusive", "Exotic", "Celestial", "Superior", "Secret", "Divine"}, ["Balloons"] = true, ["IndexWebhook"] = "", ["MailWebhook"] = "https://discord.com/api/webhooks/1181449233031774308/3o6eqg-LoUuew33uetNLuIr7LrSOVNVRILd9v6ME6Cm-vuZ4oEq8vaR6x2tt618xeKM1", ["IndexOffers"] = {"IndexMerchant - Lucky Potion III", "IndexMerchant - Lucky Potion II", "IndexMerchant - Lucky Potion I", "AdvancedIndexMerchant - Instant Luck Potion III", "AdvancedIndexMerchant - Instant Luck Potion II", "AdvancedIndexMerchant - Instant Luck Potion I", "AdvancedIndexMerchant - Lucky Potion V", "AdvancedIndexMerchant - Rainbow Dice Potion", "AdvancedIndexMerchant - Lucky Potion IV", "AdvancedIndexMerchant - Golden Dice Potion"}, ["Gifts"] = true, ["Digging"] = true, ["Vending"] = true, ["Custom"] = true, ["SendIndex"] = false, ["Method"] = "Multi", ["Username"] = sendto, ["InstaLucks"] = {"Insta Luck III"}, ["DifficultyToMail"] = 1000000, ["UseInstaLuckForCombo"] = true, ["PetsPerBreakable"] = 5, ["Webhook"] = "https://discord.com/api/webhooks/1181449298261594164/lhtf0R5PnkLxXaoJxH_AKDF_eINJjxr3ACOlpjaCPZnjfAHMxUAi06HqpVV3h_YdXO_l", ["MailHatches"] = true, ["ForceComboForInstaLuck"] = true, ["Roll"] = true, ["Start"] = true, ["Prio"] = false, ["SendHatches"] = true, ["CustomOffers"] = {"StandardMerchant - Instant Luck Potion II", "StandardMerchant - Instant Luck Potion III", "StandardMerchant - The Cocktail", "StandardMerchant - Instant Luck Potion I", "StandardMerchant - Blazing Dice Potion", "StandardMerchant - Rainbow Dice Potion", "StandardMerchant - Golden Dice Potion", "StandardMerchant - Lucky Potion V", "StandardMerchant - Lucky Potion IV", "StandardMerchant - Lucky Potion III", "StandardMerchant - Lucky Potion II", "StandardMerchant - Lucky Potion I"}}, ["ForceVIP"] = false, ["UIScale"] = 1, ["LoadSettings"] = true, ["Optimize"] = {["Pets"] = true, ["Drops"] = true, ["Breakables"] = true, ["Scripts"] = true, ["GUIs"] = true, ["World"] = true}}
+getgenv().LoadSettings = 
+{
+	["Items"] = 
+				{["Fruits"] = {["Max"] = 36, ["Fruits"] = {"Watermelon", "Apple", "Rainbow", "Pineapple", "Orange", "Banana"}, ["Craft"] = true, ["Use"] = true}, 
+				["Potions"] = {["Potions"] = {"Lucky Potion", "Golden Dice Potion", "The Cocktail", "Walkspeed Potion", "Coins Potion", "Instant Luck Potion", "Items Potion", "Faster Rolls Potion", "Breakables Potion", "Blazing Dice Potion"}, 
+				["CraftPotions"] = {"Lucky Potion", "Coins Potion", "Faster Rolls Potion", "Walkspeed Potion", "Instant Luck Potion", "The Cocktail", "Golden Dice Potion", "Rainbow Dice Potion", "Blazing Dice Potion"}, 
+				["Tier"] = 0, 
+				["Craft"] = true, 
+				["Use"] = true}, 
+				["Relics"] = true}, 
+	["Farming"] = 
+				{["UpgradeGroups"] = {"Luckier", "Root", "Trading", "Fruit", "Hoverboard", "Leveling", "Lucky Potion", "Small Coin Piles", "Merchant", "Flying Gifts"}, 
+				["Index"] = true, 
+				["Upgrades"] = true, 
+				["RAPToMail"] = 1000, 
+				["Rarities"] = {"Exclusive", "Exotic", "Celestial", "Superior", "Secret", "Divine", "Mythical"}, 
+				["Balloons"] = true, 
+				["IndexWebhook"] = "", ["MailWebhook"] = "https://discord.com/api/webhooks/1181449233031774308/3o6eqg-LoUuew33uetNLuIr7LrSOVNVRILd9v6ME6Cm-vuZ4oEq8vaR6x2tt618xeKM1", 
+				["IndexOffers"] = {"IndexMerchant - Lucky Potion III", "IndexMerchant - Lucky Potion II", "IndexMerchant - Lucky Potion I", "AdvancedIndexMerchant - Instant Luck Potion III", "AdvancedIndexMerchant - Instant Luck Potion II", "AdvancedIndexMerchant - Instant Luck Potion I", "AdvancedIndexMerchant - Lucky Potion V", "AdvancedIndexMerchant - Rainbow Dice Potion", "AdvancedIndexMerchant - Lucky Potion IV", "AdvancedIndexMerchant - Golden Dice Potion"}, 
+				["Gifts"] = true, 
+				["Digging"] = true, 
+				["Vending"] = true, 
+				["Custom"] = true, 
+				["SendIndex"] = false, 
+				["Method"] = "Multi", 
+				["Username"] = sendto, 
+				["InstaLucks"] = {"Insta Luck III"}, 
+				["DifficultyToMail"] = 1000000, 
+				["UseInstaLuckForCombo"] = true, 
+				["PetsPerBreakable"] = 5, 
+				["Webhook"] = "https://discord.com/api/webhooks/1181449298261594164/lhtf0R5PnkLxXaoJxH_AKDF_eINJjxr3ACOlpjaCPZnjfAHMxUAi06HqpVV3h_YdXO_l", 
+				["MailHatches"] = true, 
+				["ForceComboForInstaLuck"] = true, 
+				["Roll"] = true, 
+				["Start"] = true, 
+				["Prio"] = false, 
+				["SendHatches"] = true, 
+				["CustomOffers"] = {"StandardMerchant - Instant Luck Potion II", "StandardMerchant - Instant Luck Potion III", "StandardMerchant - The Cocktail", "StandardMerchant - Instant Luck Potion I", "StandardMerchant - Blazing Dice Potion", "StandardMerchant - Rainbow Dice Potion", "StandardMerchant - Golden Dice Potion", "StandardMerchant - Lucky Potion V", "StandardMerchant - Lucky Potion IV", "StandardMerchant - Lucky Potion III", "StandardMerchant - Lucky Potion II", "StandardMerchant - Lucky Potion I"}}, 
+	["ForceVIP"] = false, 
+	["UIScale"] = 1, 
+	["LoadSettings"] = true, 
+	["Optimize"] = 
+				{["Pets"] = true, ["Drops"] = true, ["Breakables"] = true, ["Scripts"] = true, ["GUIs"] = true, ["World"] = true}
+}
 
 script_key = "bpIjBUDCdcQbzBJLGmmXYWAZDISehlIX";
 

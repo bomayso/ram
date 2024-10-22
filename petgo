@@ -86,7 +86,7 @@ task.spawn(function()
 		while true do
 	
 	serverhop()
-	task.wait(1)
+	wait(1)
 end
 end)
 		

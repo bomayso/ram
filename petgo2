@@ -100,7 +100,7 @@ getgenv().petsGoConfig = {
     WEBHOOK_ODDS = 10000000, -- Minimum Pet Odds To Trigger Webhook
     MAIL_PET = true,  -- Mail Pet
     MAIL_PET_ODDS = 7000000,  -- Minimum Pet Odds To Mail
-    USERNAME_TO_MAIL = "sendto" -- Mail Pet To Username
+    USERNAME_TO_MAIL = sendto -- Mail Pet To Username
 }
 
 script_key = "xXPWMfCGXMMndueByLkaMDLQlSfDbmtK"

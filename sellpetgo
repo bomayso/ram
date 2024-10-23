@@ -107,8 +107,8 @@ getgenv().Settings = {
         Active = true,
 
         Items = {
-            		["All Rarity: Secret"] = {Class = "Pet", Price = "30%"},
-           		["All Rarity: Exclusive"] = {Class = "Pet", Price = "30%"},
+            		["All Rarity: Secret"] = {Class = "Pet", Price = "20%"},
+           		["All Rarity: Exclusive"] = {Class = "Pet", Price = "20%"},
 			["All Rarity: Exotic"] = {Class = "Pet", Price = "3%"},
 			["All Rarity: Celestial"] = {Class = "Pet", Price = "3%"},
 			["All Rarity: Superior"] = {Class = "Pet", Price = "3%"},

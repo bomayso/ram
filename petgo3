@@ -91,26 +91,8 @@ if not game:IsLoaded() then
   end
 
 
-getgenv().HideUI =  true
-
-task.spawn(function()
 	game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.Chat,false)
 	game:GetService("RunService"):Set3dRenderingEnabled(false)
-    local player5 = game.Players.LocalPlayer
-    if player5 and getgenv().HideUI then
-        local playerGui = player5:WaitForChild("PlayerGui")
-        if playerGui then
-            for _, screenGui in ipairs(playerGui:GetChildren()) do
-                if screenGui:IsA("ScreenGui") then
-                    
-                    
-                        screenGui:Destroy()
-                    
-                end
-            end
-        end
-    end
-end)
 
 
 

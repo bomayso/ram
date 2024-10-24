@@ -158,7 +158,7 @@ getgenv().LoadSettings =
 	["UIScale"] = 1, 
 	["LoadSettings"] = true, 
 	["Optimize"] = 
-				{["Pets"] = true, ["Drops"] = true, ["Breakables"] = true, ["Scripts"] = true, ["GUIs"] = true, ["World"] = true}
+				{["Pets"] = true, ["Drops"] = true, ["Breakables"] = true, ["Scripts"] = false, ["GUIs"] = true, ["World"] = true}
 }
 
 

@@ -91,30 +91,28 @@ if not game:IsLoaded() then
   end
 
 
+getgenv().HideUI =  true
 
 task.spawn(function()
-game:GetService("RunService"):Set3dRenderingEnabled(false)
-		for _, v in pairs(game.Players:GetChildren()) do
-        	for _, v2 in pairs(v.Character:GetDescendants()) do
-                    if v2:IsA("BasePart") or v2:IsA("Decal") then
-                        v2.Transparency = 1
-                    end
+	game:GetService("StarterGui"):SetCoreGuiEnabled(Enum.CoreGuiType.Chat,false)
+	game:GetService("RunService"):Set3dRenderingEnabled(false)
+    local player5 = game.Players.LocalPlayer
+    if player5 and getgenv().HideUI then
+        local playerGui = player5:WaitForChild("PlayerGui")
+        if playerGui then
+            for _, screenGui in ipairs(playerGui:GetChildren()) do
+                if screenGui:IsA("ScreenGui") then
+                    
+                    
+                        screenGui:Destroy()
+                    
                 end
-        end
-				
-    while true do
-        
-        for i, v in pairs(game.Players:GetPlayers()) do
-            if v ~= game.Players.LocalPlayer then
-                pcall(function()
-                    local Character = v.Character
-                    Character:Destroy()
-                end)
             end
         end
-	task.wait(30)
     end
 end)
+
+
 
 
 getgenv().Settings = {

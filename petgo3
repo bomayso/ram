@@ -120,14 +120,14 @@ getgenv().LoadSettings =
 {
 	["Items"] = 
 				{["Fruits"] = {["Max"] = 36, ["Fruits"] = {"Watermelon", "Apple", "Rainbow", "Pineapple", "Orange", "Banana"}, ["Craft"] = true, ["Use"] = true}, 
-				["Potions"] = {["Potions"] = {"Pumpkin Potion", "Lucky Potion", "Golden Dice Potion", "The Cocktail", "Walkspeed Potion", "Coins Potion", "Items Potion", "Faster Rolls Potion", "Breakables Potion", "Blazing Dice Potion", "Rainbow Dice Potion"}, 
+				["Potions"] = {["Potions"] = {"Pumpkin Potion", "Lucky Potion", "Golden Dice Potion", "The Cocktail", "Walkspeed Potion", "Coins Potion", "Items Potion", "Faster Rolls Potion", "Breakables Potion", "Blazing Dice Potion", "Rainbow Dice Potion", "God Potion"}, 
 				["CraftPotions"] = {"Pumpkin Potion", "Lucky Potion", "Coins Potion", "Faster Rolls Potion", "Instant Luck Potion", "The Cocktail", "Golden Dice Potion", "Rainbow Dice Potion", "Blazing Dice Potion"}, 
 				["Tier"] = 0, 
 				["Craft"] = true, 
 				["Use"] = true}, 
 				["Relics"] = true}, 
 	["Farming"] = 
-				{["UpgradeGroups"] = {"Luckier", "Root", "Trading", "Fruit", "Hoverboard", "Leveling", "Lucky Potion", "Small Coin Piles", "Merchant", "Flying Gifts"}, 
+				{["UpgradeGroups"] = {"Luckier", "Root", "Trading", "Fruit", "Hoverboard", "Leveling", "Lucky Potion", "Small Coin Piles", "Merchant", "Flying Gifts", "Halloween Event"}, 
 				["Index"] = true, 
 				["Upgrades"] = true, 
 				["RAPToMail"] = 1000, 
@@ -140,7 +140,7 @@ getgenv().LoadSettings =
 				["Vending"] = true, 
 				["Custom"] = true, 
 				["SendIndex"] = false, 
-				["Method"] = "Multi", 
+				["Method"] = "Single", 
 				["Username"] = sendto, 
 				["InstaLucks"] = {"Insta Luck III"}, 
 				["DifficultyToMail"] = 7000000, 

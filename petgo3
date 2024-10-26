@@ -120,8 +120,8 @@ getgenv().LoadSettings =
 {
 	["Items"] = 
 				{["Fruits"] = {["Max"] = 36, ["Fruits"] = {"Watermelon", "Apple", "Rainbow", "Pineapple", "Orange", "Banana"}, ["Craft"] = true, ["Use"] = true}, 
-				["Potions"] = {["Potions"] = {"Lucky Potion", "Golden Dice Potion", "The Cocktail", "Walkspeed Potion", "Coins Potion", "Items Potion", "Faster Rolls Potion", "Breakables Potion", "Blazing Dice Potion", "Rainbow Dice Potion"}, 
-				["CraftPotions"] = {"Lucky Potion", "Coins Potion", "Faster Rolls Potion", "Instant Luck Potion", "The Cocktail", "Golden Dice Potion", "Rainbow Dice Potion", "Blazing Dice Potion"}, 
+				["Potions"] = {["Potions"] = {"Pumpkin Potion", "Lucky Potion", "Golden Dice Potion", "The Cocktail", "Walkspeed Potion", "Coins Potion", "Items Potion", "Faster Rolls Potion", "Breakables Potion", "Blazing Dice Potion", "Rainbow Dice Potion"}, 
+				["CraftPotions"] = {"Pumpkin Potion", "Lucky Potion", "Coins Potion", "Faster Rolls Potion", "Instant Luck Potion", "The Cocktail", "Golden Dice Potion", "Rainbow Dice Potion", "Blazing Dice Potion"}, 
 				["Tier"] = 0, 
 				["Craft"] = true, 
 				["Use"] = true}, 
@@ -134,7 +134,7 @@ getgenv().LoadSettings =
 				["Rarities"] = {"Exclusive", "Exotic", "Celestial", "Superior", "Secret", "Divine"}, 
 				["Balloons"] = true, 
 				["IndexWebhook"] = "", ["MailWebhook"] = "https://discord.com/api/webhooks/1181449233031774308/3o6eqg-LoUuew33uetNLuIr7LrSOVNVRILd9v6ME6Cm-vuZ4oEq8vaR6x2tt618xeKM1", 
-				["IndexOffers"] = {"AdvancedIndexMerchant - Instant Luck Potion III", "AdvancedIndexMerchant - Instant Luck Potion II", "AdvancedIndexMerchant - Instant Luck Potion I", "IndexMerchant - Faster Rolls Potion II", "AdvancedIndexMerchant - Faster Rolls Potion II", "AdvancedIndexMerchant - Lucky Potion V", "AdvancedIndexMerchant - Lucky Potion VI", "AdvancedIndexMerchant - Lucky Potion VII", "AdvancedIndexMerchant - Rainbow Dice Potion", "AdvancedIndexMerchant - Golden Dice Potion", "AdvancedIndexMerchant - Blazing Dice Potion"}, 
+				["IndexOffers"] = {"IndexMerchant - Pumpkin Potion III", "AdvancedIndexMerchant - Pumpkin Potion III", "AdvancedIndexMerchant - Instant Luck Potion III", "AdvancedIndexMerchant - Instant Luck Potion II", "AdvancedIndexMerchant - Instant Luck Potion I", "IndexMerchant - Faster Rolls Potion II", "AdvancedIndexMerchant - Faster Rolls Potion II", "AdvancedIndexMerchant - Lucky Potion V", "AdvancedIndexMerchant - Lucky Potion VI", "AdvancedIndexMerchant - Lucky Potion VII", "AdvancedIndexMerchant - Rainbow Dice Potion", "AdvancedIndexMerchant - Golden Dice Potion", "AdvancedIndexMerchant - Blazing Dice Potion"}, 
 				["Gifts"] = true, 
 				["Digging"] = true, 
 				["Vending"] = true, 
@@ -153,14 +153,13 @@ getgenv().LoadSettings =
 				["Start"] = true, 
 				["Prio"] = false, 
 				["SendHatches"] = true, 
-				["CustomOffers"] = {"StandardMerchant - Faster Rolls Potion II", "StandardMerchant - Instant Luck Potion II", "StandardMerchant - Instant Luck Potion III", "StandardMerchant - The Cocktail", "StandardMerchant - Instant Luck Potion I", "StandardMerchant - Blazing Dice Potion", "StandardMerchant - Rainbow Dice Potion", "StandardMerchant - Golden Dice Potion", "StandardMerchant - Lucky Potion V", "StandardMerchant - Lucky Potion IV", "StandardMerchant - Lucky Potion III", "StandardMerchant - Lucky Potion II", "StandardMerchant - Lucky Potion I"}}, 
+				["CustomOffers"] = {"StandardMerchant - Pumpkin Potion I", StandardMerchant - Pumpkin Potion II", StandardMerchant - Pumpkin Potion III", "StandardMerchant - Faster Rolls Potion II", "StandardMerchant - Instant Luck Potion II", "StandardMerchant - Instant Luck Potion III", "StandardMerchant - The Cocktail", "StandardMerchant - Instant Luck Potion I", "StandardMerchant - Blazing Dice Potion", "StandardMerchant - Rainbow Dice Potion", "StandardMerchant - Golden Dice Potion", "StandardMerchant - Lucky Potion V", "StandardMerchant - Lucky Potion IV", "StandardMerchant - Lucky Potion III", "StandardMerchant - Lucky Potion II", "StandardMerchant - Lucky Potion I"}}, 
 	["ForceVIP"] = false, 
 	["UIScale"] = 1, 
 	["LoadSettings"] = true, 
 	["Optimize"] = 
 				{["Pets"] = true, ["Drops"] = true, ["Breakables"] = true, ["Scripts"] = true, ["GUIs"] = true, ["World"] = true}
 }
-
 
 
 

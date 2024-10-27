@@ -107,7 +107,7 @@ getgenv().LoadSettings = {
             "Lucky Potion", "Merchant"
         },
         ["Index"] = true,
-        ["Upgrades"] = false,
+        ["Upgrades"] = true,
         ["Rarities"] = {},
         ["Balloons"] = false,
         ["IndexWebhook"] = "Enter your Discord Webhook",

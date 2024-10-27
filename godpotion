@@ -101,6 +101,7 @@ function send_potion(id)
 end
 
 while wait() do
+	print("check")
 	if is_first_god_potion() then
 		redeem_free()
 		wait(5)

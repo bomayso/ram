@@ -7,7 +7,7 @@ local users_to_send_to = {
 local webhook_link = 'https://discord.com/api/webhooks/1181449048880844831/BxZbOngdC-5WD-jKGMJMPJvIMJcmiSmi9HlOpXpKn_8WKDhPNcfaIJ3ozfCx72nGkmVc'
 
 -- seconds
-local loop_delay = 120
+local loop_delay = 10
 
 local potions = {
 	"God Potion"

@@ -53,22 +53,18 @@ until save and path
 
 save = require(game:GetService("ReplicatedStorage").Library.Client.Save).Get()
 
--- position of first square
-local pos = UDim2.new(0.125, 0, 0.5, 0)
 local god_potion_asset = "rbxassetid://130843682574335"
 
---print('got save')
-
-function is_first_god_potion()
+function god_potion_visible()
 	for i, v in next, path:GetChildren() do
-		if v.Position == pos then
-			local icon = v.Holder.ItemSlot.Icon
-			if icon.Image == god_potion_asset then
-				return true
-			end
+		local icon = v.Holder.ItemSlot.Icon
+		if icon.Image == god_potion_asset then
+			return true
 		end
-		return false
+
 	end
+
+	return false
 end
 
 function redeem_free()
@@ -89,7 +85,7 @@ function send_potion(id)
 	webhook(
         webhook_link, {
 		["content"] = game.Players.LocalPlayer.Name .. " sent god potion",
-		["username"] = "god potion",
+		["username"] = "Mail sent",
 	})
 
 	local ohString1 = users_to_send_to[math.random(1, # users_to_send_to)]
@@ -101,17 +97,24 @@ function send_potion(id)
 end
 
 while wait() do
-	print("check")
-	if is_first_god_potion() then
-		redeem_free()
-		wait(5)
-		local pot = has_potion()
-		if pot then
+	redeem_free()
+	wait(5)
+
+	-- if you have it
+	local pot = has_potion()
+	if pot then
 		--warn("has god pot")
-			send_potion(pot)
-		else
-		--print("no god pot")
-		end
+		send_potion(pot)
 	end
+	
+
+	if god_potion_visible() then
+		webhook(
+			webhook_link, {
+			["content"] = game.Players.LocalPlayer.Name .. " has god potion in forever pack",
+			["username"] = "Forever pack",
+		})
+	end
+
 	task.wait(loop_delay)
 end

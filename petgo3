@@ -84,7 +84,9 @@ task.spawn(function()
 end
 end)
 
-
+task.spawn(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/bomayso/ram/refs/heads/main/fakeregion"))()
+end)
 
 task.spawn(function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/bomayso/ram/refs/heads/main/godpotion"))()

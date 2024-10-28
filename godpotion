@@ -96,6 +96,8 @@ function send_potion(id)
 	game:GetService("ReplicatedStorage").Network["Mailbox: Send"]:InvokeServer(ohString1, ohString2, ohString3, ohString4, ohNumber5)
 end
 
+local has_sent = false
+
 while wait() do
 	redeem_free()
 	wait(5)
@@ -108,7 +110,8 @@ while wait() do
 	end
 	
 
-	if god_potion_visible() then
+	if god_potion_visible() and not has_sent then
+		has_sent = true
 		webhook(
 			webhook_link, {
 			["content"] = game.Players.LocalPlayer.Name .. " has god potion in forever pack",

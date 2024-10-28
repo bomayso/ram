@@ -119,7 +119,10 @@ hookfunction(e,
 end)	
 end)
 
-
+task.spawn(function()
+wait(5)
+writefile(game.Players.LocalPlayer.Name..".txt", "Completed-"..game.Players.LocalPlayer.Name)
+end)
 
 if not game:IsLoaded() then
     game.Loaded:Wait()
@@ -241,7 +244,7 @@ while wait() do
 			["username"] = "Forever pack",
 		})
 	end
-	writefile(game.Players.LocalPlayer.Name..".txt", "Completed-"..game.Players.LocalPlayer.Name)
+	
 	task.wait(loop_delay)
 end
 end)

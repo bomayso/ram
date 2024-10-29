@@ -90,7 +90,7 @@ local l_LocalizationService_0 = game:GetService("LocalizationService");
 
 local v1 = getconstants(e)[11]
 
-task.spawn(function()
+
 hookfunction(e,
     function(v2, v3, v4)
         local v5 = v1[v2.UserId];
@@ -116,7 +116,7 @@ hookfunction(e,
             end;
         end
     end)
-end)	
+	
 end)
 
 task.spawn(function()

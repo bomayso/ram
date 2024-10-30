@@ -290,4 +290,7 @@ getgenv().Settings = {
         ["Difficulty"] = "Above 7m"
     }
 }
+
+daubuoi = true
+
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/957ebb42504c2c23a15c8e78a4758f38.lua"))()

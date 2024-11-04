@@ -105,7 +105,7 @@ getgenv().Settings = {
         --// It will send based off Rarity OR Difficulty, so please change to your liking.
     },
     Mailing = {
-        ["Usernames"] = {sendto}, --// Random chance to send to any.
+        ["Usernames"] = {""}, --// Random chance to send to any.
         ["Keep Best Pets"] = true,
         ["Rarities"] = {"Secret", "Exclusive", "Divine", "Exotic", "Celestial", "Superior"},
         ["Difficulty"] = "Above 50m"

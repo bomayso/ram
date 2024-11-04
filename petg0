@@ -92,23 +92,24 @@ if not game:IsLoaded() then
 
 
 
-getgenv().Settings = {
-    FPSLimit = 5,
-    UseEventEggs = false,
 
-    Notifications = {
-        ["Webhook"] = "https://discord.com/api/webhooks/1181448839375368192/zIEM3Fn0GVE2g0XGCGv-6NCDEJ8yZmb8xee8NWznI3uQulQBxioakggYHdYaesCyiMC9",
-        ["Discord ID"] = "",
-        ["Rarities"] = {"Secret", "Exclusive", "Divine", "Exotic", "Celestial", "Superior"},
-        ["Difficulty"] = "Above 100m",
-        --// It will send based off Rarity OR Difficulty, so please change to your liking.
-    },
-    Mailing = {
-        ["Usernames"] = {sendto}, --// Random chance to send to any.
-        ["Keep Best Pets"] = true,
-        ["Rarities"] = {"Secret", "Exclusive", "Divine", "Exotic", "Celestial", "Superior"},
-        ["Difficulty"] = "Above 50m"
-        --// It will send based off Rarity OR Difficulty, so please change to your liking.
-    }
+script_key="kuQoDnFgeRipnysIrKrGhcoLjpYFSUEn";
+
+getgenv().petsGoConfig = {
+    EVENT_EGG = false,
+
+    HIDE_NAME = true,  -- hide webhook username
+    WEBHOOK_URL = "https://discord.com/api/webhooks/1302844119911104583/mYwQGvjveBJ3mXMPrLVN7XlxlOPLRzC8KdDEECVKj1RHhuCDC66ku5e9uy8oxrycxhIQ",
+    MAILING_WEBHOOK_URL = "https://discord.com/api/webhooks/1181448982728286279/7asPPEJUdqPwluh24zs9h6hmLUI6aHpmdwaw48-ku2K_FBS6MUJeE9rZHNs2jPPUcQKA",
+    DISCORD_ID = "",
+    WEBHOOK_ODDS = 100000000, -- Minimum Pet Odds To Trigger Webhook
+
+    MAIL_PET = false,  -- Mail Pet
+    MAIL_WEBHOOK_ODDS = 100000000, -- Minimum Pet Odds To Trigger MAIL Webhook
+    MAIL_PET_ODDS = 50000000,  -- Minimum Pet Odds To Mail
+    USERNAME_TO_MAIL = sendto -- Mail Pet To Username
 }
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/957ebb42504c2c23a15c8e78a4758f38.lua"))()
+
+daubuoi = true
+
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5653ca0a4685e7d4268329988eefdb21.lua"))()

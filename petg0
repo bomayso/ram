@@ -107,7 +107,7 @@ getgenv().petsGoConfig = {
     USERNAME_TO_MAIL = sendto -- Mail Pet To Username
 }
 
-script_key="qsRsHLISSqRCYRltDhdoVHUmYBhhqSWa";
+script_key="kuQoDnFgeRipnysIrKrGhcoLjpYFSUEn";
 
 daubuoi = true
 

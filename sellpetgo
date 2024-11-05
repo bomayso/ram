@@ -108,13 +108,13 @@ getgenv().Settings = {
 
         Items = {
 			["Instant Luck Potion 4"] = {Class = "Consumable", Price = "20%"},
-            		["All Rarity: Secret"] = {Class = "Pet", Price = "20%"},
-           		["All Rarity: Exclusive"] = {Class = "Pet", Price = "30%"},
-			["All Rarity: Exotic"] = {Class = "Pet", Price = "12%"},
-			["All Rarity: Celestial"] = {Class = "Pet", Price = "18%"},
-			["All Rarity: Superior"] = {Class = "Pet", Price = "14%"},
-			["All Rarity: Divine"] = {Class = "Pet", Price = "16%"},
-			["All Rarity: Mythical"] = {Class = "Pet", Price = "10%"},
+            		["All Rarity: Secret"] = {Class = "Pet", Price = "18%"},
+           		["All Rarity: Exclusive"] = {Class = "Pet", Price = "22%"},
+			["All Rarity: Exotic"] = {Class = "Pet", Price = "10%"},
+			["All Rarity: Celestial"] = {Class = "Pet", Price = "16%"},
+			["All Rarity: Superior"] = {Class = "Pet", Price = "12%"},
+			["All Rarity: Divine"] = {Class = "Pet", Price = "14%"},
+			["All Rarity: Mythical"] = {Class = "Pet", Price = "8%"},
         },
 
         Serverhop = {

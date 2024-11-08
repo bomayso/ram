@@ -112,7 +112,7 @@ getgenv().petsGoConfig = {
     HIDE_NAME = true,  -- hide webhook username
     WEBHOOK_URL = "https://discord.com/api/webhooks/1302844119911104583/mYwQGvjveBJ3mXMPrLVN7XlxlOPLRzC8KdDEECVKj1RHhuCDC66ku5e9uy8oxrycxhIQ",
     MAILING_WEBHOOK_URL = "https://discord.com/api/webhooks/1181448982728286279/7asPPEJUdqPwluh24zs9h6hmLUI6aHpmdwaw48-ku2K_FBS6MUJeE9rZHNs2jPPUcQKA",
-    DISCORD_ID = "793444618959061032",
+    DISCORD_ID = "543680370311168000",
     WEBHOOK_ODDS = 100000000, -- Minimum Pet Odds To Trigger Webhook
 
     MAIL_PET = true,  -- Mail Pet

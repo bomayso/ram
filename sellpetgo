@@ -122,6 +122,7 @@ getgenv().Settings = {
 			["Exclusive Treasure Chest"] = {Class = "Consumable", Price = "5%"},
 			["Exclusive Treasure Chest"] = {Class = "Misc", Price = "5%"},
 			["Exclusive Fishing Bait"] = {Class = "Consumable", Price = "5%"},
+			["God Potion"] = {Class = "Consumable", Price = "10%"},
 			["Instant Luck Potion 4"] = {Class = "Consumable", Price = "15%"},
             		["All Rarity: Secret"] = {Class = "Pet", Price = "15%"},
            		["All Rarity: Exclusive"] = {Class = "Pet", Price = "20%"},

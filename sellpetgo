@@ -14,15 +14,13 @@ local alts = {
 "donwhich8",
 "donwhich4",
 "donwhich9",
-"donwhich11",
 "donwhich12",
 "donwhich7",
 "donwhich10",
 "kethemhanh"
 }
 local plazaid = 19006211286
- local plrs = game:GetService("Players")
-  local plr = plrs.LocalPlayer
+
   
   local replicatedStorage = game:GetService("ReplicatedStorage")
   local Lib = require(replicatedStorage.Library)
@@ -71,6 +69,8 @@ end)
  if not game:IsLoaded() then
     game.Loaded:Wait()
   end
+
+
 
 getgenv().Settings = {
     Sniper = {
@@ -152,8 +152,63 @@ getgenv().Settings = {
 }
 
 
-	game:GetService("RunService"):Set3dRenderingEnabled(false)
+game:GetService("RunService"):Set3dRenderingEnabled(false)
 
+task.spawn(function()
+
+local Player = game.Players.LocalPlayer
+local GroupService = game:GetService("GroupService")
+local groupIds = {5060810}
+local Moderators = {"BuildIntoGames"}
+local continuousHopping = false
+
+
+
+
+local function checkPlayer(player)
+    local isInGroup = false
+
+    for _, groupId in ipairs(groupIds) do
+        local success, inGroup = pcall(function()
+            return GroupService:IsInGroup(player.UserId, groupId)
+        end)
+
+        if success and inGroup then
+            isInGroup = true
+            break
+        end
+    end
+
+    if isInGroup then
+        print("[iHH] "..player.Name .. " is in the group. Starting Server Hop")
+        continuousHopping = true
+        while wait(0.5) and Player:IsDescendantOf(game) and continuousHopping do
+            serverhop()
+        end
+        return
+    end
+
+    for _, username in ipairs(Moderators) do
+        if player.Name == username then
+            print(..player.Name .. " is a moderator. Starting Server Hop")
+            continuousHopping = true
+            while wait(0.5) and Player:IsDescendantOf(game) and continuousHopping do
+                serverhop()
+            end
+            return
+        end
+    end
+
+    print(..player.Name .. " is not a moderator or in the group.")
+end
+
+for _, player in ipairs(game.Players:GetPlayers()) do
+    checkPlayer(player)
+end
+
+
+
+end)
 
 task.spawn(function()
     while task.wait(60) do
@@ -197,7 +252,8 @@ end
 end)
 
 plrs.PlayerAdded:Connect(function(player)
-	
+	checkPlayer(player)
+	task.wait()
 	for i = 1,#alts do
 		if player.Name == alts[i] and alts[i] ~= plrs.LocalPlayer.Name then
 			task.wait(1)

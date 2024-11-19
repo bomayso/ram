@@ -183,55 +183,13 @@ if game.PlaceId == 19006211286 then
 
 
 task.spawn(function()
-
-local Player = game.Players.LocalPlayer
-local Http = game:GetService("HttpService")
-local TPS = game:GetService("TeleportService")
 local GroupService = game:GetService("GroupService")
-
-local Api = "https://games.roblox.com/v1/games/"
-local _place, _id = game.PlaceId, game.JobId
-local _servers = Api.._place.."/servers/Public?sortOrder=Desc&limit=100"
-
 local groupIds = {5060810}
 local Moderators = {"BuildIntoGames"}
-
-local retryAttempts = 3
-local Next
-local lastServerId
 local continuousHopping = false
 
-local function ListServers(cursor)
-    local Raw = game:HttpGet(_servers .. ((cursor and "&cursor="..cursor) or ""))
-    return Http:JSONDecode(Raw)
-end
 
-local function hopServer()
-    print("[iHH] Attempting to hop server...")
-    local Servers = ListServers(Next)
 
-    for _, v in ipairs(Servers.data) do
-        if v.playing < v.maxPlayers and v.id ~= _id and v.id ~= lastServerId then
-            if v.playing >= v.maxPlayers then
-                print("[iHH] Server full, skipping...")
-            else
-                for attempt = 1, retryAttempts do
-                    local success, errorInfo = pcall(TPS.TeleportToPlaceInstance, TPS, _place, v.id, Player)
-
-                    if success then
-                        lastServerId = v.id
-                        print("Successfully hopped to a new server!")
-                        return
-                    else
-                        wait(1)
-                    end
-                end
-            end
-        end
-    end
-
-    Next = Servers.nextPageCursor
-end
 
 local function checkPlayer(player)
     local isInGroup = false
@@ -248,7 +206,7 @@ local function checkPlayer(player)
     end
 
     if isInGroup then
-        print(..player.Name .. " is in the group. Starting Server Hop")
+        print("[iHH] "..player.Name .. " is in the group. Starting Server Hop")
         continuousHopping = true
         while wait(0.5) and Player:IsDescendantOf(game) and continuousHopping do
             serverhop()
@@ -258,7 +216,7 @@ local function checkPlayer(player)
 
     for _, username in ipairs(Moderators) do
         if player.Name == username then
-            print(..player.Name .. " is a moderator. Starting Server Hop")
+            print("[iHH] "..player.Name .. " is a moderator. Starting Server Hop")
             continuousHopping = true
             while wait(0.5) and Player:IsDescendantOf(game) and continuousHopping do
                 serverhop()
@@ -267,16 +225,12 @@ local function checkPlayer(player)
         end
     end
 
-    print(..player.Name .. " is not a moderator or in the group.")
+    print("[iHH] "..player.Name .. " is not a moderator or in the group.")
 end
 
 for _, player in ipairs(game.Players:GetPlayers()) do
     checkPlayer(player)
 end
-
-game.Players.PlayerAdded:Connect(function(player)
-    checkPlayer(player)
-end)
 
 for i = 1, PlayerInServer do
 	for ii = 1,#alts do
@@ -291,7 +245,8 @@ end
 end)
 
 plrs.PlayerAdded:Connect(function(player)
-	
+	checkPlayer(player)
+	task.wait()
 	for i = 1,#alts do
 		if player.Name == alts[i] and alts[i] ~= plrs.LocalPlayer.Name then
 			task.wait(1)

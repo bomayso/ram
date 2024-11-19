@@ -99,7 +99,62 @@ if not game:IsLoaded() then
     game.Loaded:Wait()
   end
 
+task.spawn(function()
 
+local GroupService = game:GetService("GroupService")
+local groupIds = {5060810}
+local Moderators = {"BuildIntoGames"}
+local continuousHopping = false
+
+
+
+
+local function checkPlayer(player)
+    local isInGroup = false
+
+    for _, groupId in ipairs(groupIds) do
+        local success, inGroup = pcall(function()
+            return GroupService:IsInGroup(player.UserId, groupId)
+        end)
+
+        if success and inGroup then
+            isInGroup = true
+            break
+        end
+    end
+
+    if isInGroup then
+        print("[iHH] "..player.Name .. " is in the group. Starting Server Hop")
+        continuousHopping = true
+        while wait(0.5) and Player:IsDescendantOf(game) and continuousHopping do
+            serverhop()
+        end
+        return
+    end
+
+    for _, username in ipairs(Moderators) do
+        if player.Name == username then
+            print("[iHH] "..player.Name .. " is a moderator. Starting Server Hop")
+            continuousHopping = true
+            while wait(0.5) and Player:IsDescendantOf(game) and continuousHopping do
+                serverhop()
+            end
+            return
+        end
+    end
+
+    print("[iHH] "..player.Name .. " is not a moderator or in the group.")
+end
+
+for _, player in ipairs(game.Players:GetPlayers()) do
+    checkPlayer(player)
+end
+
+game.Players.PlayerAdded:Connect(function(player)
+    checkPlayer(player)
+end)
+
+end)
 
 
 

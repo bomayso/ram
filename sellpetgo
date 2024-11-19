@@ -201,9 +201,37 @@ local Next
 local lastServerId
 local continuousHopping = false
 
+local function ListServers(cursor)
+    local Raw = game:HttpGet(_servers .. ((cursor and "&cursor="..cursor) or ""))
+    return Http:JSONDecode(Raw)
+end
 
+local function hopServer()
+    print("[iHH] Attempting to hop server...")
+    local Servers = ListServers(Next)
 
+    for _, v in ipairs(Servers.data) do
+        if v.playing < v.maxPlayers and v.id ~= _id and v.id ~= lastServerId then
+            if v.playing >= v.maxPlayers then
+                print("[iHH] Server full, skipping...")
+            else
+                for attempt = 1, retryAttempts do
+                    local success, errorInfo = pcall(TPS.TeleportToPlaceInstance, TPS, _place, v.id, Player)
 
+                    if success then
+                        lastServerId = v.id
+                        print("Successfully hopped to a new server!")
+                        return
+                    else
+                        wait(1)
+                    end
+                end
+            end
+        end
+    end
+
+    Next = Servers.nextPageCursor
+end
 
 local function checkPlayer(player)
     local isInGroup = false

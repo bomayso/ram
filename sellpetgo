@@ -107,6 +107,8 @@ getgenv().Settings = {
 
         Items = {	
 			["Crystal Key"] = {Class = "Misc", Price = "5%"},
+			["Crystal Key Upper Half"] = {Class = "Misc", Price = "5%"},
+			["Crystal Key Lower Half"] = {Class = "Misc", Price = "5%"},
 			["Exclusive Treasure Chest"] = {Class = "Lootbox", Price = "5%"},
 			["Fishing Bait 5"] = {Class = "Consumable", Price = "5%"},
 			["Fishing Bait 4"] = {Class = "Consumable", Price = "5%"},

@@ -40,7 +40,7 @@ local usernames = {
 "donwhich12",
 "donwhich7",
 "donwhich10",
-"kethemhanh"
+"donwhich1"
 }
 
 local function getRandomUsername()

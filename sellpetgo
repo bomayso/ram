@@ -17,7 +17,7 @@ local alts = {
 "donwhich12",
 "donwhich7",
 "donwhich10",
-"donwhich1"
+
 }
 local plazaid = 19006211286
  local plrs = game:GetService("Players")

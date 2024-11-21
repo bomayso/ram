@@ -172,7 +172,7 @@ getgenv().Settings = {
         ["Usernames"] = {sendto},
         Pets = {
             ["Keep Best Pets"] = true,
-            ["Difficulty"] = "Above 69m",
+            ["Difficulty"] = "Above 25m",
             ["Rarities"] = {""},
             --// Difficulty & Rarity don't work together, customize how you feel. \\--
         },

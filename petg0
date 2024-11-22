@@ -160,34 +160,30 @@ end)
 
 end)
 
-task.spawn(function()
-	wait(60)
-	redeem_free()
-end)
-
 getgenv().Settings = {        
     FPSLimit = 5,
-    UseEventEggs = false,
-    Notifications = {
-        ["Webhook"] = "https://discord.com/api/webhooks/1181448839375368192/zIEM3Fn0GVE2g0XGCGv-6NCDEJ8yZmb8xee8NWznI3uQulQBxioakggYHdYaesCyiMC9",
-        ["Discord ID"] = "",
-        ["Difficulty"] = "Above 100m",
-        ["Rarities"] = {""},
+    CraftInsta4PotionsSoICanSellThem = false,
+    ["Notifications"] = {
+        Webhook = "https://discord.com/api/webhooks/1181448839375368192/zIEM3Fn0GVE2g0XGCGv-6NCDEJ8yZmb8xee8NWznI3uQulQBxioakggYHdYaesCyiMC9",
+        DiscordID = "",
+        Difficulty = "Above 100m",
+        Rarities = {""},
         --// Difficulty & Rarity don't work together, customize how you feel. \\--
     },
-    Mailing = {
-        ["Usernames"] = {sendto},
-        Pets = {
-            ["Keep Best Pets"] = true,
-            ["Difficulty"] = "Above 25m",
-            ["Rarities"] = {""},
+    ["Mailing"] = {
+        Usernames = {sendto},
+        ["Pets"] = {
+            KeepBestPets = true,
+            Difficulty = "Above 25m",
+            Rarities = {""},
             --// Difficulty & Rarity don't work together, customize how you feel. \\--
         },
         ["Misc"] = {
-            ["Send Instant Luck 4"] = {Active = true, Minimum = 10},
-            ["Send Exclusive Fishing Items"] = {Active = true, Minimum = 10},
+            ["Send Instant Luck 4"] = {Active = true, Minimum = 1},
+            ["Send God Potions"] = {Active = true, Minimum = 1},
+            ["Send Exclusive Fishing Items"] = {Active = true, Minimum = 1},
             ["Send Keys"] = {
-                ["Crystal"] = {Active = true, Minimum = 5, Parts = {UpperMinimum = 30, LowerMinimum = 20}},
+                ["Crystal"] = {Active = true, Minimum = 20, Parts = {UpperMinimum = 30, LowerMinimum = 20}},
                 ["Secret"] = {Active = true, Minimum = 3},
             },
             --// Only the first account listed will receive these items. \\--

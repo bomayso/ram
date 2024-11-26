@@ -175,7 +175,7 @@ getgenv().Settings = {
         ["Pets"] = {
             KeepBestPets = true,
             Difficulty = "Above 120m",
-            Rarities = {"Superior", "Secret", "Exclusive", "Celestial"},
+            Rarities = {"Secret", "Exclusive", "Celestial"},
             --// Difficulty & Rarity don't work together, customize how you feel. \\--
         },
         ["Misc"] = {

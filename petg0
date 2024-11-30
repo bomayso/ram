@@ -193,4 +193,5 @@ getgenv().Settings = {
 
 daubuoi = true
 
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/957ebb42504c2c23a15c8e78a4758f38.lua"))()
+script_key="JzCcFHdqsKYEXELzDwacuiTCyVqIGLVY";
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3cb1834cff48e9af0cc2616e44ab7d70.lua"))()

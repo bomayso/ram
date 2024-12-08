@@ -160,6 +160,14 @@ end)
 
 end)
 
+task.spawn(function()
+	while wait(10) do
+		if game.PlaceId ~= 18901165922 then
+			serverhop()
+		end
+	end
+end)
+
 script_key="JzCcFHdqsKYEXELzDwacuiTCyVqIGLVY";
 getgenv().Settings = {        
     FPSLimit = 5,

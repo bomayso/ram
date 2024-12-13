@@ -4,7 +4,7 @@
 
 local function getServers()
     local url =
-        string.format("https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=Asc&limit=100&excludeFullGames=true", 18901165922)
+        string.format("https://games.roblox.com/v1/games/%s/servers/Public?sortOrder=Asc&limit=100&excludeFullGames=true", game.PlaceId)
     local servers = game:GetService("HttpService"):JSONDecode(game:HttpGet(url)).data
     return servers
 end
@@ -18,7 +18,7 @@ local function serverhop()
     until server.id ~= game.JobId
 
 
-    tpService:TeleportToPlaceInstance(18901165922, server.id, plr)
+    tpService:TeleportToPlaceInstance(game.PlaceId, server.id, plr)
 end
 
 local usernames = {
@@ -160,13 +160,6 @@ end)
 
 end)
 
-task.spawn(function()
-	while wait(10) do
-		if game.PlaceId ~= 18901165922 then
-			serverhop()
-		end
-	end
-end)
 
 script_key="JzCcFHdqsKYEXELzDwacuiTCyVqIGLVY";
 getgenv().Settings = {        

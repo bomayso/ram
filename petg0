@@ -183,9 +183,13 @@ getgenv().Settings = {
             ["Send God Potions"] = {Active = true, Minimum = 1},
             ["Send Exclusive Fishing Items"] = {Active = true, Minimum = 1},
             ["Send Keys"] = {
-                ["Crystal"] = {Active = true, Minimum = 20, Parts = {UpperMinimum = 30, LowerMinimum = 20}},
+                ["Crystal"] = {Active = true, Minimum = 20, Parts = {UpperMinimum = 30, LowerMinimum = 10}},
                 ["Secret"] = {Active = true, Minimum = 3},
             },
+		["Send Lootboxes"] = {
+                ["Hype & Huge"] = {Active = true, Minimum = 1},
+                ["Other"] = {Active = true, Minimum = 10},
+	},
             --// Only the first account listed will receive these items. \\--
         }
     }

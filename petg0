@@ -190,7 +190,7 @@ getgenv().Settings = {
         Usernames = {sendto},
         ["Pets"] = {
             KeepBestPets = true,
-            Difficulty = "Above 100m",
+            Difficulty = "Above 160m",
 
         },
         ["Misc"] = {

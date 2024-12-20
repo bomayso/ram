@@ -203,7 +203,7 @@ getgenv().Settings = {
             },
 		["Send Lootboxes"] = {
                 ["Hype & Huge"] = {Active = true, Minimum = 1},
-                ["Other"] = {Active = true, Minimum = 10},
+                ["Other"] = {Active = true, Minimum = 20},
 	},
             --// Only the first account listed will receive these items. \\--
         }

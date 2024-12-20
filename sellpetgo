@@ -1,23 +1,22 @@
 local alts = {
+"kethemhanh3",
 "johnwhichh5",
 "johnwhichh4",
+"johnwhichh6",
 "johnwhichh7",
 "johnwhichh8",
 "johnwhichh12",
 "johnwhichh13",
 "johnwhichh10",
-"donwhich1",
+"johnwhichh11",
+"donwhich2",
 "donwhich8",
 "donwhich3",
 "donwhich4",
 "donwhich9",
-"donwhich11",
-"donwhich12",
 "donwhich7",
 "donwhich10",
 "kethemhanh",
-"Q9EXaU4r",
-"ditmepet99",
 "t1fakervippro",
 "supportxxu1",
 "jackingnom",
@@ -34,7 +33,6 @@ local alts = {
 "rayquankilx",
 "qntstreamsh",
 "mckdittlink"
-
 }
 local plazaid = 19006211286
  local plrs = game:GetService("Players")

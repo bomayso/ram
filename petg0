@@ -192,7 +192,7 @@ getgenv().Settings = {
 
         },
         ["Misc"] = {
-            ["Send Instant Luck 4"] = {Active = false, Minimum = 1},
+            ["Send Instant Luck 4"] = {Active = true, Minimum = 1},
             ["Send God Potions"] = {Active = true, Minimum = 1},
             ["Send Exclusive Fishing Items"] = {Active = true, Minimum = 1},
             ["Send Keys"] = {

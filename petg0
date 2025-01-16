@@ -94,9 +94,7 @@ task.spawn(function()
     end
 end)
 
-function redeem_free()
-	game:GetService("ReplicatedStorage").Network["ForeverPacks: Claim Free"]:InvokeServer("Default")
-end 
+
 
 task.spawn(function()
 	wait(math.random(1800, 3600))
@@ -171,41 +169,38 @@ end)
 end)
 
 
-script_key="yJorSFMIkHKNjaQmYpXEWKxqEDlbNMjK";
-getgenv().Settings = {        
-    FPSLimit = 5,
-    CraftInsta4PotionsSoICanSellThem = true,
-    ["Notifications"] = {
-        Webhook = "https://discord.com/api/webhooks/1328801400616124597/1AGdL3XJaRm3lTMYsF7AhWuydLqGm8S8TqDo5nJxwml3hMg_XejY_iG_DGUW261VLXvU",
-        DiscordID = "",
-        Difficulty = "Above 100m",
+script_key="pzJWJPYLuguSaphivtczaaVsspjwvdmq";
 
-    },
-    ["Mailing"] = {
-        Usernames = {sendto},
-        ["Pets"] = {
-            KeepBestPets = true,
-            Difficulty = "Above 100m",
+getgenv().petsGoConfig = {
+    -- Event config
+    -- true will open event gift bag/egg
+    -- false will auto mail gift bag/egg
+    CONSUME_CORRUPTED_HUGE_BAIT = false,
+    CONSUME_ALL_ENCHANT_SAFE = false,
+    CONSUME_ALL_MINING_CHEST = false,
+    CONSUME_EVENT_GIFT_BAG = false,
+    CONSUME_EVENT_EGG = false, -- Hype eggs not included
 
-        },
-        ["Misc"] = {
-            ["Send Instant Luck 4"] = {Active = true, Minimum = 1},
-            ["Send God Potions"] = {Active = true, Minimum = 1},
-            ["Send Exclusive Fishing Items"] = {Active = true, Minimum = 1},
-            ["Send Keys"] = {
-                ["Crystal"] = {Active = true, Minimum = 20, Parts = {UpperMinimum = 30, LowerMinimum = 10}},
-                ["Secret"] = {Active = true, Minimum = 3},
-            },
-		["Send Lootboxes"] = {
-                ["Hype & Huge"] = {Active = true, Minimum = 1},
-                ["Other"] = {Active = true, Minimum = 1},
-	},
-            --// Only the first account listed will receive these items. \\--
-        }
-    }
+    WEBHOOK_URL = "https://discord.com/api/webhooks/1302844116887146496/EDertQZY6P5IaCIoS5FMUclYDBU9BghfJvATPc32oPbsWS77_OesAARkGG0bcuv_VXPb",
+    MAILING_WEBHOOK_URL = "https://discord.com/api/webhooks/1181448979649667123/fQxrC3jtsaibfVa2kStcyxec0TN-YHKvDaVK0CLQ2TFRrEub862Ts8xbThg8lV9Gi4tq",
+    DISCORD_ID = "1168121186790686779",  -- Required!!! (For public-webhook)
+    WEBHOOK_ODDS = 100000000, -- Minimum Pet Odds To Trigger Webhook
+
+    DIAMOND_EGG = true,  -- true = Diamond Egg, false = F2P Egg
+
+    -- Allowed enchant keywords : Criticals, Loot, Speed, Strength, Chests, Diamonds, Huges, Lightning, TNT
+    PICKAXE_ENCHANTS = {"Speed", "Speed", "Strength"},
+
+    MAILING = true,  -- Auto mail
+    MAIL_FISHING_ROD = true,  -- true = mail, false = keep fishing rod on account (FASTER Fishing)
+    MAIL_WEBHOOK_ODDS = 100000000, -- Minimum Pet Odds To Trigger MAIL Webhook
+    MAIL_PET_ODDS = 100000000,  -- Minimum Pet Odds To Mail
+    USERNAME_TO_MAIL = {"kethemhanh3"} -- Mail to username, Example : USERNAME_TO_MAIL = {"username1", "username2"}
 }
+
+
 
 daubuoi = true
 
 
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3cb1834cff48e9af0cc2616e44ab7d70.lua"))()
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5653ca0a4685e7d4268329988eefdb21.lua"))()

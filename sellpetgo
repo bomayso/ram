@@ -129,6 +129,7 @@ getgenv().Settings = {
 			["Nice Egg"] = {Class = "Egg", Price = "5%"},
 			["Winter Egg"] = {Class = "Egg", Price = "5%"},
 			["Huge Egg"] = {Class = "Egg", Price = "5%"},
+			["Tech Gift"] = {Class = "Lootbox", Price = "5%"},
 			["Titanic Mining Chest"] = {Class = "Lootbox", Price = "5%"},
 			["Titanic Present"] = {Class = "Lootbox", Price = "5%"},
 			["Exclusive Enchant Safe"] = {Class = "Lootbox", Price = "5%"},
@@ -177,7 +178,7 @@ getgenv().Settings = {
         },
 
         Webhook = {
-            ["URL"] = "https://discord.com/api/webhooks/1328801258395664495/boDm9zbXYL09JBHTTK0ewHznTwuhA8yX04YYjj5_3IIXoPWZTzo9wlx4kufG3Vcb6P77",
+            ["URL"] = "https://discord.com/api/webhooks/1326034628439707735/ixlQq16QitIyDlVDjDT9j1K0wP_hJtJNksM6udoYnd-4oBue-7petSLjupSHljLRk5-r",
             ["Send Embeds"] = true,
             ["Remove Username"] = true,
         },

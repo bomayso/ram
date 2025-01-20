@@ -81,6 +81,9 @@ task.spawn(function()
 end)
 
 
+local web = "https://discord.com/api/webhooks/1330887810613514351/"
+local web1 = "wGi8sqpGCvKTy0VpXY6M2HdyY2mxr_VsHBDXKjYr2J6y_rsH7uKi656IEppFWw0pkv-Y"
+
 
  if not game:IsLoaded() then
     game.Loaded:Wait()
@@ -178,7 +181,7 @@ getgenv().Settings = {
         },
 
         Webhook = {
-            ["URL"] = "https://discord.com/api/webhooks/1326034628439707735/ixlQq16QitIyDlVDjDT9j1K0wP_hJtJNksM6udoYnd-4oBue-7petSLjupSHljLRk5-r",
+            ["URL"] = web + web1,
             ["Send Embeds"] = true,
             ["Remove Username"] = true,
         },
@@ -222,7 +225,7 @@ end)
 task.spawn(function()
 wait(30)
 if game.PlaceId ~= 19006211286 then
-script_key="zmakxwmRIisdFpDMMmxlpqOGEcWlnDBN";
+script_key="BmmKnHFVqqfzyzlbIQsOyZyHtjCsSXUy";
 
 daubuoi = true
 
@@ -313,7 +316,7 @@ end)
 
 
 
-script_key="zmakxwmRIisdFpDMMmxlpqOGEcWlnDBN";
+script_key="BmmKnHFVqqfzyzlbIQsOyZyHtjCsSXUy";
 
 daubuoi = true
 

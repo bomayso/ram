@@ -179,7 +179,7 @@ getgenv().Settings = {
         },
 
         Webhook = {
-            ["URL"] = web + web1,
+            ["URL"] = web .. web1,
             ["Send Embeds"] = true,
             ["Remove Username"] = true,
         },

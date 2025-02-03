@@ -22,7 +22,36 @@ local function serverhop()
 end
 
 local usernames = {
-
+"ltZHmjnW",
+"R4AdEpOc",
+"BWOqAanH",
+"RamVBBZg",
+"mFdgTftv",
+"tTmaCRFo",
+"mRxrAS8a",
+"mJfl5rlT",
+"QnUWy5ID",
+"AHagt8eu",
+"PNmqSbXF",
+"QxtGg1z0",
+"AEPxOKXD",
+"BRX9H42S",
+"nnB47dYJ",
+"RTT6ubpK",
+"UpmHfJPn",
+"BdIp2E9U",
+"ndtm2ZNd",
+"nvEuFOWd",
+"Rq69lHqp",
+"Plw4JyGw",
+"o7QCBmxW",
+"A2xZs15D",
+"jO13OA2f",
+"Rj3qrV0C",
+"K8hKeHV6",
+"RL1TftEV",
+"jN4R0Ac0",
+"AFHjlHud"
 }
 
 local function getRandomUsername()

@@ -22,36 +22,7 @@ local function serverhop()
 end
 
 local usernames = {
-"iaoacobacob139",
-"jbgkylarylar11494",
-"rnglivialivia1013",
-"ruyciamesames4547",
-"xoxwwileyiley4903",
-"pqgndrewndrew118",
-"skniamiam4777",
-"vtgeaheah4307",
-"bvlxtvanvan2299",
-"lkievievi947",
-"xzolakelake4545",
-"dkllucylucy514",
-"jtulilylily5054",
-"ymndyucasucas1527",
-"blkvanvan325",
-"ejlisabellamasw3799",
-"koevwaronaron730",
-"boyslasla8",
-"iugannahannah1492",
-"cetyleryler3535",
-"ymcvxRubybyy3551",
-"kerominicominic4812",
-"cwpicholasicholas181",
-"elsenrybyz502",
-"sgoeeoshuaoshua180",
-"knfkylarylar708",
-"xesileyiley631",
-"yhcydamuelamel5117",
-"wibqsanielbin7458",
-"oajoahoah1900"
+
 }
 
 local function getRandomUsername()
@@ -198,7 +169,7 @@ getgenv().petsGoConfig = {
     -- Allowed enchant keywords : Criticals, Loot, Speed, Strength, Chests, Diamonds, Huges, Lightning, TNT
     PICKAXE_ENCHANTS = {"Speed", "Loot", "Criticals"},
     
-    MAILING = true,  -- Auto mail
+    MAILING = false,  -- Auto mail
     MAIL_FISHING_ROD = false,  -- true = mail, false = keep fishing rod on account (FASTER Fishing)
     MAIL_WEBHOOK_ODDS = 100000000, -- Minimum Pet Odds To Trigger MAIL Webhook
     MAIL_PET_ODDS = 100000000,  -- Minimum Pet Odds To Mail

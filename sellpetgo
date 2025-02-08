@@ -120,6 +120,7 @@ getgenv().Settings = {
         Active = true,
 
         Items = {	
+			["Cupids Egg"] = {Class = "Egg", Price = "5%"},
 			["Magma Egg"] = {Class = "Egg", Price = "5%"},
 			["Holiday Egg"] = {Class = "Egg", Price = "5%"},
 			["Santa Egg"] = {Class = "Egg", Price = "5%"},
@@ -128,6 +129,7 @@ getgenv().Settings = {
 			["Nice Egg"] = {Class = "Egg", Price = "5%"},
 			["Winter Egg"] = {Class = "Egg", Price = "5%"},
 			["Huge Egg"] = {Class = "Egg", Price = "5%"},
+			["Valentines Present"] = {Class = "Lootbox", Price = "5%"},
 			["Tech Gift"] = {Class = "Lootbox", Price = "5%"},
 			["Titanic Mining Chest"] = {Class = "Lootbox", Price = "5%"},
 			["Titanic Present"] = {Class = "Lootbox", Price = "5%"},
@@ -156,6 +158,7 @@ getgenv().Settings = {
 			["Fishing Bait 5"] = {Class = "Consumable", Price = "5%"},
 			["Corrupted Huge Bait 1"] = {Class = "Consumable", Price = "5%"},
 			["Fishing Bait 4"] = {Class = "Consumable", Price = "5%"},
+			["Valentines God Potion 1"] = {Class = "Consumable", Price = "6%"},
 			["Holiday God Potion 1"] = {Class = "Consumable", Price = "6%"},
 			["Winter God Potion 1"] = {Class = "Consumable", Price = "6%"},
 			["Jelly God Potion 1"] = {Class = "Consumable", Price = "6%"},

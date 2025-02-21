@@ -22,38 +22,44 @@ local function serverhop()
 end
 
 local usernames = {
-"aqhokazelaze7133",
-"axsazelaze1063",
-"yheamuelamel10696",
-"xsfacharyacary1966",
-"nyxrandonndon2537",
-"szdioletiolet4044",
-"uynmcasonason5022",
-"kydztaronaron4025",
-"xkuoqileyiley7346",
-"kwmvqtellatella7965",
-"eagracegoge4410",
-"niqrandonndon560",
-"glbAlicelie765",
-"fwrsvyanyan4084",
-"mqoiennaienna232",
-"xdgacharyacary911",
-"ekqoejackjack4847",
-"wxcbdthangeen1101",
-"froyanyan514",
-"yjgRubybyy4784",
-"uuuoeoeoe2919",
-"yeducasucas10868",
-"fsqozathanathan1820",
-"fiqoraora3774",
-"weldwmilysim1547",
-"aeoracerace2086",
-"tpkarperarper9780",
-"ijrjdannahannah4105",
-"vrcustinustin348",
-"njquroraurora2640",
-"wvxmilysim3370",
-"pmxavidavid891"
+"pchavidavid2459",
+"eigscenrybyz1713",
+"cmdoqlenalena8386",
+"okommamma356",
+"rfyamesames11",
+"kpybutellatella2791",
+"lxgdamdam1950",
+"ccdlbyleryler6208",
+"ujnnaasonason371",
+"vyfustinustin87",
+"ixratthewatthew48",
+"gobwenwen2018",
+"genylanylan11532",
+"frrhgoraora8874",
+"fjeathanathan2641",
+"oqtophieophie67",
+"ithatthewatthew2008",
+"jfdlilylily392",
+"aybndrewndrew10870",
+"nmfilyily1",
+"mssoeoe499",
+"lxyavannahavnnah1019",
+"vuhoganogan3198",
+"tetichaelichael4446",
+"npzuroraurora575",
+"dzsoshuaoshua1750",
+"wdlanielbin4190",
+"uokoeoe945",
+"fwgojyanyan5229",
+"mwcxnevinevin465",
+"wzathangeen4640",
+"uaboeoe5123",
+"fyholyanyan5380",
+"drzrglucylucy1564",
+"havalebaleb170",
+"jvkkylarylar3733",
+"yrlcarlettcar3758",
+"bwqvanvan982"
 }
 
 local function getRandomUsername()
@@ -141,7 +147,7 @@ getgenv().petsGoConfig = {
     DIAMOND_EGG = true,  -- true = Diamond Egg, false = F2P Egg
     MINE_ALL_ORES = true,  -- true = all ore, false = runic & event ore
     
-    MAILING = false,  -- Auto mail
+    MAILING = true,  -- Auto mail
 	SHOW_PET_WEBHOOK_USERNAME = false,
     MAIL_WEBHOOK_ODDS = 100000000, -- Minimum Pet Odds To Trigger MAIL Webhook
     MAIL_PET_ODDS = 100050000,  -- Minimum Pet Odds To Mail

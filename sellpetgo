@@ -128,6 +128,7 @@ getgenv().Settings = {
         Active = true,
 
         Items = {	
+			["Mastery"] = {Class = "XPPotion", Price = "5%"},
 			["10,000x Thieving Egg"] = {Class = "Egg", Price = "5%", Amount = 5000},
 			["100x Thieving Egg"] = {Class = "Egg", Price = "5%", Amount = 5000},
 			["Heartbreak Egg"] = {Class = "Egg", Price = "5%", Amount = 5000},
@@ -142,7 +143,7 @@ getgenv().Settings = {
 			["Huge Egg"] = {Class = "Egg", Price = "5%"},
 			["Thieving Present"] = {Class = "Lootbox", Price = "5%"},
 			["Exotic Thieving Chest"] = {Class = "Lootbox", Price = "5%"},
-			["Legendary Thieving Chest"] = {Class = "Lootbox", Price = "5%"},
+			["Legendary Thieving Chest"] = {Class = "Lootbox", Price = "5%", Amount = 5000},
 			["Heartbreak Present"] = {Class = "Lootbox", Price = "5%"},
 			["Valentines Present"] = {Class = "Lootbox", Price = "5%"},
 			["Tech Gift"] = {Class = "Lootbox", Price = "5%"},

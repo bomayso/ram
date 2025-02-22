@@ -130,7 +130,7 @@ local web3 = "dEb04jYUEeX4ACVXdC8t7hh2VNyJWiaZ4lH0Jvt8wvPRzY-tRcq-9Czu2nz_7r3UYP
 script_key="pzJWJPYLuguSaphivtczaaVsspjwvdmq";
 
 getgenv().petsGoConfig = {
-	AUTO_RESTART = true,
+	AUTO_RESTART = false,
     -- true/false (true = consume, false = automail)
     CONSUME_CORRUPTED_HUGE_BAIT = true,
     CONSUME_ALL_ENCHANT_SAFE = false,

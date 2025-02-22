@@ -130,6 +130,8 @@ getgenv().Settings = {
         Items = {	
 			["Mastery"] = {Class = "XPPotion", Price = "5%"},
 			["10,000x Thieving Egg"] = {Class = "Egg", Price = "5%", Amount = 4000},
+			["10x Thieving Egg"] = {Class = "Egg", Price = "5%", Amount = 4000},
+			["1x Thieving Egg"] = {Class = "Egg", Price = "5%", Amount = 4000},
 			["100x Thieving Egg"] = {Class = "Egg", Price = "5%", Amount = 4000},
 			["Heartbreak Egg"] = {Class = "Egg", Price = "5%", Amount = 4000},
 			["Cupids Egg"] = {Class = "Egg", Price = "5%"},

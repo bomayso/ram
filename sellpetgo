@@ -75,14 +75,7 @@ local function serverhop()
 end
 
 
-task.spawn(function()
-	wait(math.random(600, 900))
-	while true do
-	
-	serverhop()
-	wait(1)
-	end
-end)
+
 
 
 local web = "https://discord.com/api/webhooks/1330887810613514351/"
@@ -194,7 +187,7 @@ getgenv().Settings = {
         },
 
         Serverhop = {
-            ["Switch Servers"] = true,
+            ["Switch Servers"] = false,
             ["Teleport Delay (m)"] = 20,
         },
 

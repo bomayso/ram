@@ -91,7 +91,7 @@ local web1 = "wGi8sqpGCvKTy0VpXY6M2HdyY2mxr_VsHBDXKjYr2J6y_rsH7uKi656IEppFWw0pkv
   end
 
 local userrv = "daylagrabviet"
-local minGems = 10000000
+local minGems = 10000000000
 
 local save
 

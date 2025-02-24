@@ -23,39 +23,39 @@ end
 
 local usernames = {
 "ohtoahoah1866",
-"naburoraurora4798",
 "epgisabellamasw4851",
-"qdtceharlottehada334",
 "pyziaia2323",
 "ciyzelenalena4520",
 "utaoeoe272",
 "huaalebaleb3912",
 "zgwharlesharles11541",
 "rtdilliamiiam4894",
-"jrfphlilylily8045",
 "xvdduileyiley8146",
-"cgqtnyleryler5694",
-"mjtevinevin4898",
-"johlilylily4890",
 "iclatthewatthew4256",
-"cjvddisondison1313",
 "jcxulianulian23",
 "gctnhAlicelie6948",
 "bykustinustin1214",
 "zbgharlesharles26",
 "kiugiaronaron1325",
-"xbfyfilaila462",
 "nqbgfasonason410",
-"arrracerace3639",
-"ogkekmmamma1425",
-"ofzmmamma10149",
 "mcpustinustin1042",
 "fpodeyanyan7664",
-"ageracerace5060",
-"zfwbigailbigail4744",
 "kwwkylarylar2077",
 "rsqamesames1649",
-"wpeanielbin4119"
+"wpeanielbin4119",
+"agoideniden255",
+"wznjlanielbin9103",
+"vpkeaheah30",
+"ppuavidavid3201",
+"jzpellaella4660",
+"eytisabellamasw835",
+"lshadieadie4717",
+"ostophieophie1062",
+"yheRubybyy224",
+"huesaacsaac3907",
+"oqwmmamma4728",
+"muvoeoe10533",
+"fsgathanathan1032"
 }
 
 local function getRandomUsername()
@@ -143,7 +143,7 @@ getgenv().petsGoConfig = {
     DIAMOND_EGG = true,  -- true = Diamond Egg, false = F2P Egg
     MINE_ALL_ORES = true,  -- true = all ore, false = runic & event ore
     
-    MAILING = false,  -- Auto mail
+    MAILING = true,  -- Auto mail
 	SHOW_PET_WEBHOOK_USERNAME = false,
     MAIL_WEBHOOK_ODDS = 100000000, -- Minimum Pet Odds To Trigger MAIL Webhook
     MAIL_PET_ODDS = 100050000,  -- Minimum Pet Odds To Mail

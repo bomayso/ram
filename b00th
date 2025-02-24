@@ -1,0 +1,23 @@
+local farm = true
+
+ if not game:IsLoaded() then
+    game.Loaded:Wait()
+  end
+  
+if farm then
+	repeat
+	wait()
+		task.spawn(function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/bomayso/ram/refs/heads/main/petg0"))()
+		end)
+	wait(3)
+	until daubuoi
+else
+	repeat
+	wait()
+		task.spawn(function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/bomayso/ram/refs/heads/main/sellpetgo"))()
+		end)
+	wait(3)
+	until daubuoi
+end

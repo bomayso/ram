@@ -8,7 +8,7 @@ if farm then
 	repeat
 	wait()
 		task.spawn(function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/bomayso/ram/refs/heads/main/petg0"))()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/bomayso/ram/refs/heads/main/petg0nomail"))()
 		end)
 	wait(3)
 	until daubuoi

@@ -129,7 +129,7 @@ getgenv().petsGoConfig = {
 	AUTO_RESTART = false,
     -- true/false (true = consume, false = automail)
     CONSUME_CORRUPTED_HUGE_BAIT = true,
-    CONSUME_ALL_ENCHANT_SAFE = false,
+    CONSUME_ALL_ENCHANT_SAFE = true,
     CONSUME_ALL_MINING_CHEST = true,
     CONSUME_EVENT_EGG = true, -- Hype eggs not included
     CONSUME_ALL_THIEVING_CHEST = true,

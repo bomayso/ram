@@ -118,15 +118,16 @@ local web3 = "dEb04jYUEeX4ACVXdC8t7hh2VNyJWiaZ4lH0Jvt8wvPRzY-tRcq-9Czu2nz_7r3UYP
 script_key="pzJWJPYLuguSaphivtczaaVsspjwvdmq";
 
 getgenv().petsGoConfig = {
-	AUTO_RESTART = false,
+	AUTO_RESTART = true,
     -- true/false (true = consume, false = automail)
     CONSUME_CORRUPTED_HUGE_BAIT = true,
     CONSUME_ALL_ENCHANT_SAFE = false,
     CONSUME_ALL_MINING_CHEST = true,
-    CONSUME_EVENT_EGG = false, -- Hype eggs not included
+    CONSUME_EVENT_EGG = true, -- Hype eggs not included
     CONSUME_ALL_THIEVING_CHEST = false,
     CONSUME_INSTA_LUCK_4 = true,
     IGNORE_DICE_COMBO = false, -- Consume Insta Luck 3 without combo
+    CONSUME_VAULT_KEY = true,
 	WEBHOOK_URL = web .. web1,
     MAILING_WEBHOOK_URL = web2 .. web3,
     DISCORD_ID = "1168121186790686779",  -- Required!!! (For public-webhook)

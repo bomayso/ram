@@ -111,7 +111,7 @@ task.spawn(function()
 end
 end)
 
-_G.Config = { UserID = "a6eb4e69-060d-42b0-99b5-834601bb6da2", discord_id = "332193090825748484" , Note = "duoibau", } 
+_G.Config = { UserID = "a6eb4e69-060d-42b0-99b5-834601bb6da2", discord_id = "332193090825748484" , Note = "farm", } 
 task.spawn(function()
 		task.wait(70)
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/skadidau/unfazedfree/refs/heads/main/petsgo"))()

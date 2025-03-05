@@ -77,7 +77,7 @@ local Http2 = game:GetService("HttpService")
 
 local Players = game:GetService('Players')
 local Client = Players.LocalPlayer
-_G.EnableFriendRequest = true
+_G.EnableFriendRequest = false
 
 local function SendFriendRequests()
 	

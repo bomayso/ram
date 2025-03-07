@@ -22,13 +22,11 @@ local function serverhop()
 end
 
 local usernames = {
-"GrimesJono10",
 "ObrienAmandal23",
 "GilesJacobd6206",
 "CharlesNathanu845",
 "VelezZacharyr3617",
 "HooperTraceyz4",
-"ChapmanPigleto2175",
 "MuellerBradyp42",
 "MurilloWalterl45",
 "SilvaStefanieb439",
@@ -40,7 +38,6 @@ local usernames = {
 "LucasKirkq126",
 "BallardMelaniej0947",
 "HaleyKario4",
-"FlynnLindaz891",
 "GuzmanKatherinej2859",
 "HouseDevonr9",
 "RedGeorgel1333",

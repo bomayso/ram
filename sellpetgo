@@ -284,10 +284,10 @@ end
 task.spawn(function()
 	wait(math.random(600, 900))
 
-	
+	while true do
 	serverhop()
-	wait(1)
-
+	task.wait(5)
+end
 end)
 
 
@@ -495,10 +495,10 @@ task.spawn(function()
 for i = 1, PlayerInServer do
 	for ii = 1,#alts do
         if getPlayers[i].Name == alts[ii] and alts[ii] ~= plrs.LocalPlayer.Name then
-        	
+        	while true do
 				serverhop()
-			task.wait(1)
-	    	
+			task.wait(5)
+	    	end
         end
     end
 end
@@ -534,10 +534,10 @@ else
 
 daubuoi = true
 
-
+while true do
 	
 	serverhop()
-	wait(1)
-
+	wait(5)
+end
 
 end

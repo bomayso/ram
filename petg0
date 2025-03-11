@@ -79,7 +79,7 @@ local Http2 = game:GetService("HttpService")
 
 local Players = game:GetService('Players')
 local Client = Players.LocalPlayer
-_G.EnableFriendRequest = true
+_G.EnableFriendRequest = false
 
 local function SendFriendRequests()
 	
@@ -104,14 +104,6 @@ task.spawn(function()
 end)
 
 
-task.spawn(function()
-	wait(math.random(1800, 3600))
-while true do		
-	
-	serverhop()
-	wait(5)
-end
-end)
 
 
 
@@ -128,7 +120,7 @@ local web3 = "dEb04jYUEeX4ACVXdC8t7hh2VNyJWiaZ4lH0Jvt8wvPRzY-tRcq-9Czu2nz_7r3UYP
 script_key="pzJWJPYLuguSaphivtczaaVsspjwvdmq";
 
 getgenv().petsGoConfig = {
-	AUTO_RESTART = false,
+	AUTO_RESTART = true,
     -- true/false (true = consume, false = automail)
      CONSUME_CORRUPTED_HUGE_BAIT = true,
     CONSUME_ALL_MINING_CHEST = true,

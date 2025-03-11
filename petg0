@@ -57,11 +57,7 @@ local usernames = {
 "UwB7SyJv",
 "FbMRytMN",
 "R8ZabmFZ",
-"A7IURwq6",
-"vZxjsH4Q",
-"p5lYLzTk",
-"XAQzOeZE",
-"wxAa5AjV"
+"A7IURwq6"
 }
 
 local function getRandomUsername()

@@ -124,7 +124,7 @@ local web1 = "13mFCyEjiIeTGhrtcsjWZ2Fq7lxDCAqRBCX1qUFzyfLi7EmRsPKy6r5F8R9xVTY6Vk
 local web2 = "https://discord.com/api/webhooks/1330886409707454477/"
 local web3 = "dEb04jYUEeX4ACVXdC8t7hh2VNyJWiaZ4lH0Jvt8wvPRzY-tRcq-9Czu2nz_7r3UYPF_"
 
-script_key="pzJWJPYLuguSaphivtczaaVsspjwvdmq";
+script_key="MOHBTWsfJmvEhYGNAtEYucsgKFsTdLJQ";
 
 getgenv().petsGoConfig = {
 	AUTO_RESTART = false,
